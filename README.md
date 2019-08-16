@@ -5,5 +5,4 @@
 </p>
 
 
-## NidhoggDJoking
-Personal blog
+# NidhoggDJoking Personal Resume
