@@ -137,3 +137,13 @@ function downFile(content="assets/download/README.md", filename="README.md") {
     // 然后移除
     document.body.removeChild(eleLink);
 };
+
+
+// WeChat  ********************************************
+
+function WeChat() {
+    $('.WeChat').fadeIn();
+    $('.WeChat').click(function(event) {
+           $('.WeChat').fadeOut();
+    });
+ }

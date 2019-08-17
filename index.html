@@ -44,21 +44,24 @@
                         <div class="text-center">
                             <h3 class="title title--h3 sidebar__user-name"><span class="weight--500"></span></h3>
                             <div class="badge badge--gray">Creative Director</div>
-
                             <div class="social">
-                                <a class="social__link" href="#"><i class="font-icon iconfont iconqq-"></i></a>
-                                <a class="social__link" href="#"><i class="font-icon iconfont iconweixin"></i></a>
+                                <a class="social__link" href="http://wpa.qq.com/msgrd?v=3&amp;uin=250348426&amp;site=qq&amp;menu=yes" target="_blank" title="QQ">
+                                    <i class="font-icon iconfont iconqq-"></i>
+                                </a>
+                                <a class="social__link" href="#" onclick="WeChat()">
+                                    <i class="font-icon iconfont iconweixin"></i>
+                                </a>
+                            </div>
+                            <div class="sidebar__info box-inner box-inner--rounded">
+                                <ul class="contacts-block">
+                                    <li class="contacts-block__item" data-toggle="tooltip" data-placement="top" title="Birthday"><i class="font-icon icon-calendar"></i></li>
+                                    <li class="contacts-block__item" data-toggle="tooltip" data-placement="top" title="Address"><i class="font-icon icon-location"></i></li>
+                                    <li class="contacts-block__item" data-toggle="tooltip" data-placement="top" title="E-mail"><a href="mailto:example@mail.com"><i class="font-icon icon-envelope"></i></a></li>
+                                    <li class="contacts-block__item" data-toggle="tooltip" data-placement="top" title="Phone"><i class="font-icon icon-phone"></i></li>
+                                    <li class="contacts-block__item" data-toggle="tooltip" data-placement="top" title="Github"><a href=""><i class="font-icon icon-github"></i></a></li>
+                                </ul><a class="btn btn--blue-gradient" href="#" onclick="downFile()"><i class="font-icon icon-download"></i>Download CV</a>
+                            </div>
                         </div>
-                        <div class="sidebar__info box-inner box-inner--rounded">
-                            <ul class="contacts-block">
-                                <li class="contacts-block__item" data-toggle="tooltip" data-placement="top" title="Birthday"><i class="font-icon icon-calendar"></i></li>
-                                <li class="contacts-block__item" data-toggle="tooltip" data-placement="top" title="Address"><i class="font-icon icon-location"></i></li>
-                                <li class="contacts-block__item" data-toggle="tooltip" data-placement="top" title="E-mail"><a href="mailto:example@mail.com"><i class="font-icon icon-envelope"></i></a></li>
-                                <li class="contacts-block__item" data-toggle="tooltip" data-placement="top" title="Phone"><i class="font-icon icon-phone"></i></li>
-                                <li class="contacts-block__item" data-toggle="tooltip" data-placement="top" title="Github"><a href=""><i class="font-icon icon-github"></i></a></li>
-                            </ul><a class="btn btn--blue-gradient" href="#" onclick="downFile()"><i class="font-icon icon-download"></i>Download CV</a>
-                        </div>
-                    </div>
                 </aside><!-- Content -->
                 <div class="col-12 col-md-12 col-xl-9">
                     <div class="box pb-0">
@@ -81,7 +84,7 @@
                         </div><!-- About -->
                         <div class="pb-0 pb-sm-2">
                             <h1 class="title title--h1 title__separate">About Me</h1>
-                            <p>I'm Front end engineer  from Hunan, China, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.</p>
+                            <p>I'm Front end engineer from Hunan, China, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.</p>
                             <p>My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way. </p>
                         </div><!-- What -->
                         <div class="box-inner pb-0">
@@ -132,7 +135,6 @@
                                                 <image xlink:href="assets/img/avatar-2.jpg" height="100%" width="100%" />
                                             </g>
                                         </svg>
-                                       
                                         <h4 class="title title--h5">Lender</h4>
                                         <p class="review-item__caption">This road is doomed to be lonely, that kind of loneliness is a little more every day than the previous day.</p>
                                     </div><!-- Item review -->
@@ -141,7 +143,7 @@
                                                 <image xlink:href="assets/img/avatar-3.jpg" height="100%" width="100%" />
                                             </g>
                                         </svg>
-                                         <h4 class="title title--h5">Kasey</h4>
+                                        <h4 class="title title--h5">Kasey</h4>
                                         <p class="review-item__caption">You must be very difficult. The next way is for you to come and go alone.</p>
                                     </div>
                                     <div class="swiper-slide review-item"><svg class="avatar avatar--80" viewBox="0 0 84 84">
@@ -169,26 +171,22 @@
                             <div class="swiper-container js-carousel-clients">
                                 <div class="swiper-wrapper">
                                     <!-- Item client 带溢出滚屏-->
-                                     <div class="swiper-slide">
+                                    <div class="swiper-slide">
                                         <a href="https://juejin.im/user/5c1073f4f265da611e4d81da">
-                                        <img style="margin-top: 0.5rem;"  
-                                            src="assets/images/code/juejin.svg" alt="juejin"/></a>
+                                            <img style="margin-top: 0.5rem;" src="assets/images/code/juejin.svg" alt="juejin" /></a>
                                     </div>
-
                                     <div class="swiper-slide">
                                         <a href="https://me.csdn.net/qq_38062409">
-                                        <img src="assets/images/code/csdn.png" alt="csdn"/></a>
+                                            <img src="assets/images/code/csdn.png" alt="csdn" /></a>
                                     </div>
                                     <div class="swiper-slide">
                                         <a href="https://www.cnblogs.com/nidhoggdjoking">
-                                        <img src="assets/images/code/blog.png" alt="Logo"/></a>
+                                            <img src="assets/images/code/blog.png" alt="Logo" /></a>
                                     </div>
                                     <div class="swiper-slide">
                                         <a href="https://github.com/NidhoggDJoking">
-                                        <img style="margin-top: 0.3rem;" 
-                                            src="assets/images/code/logo-github.png" alt="github"/></a>
+                                            <img style="margin-top: 0.3rem;" src="assets/images/code/logo-github.png" alt="github" /></a>
                                     </div>
-                                    
                                 </div>
                                 <div class="swiper-pagination"></div>
                             </div>
@@ -207,6 +205,10 @@
             <path d="M0 27.2891c0-4.6662 2.4889-8.976 6.52491-11.2986L31.308 1.72845c3.98-2.290382 8.8697-2.305446 12.8637-.03963l25.234 14.31558C73.4807 18.3162 76 22.6478 76 27.3426V56.684c0 4.6805-2.5041 9.0013-6.5597 11.3186L44.4317 82.2915c-3.9869 2.278-8.8765 2.278-12.8634 0L6.55974 68.0026C2.50414 65.6853 0 61.3645 0 56.684V27.2891z" />
         </clipPath>
     </svg><!-- JavaScripts -->
+    <div class="WeChat">
+        <img src="assets/WeChat/WeChat.png" 
+                    alt="WeChat">
+    </div>
     <script src="assets/js/jquery-3.4.1.min.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/common.js"></script>

@@ -2784,3 +2784,27 @@ iframe {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+.WeChat{
+    position: fixed;
+    display: none;
+    align-items:center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    margin: 0;
+    height: 100%;width: 100%;
+    background-color: #5050502e;
+    z-index: 1000;
+    text-align: center;
+}
+.WeChat img{
+    position: relative;
+    top: 50%;
+    width: 14rem;
+    height: 14rem;
+    border-radius: 5px;
+}
