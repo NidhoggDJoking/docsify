@@ -217,15 +217,12 @@
     var short = 150;
     var long = 1000;
     message = "";
-
     $this.html('');
     typeLetter();
-
     function typeLetter() {
         var char = charArray.shift();
         var rand = Math.random();
         rand = (rand + .38) * 80;
-
         if (char != "/") {
             delay = rand;
             message += char;
@@ -233,9 +230,7 @@
             delay = long;
             message = message;
         }
-
         $this.html(message);
-
         setTimeout(function() {
             if (charArray.length > 0) {
                 typeLetter();
