@@ -83,7 +83,7 @@
                         <div class="pb-0 pb-sm-2">
                             <h1 class="title title--h1 title__separate">About Me</h1>
                             <p>I'm Front end engineer from Hunan, China, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.</p>
-                            <p>My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way. </p>
+                            <p class="joking" data-message="My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way.">My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way. </p>
                         </div><!-- What -->
                         <div class="box-inner pb-0">
                             <h2 class="title title--h3">What can I do?</h2>
@@ -204,13 +204,45 @@
         </clipPath>
     </svg><!-- JavaScripts -->
     <div class="WeChat">
-        <img src="assets/WeChat/WeChat.png" 
-                    alt="WeChat">
+        <img src="assets/WeChat/WeChat.png" alt="WeChat">
     </div>
     <script src="assets/js/jquery-3.4.1.min.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/common.js"></script>
     <script src="assets/js/data.js"></script>
+    <script type="text/javascript">
+    $this = $('.joking');
+    var message = $this.attr("data-message");
+    var charArray = message.split('');
+    var short = 150;
+    var long = 1000;
+    message = "";
+
+    $this.html('');
+    typeLetter();
+
+    function typeLetter() {
+        var char = charArray.shift();
+        var rand = Math.random();
+        rand = (rand + .35) * 110;
+
+        if (char != "/") {
+            delay = rand;
+            message += char;
+        } else {
+            delay = long;
+            message = message;
+        }
+
+        $this.html(message);
+
+        setTimeout(function() {
+            if (charArray.length > 0) {
+                typeLetter();
+            }
+        }, delay);
+    }
+    </script>
 </body>
 
 </html>
