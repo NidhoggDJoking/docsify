@@ -162,9 +162,8 @@ function star(){
                 if (this.currentTime > lyric[i][0]) {
                 if(i>=1){
                         $("#subtitles").html(lyric[i][1]);
-
-                    }else{
-                        $("#subtitles").html(lyric[i][1]);
+                        // PlanB
+                        // $("#subtitles").attr('data-sub', lyric[i][1]);
 
                     }
                 };
