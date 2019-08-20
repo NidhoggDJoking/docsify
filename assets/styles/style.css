@@ -2816,6 +2816,8 @@ iframe {
     position: absolute;
     bottom:0;
     height: 7rem;
+    animation:yourmove 1s;
+    animation-fill-mode:forwards;
 }
 .subtitles{
     position: fixed;
@@ -2844,7 +2846,7 @@ iframe {
     -webkit-text-fill-color: transparent;
 }
 
-    /*PlanB*/
+/*PlanB 需要attr(data-sub)的输入输出 以废除*/
 /*.subtitles p::after{
     content: attr(data-sub);
     display: block;
@@ -2854,4 +2856,26 @@ iframe {
     top: 0;
     z-index: 2;
     -webkit-mask-image: -webkit-gradient(linear, 0 0, 0 bottom, from(yellow), to(rgba(0, 0, 255, 0)));
+}*/
+
+.con-subtitles.closesub{
+    animation:mymove 1s;
+    animation-fill-mode:forwards;
+
+}
+@keyframes mymove
+{
+100%{
+    bottom: -150px;
+}
+}
+@keyframes yourmove
+{
+
+from{
+    bottom: -150px;
+}
+to{
+    bottom: 0px;
+}
 }

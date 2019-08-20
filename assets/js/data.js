@@ -91,7 +91,8 @@ function addm(){
 				  }
 	　　　　 }
 　　});
-        star()
+        star();
+        close();
 }
 
 // 音乐进度清零
@@ -203,3 +204,8 @@ function star(){
         });
         return result;
     }
+
+
+function close(){
+    $('.con-subtitles').toggleClass('closesub');
+}
