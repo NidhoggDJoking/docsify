@@ -86,8 +86,10 @@ function addm(){
 	　　　　 if(event.keyCode == 13){
 	　　　　　　if(audio.paused){              
 				      audio.play();
+                      close();
 				  }else{
 				   	  audio.pause();
+                      close();
 				  }
 	　　　　 }
 　　});
