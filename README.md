@@ -6,6 +6,8 @@
 
 <h1 align="center">Nidhogg·D·Joking Personal Resume</h1>
 
+&nbsp; 
+
 
 ```
   ┌───┐   ┌───┬───┬───┬───┐ ┌───┬───┬───┬───┐ ┌───┬───┬───┬───┐ ┌───┬───┬───┐
