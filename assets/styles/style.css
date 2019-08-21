@@ -2906,7 +2906,7 @@ iframe {
 
 
 /* ****************画布***************** */
-.science  {
+.science {
     position: fixed;
     align-items: center;
     top: 0;
@@ -2921,7 +2921,7 @@ iframe {
     z-index: -1;
     text-align: center;
     animation: toblack 20s infinite;
-    animation-direction:alternate;
+    animation-direction: alternate;
     animation-timing-function: cubic-bezier(0.72, 0.39, 0.41, 0.73);
 }
 
@@ -2934,4 +2934,19 @@ iframe {
     to {
         background-color: #000;
     }
+}
+
+.universal {
+    position: fixed;
+    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    text-align: center;
 }
