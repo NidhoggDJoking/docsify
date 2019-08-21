@@ -113,7 +113,7 @@ function bf(){
 		  if(audio.paused){              
 		      audio.play();		// 这个就是播放  
 		  }else{
-		   	  audio.pause();	// 这个就是暂停
+		   	  audio.pause();	// 这个就是暂停    
 		  }
 	 } 
 }
@@ -125,7 +125,7 @@ function Tj(volume=0.5){
 	document.getElementById("music").volume = volume;
 }
 
-function downFile(content="assets/download/README.md", filename="README.md") {
+function downFile(content="README.md", filename="README.md") {
 	// window.open('file:///E:/New/assets/download/README.md')
 
     // 创建隐藏的可下载链接
