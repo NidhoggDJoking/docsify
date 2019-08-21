@@ -1503,8 +1503,8 @@ iframe {
     text-decoration: none;
     /*JokingAdd*/
     overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .contacts-block__item a:hover {
@@ -2786,22 +2786,24 @@ iframe {
 /*# sourceMappingURL=style.css.map */
 
 
-.WeChat{
+.WeChat {
     position: fixed;
     display: none;
-    align-items:center;
+    align-items: center;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     overflow: auto;
     margin: 0;
-    height: 100%;width: 100%;
+    height: 100%;
+    width: 100%;
     background-color: #5050502e;
     z-index: 1000;
     text-align: center;
 }
-.WeChat img{
+
+.WeChat img {
     position: relative;
     top: 43%;
     width: 14rem;
@@ -2811,37 +2813,39 @@ iframe {
 
 /* 底部歌词栏样式 */
 
-.con-subtitles{
+.con-subtitles {
     /*display: none;*/
     position: absolute;
-    bottom:0;
+    bottom: 0;
     height: 7rem;
-    animation:yourmove 1s;
-    animation-fill-mode:forwards;
+    animation: yourmove 1s;
+    animation-fill-mode: forwards;
 }
-.subtitles{
+
+.subtitles {
     position: fixed;
     width: 100%;
     height: 7rem;
     background: #00000094;
     text-align: center;
-    align-items:center;
+    align-items: center;
     z-index: 2;
-}   
-.subtitles p{
+}
+
+.subtitles p {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     display: block;
     text-shadow: 0px 0px 20px #ffffff8c;
     color: #fff;
     font-weight: 400;
     font-size: 1.5rem;
     letter-spacing: .1rem;
-    margin-bottom:0rem;
+    margin-bottom: 0rem;
     /* PlanA*/
-    background-image: -webkit-linear-gradient(bottom,#00ff37,#f0ff00,#ff036c);
+    background-image: -webkit-linear-gradient(bottom, #00ff37, #f0ff00, #ff036c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -2858,44 +2862,62 @@ iframe {
     -webkit-mask-image: -webkit-gradient(linear, 0 0, 0 bottom, from(yellow), to(rgba(0, 0, 255, 0)));
 }*/
 
-.con-subtitles.closesub{
-    animation:mymove 1s;
-    animation-fill-mode:forwards;
+.con-subtitles.closesub {
+    animation: mymove 1s;
+    animation-fill-mode: forwards;
 
 }
-@keyframes mymove
-{
-100%{
-    bottom: -150px;
-}
-}
-@keyframes yourmove
-{
 
-from{
-    bottom: -150px;
+@keyframes mymove {
+    100% {
+        bottom: -150px;
+    }
 }
-to{
-    bottom: 0px;
-}
+
+@keyframes yourmove {
+
+    from {
+        bottom: -150px;
+    }
+
+    to {
+        bottom: 0px;
+    }
 }
 
 /*滚动条*****************************************************- */
 
-::-webkit-scrollbar-track
-    {
-       background-color: #f0f0f6;
-       box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.12);
-    }
-    /*定义滚动条高宽及背景*/
-    ::-webkit-scrollbar
-    {
-        width: 8px;
-        background-color: rgba(0, 0, 0, 0.34);
-    }
-    /*定义滚动条*/
-    ::-webkit-scrollbar-thumb
-    {
-        border-radius: 10px;
-        background: linear-gradient(to bottom,#ff1561,#fbff04,#0fff4e,#00a1ff);
-    }
+::-webkit-scrollbar-track {
+    background-color: #f0f0f6;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.12);
+}
+
+/*定义滚动条高宽及背景*/
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(0, 0, 0, 0.34);
+}
+
+/*定义滚动条*/
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #ff1561, #fbff04, #0fff4e, #00a1ff);
+}
+
+
+/* ****************画布***************** */
+.science  {
+    position: fixed;
+    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #5050502e;
+    z-index: -1;
+    text-align: center;
+}
