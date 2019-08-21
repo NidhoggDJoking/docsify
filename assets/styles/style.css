@@ -2920,4 +2920,17 @@ iframe {
     background-color: #5050502e;
     z-index: -1;
     text-align: center;
+    animation: toblack 20s infinite;
+    animation-direction:alternate;
+}
+
+@keyframes toblack {
+
+    from {
+        background-color: #0000;
+    }
+
+    to {
+        background-color: #000;
+    }
 }
