@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">Nidhogg·D·Joking Personal Resume</h1>
+<h1 align="center">Nidhogg·D·Joking</h1>
 
 &nbsp; 
 
