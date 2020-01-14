@@ -125,7 +125,7 @@ function Tj(volume=0.5){
 	document.getElementById("music").volume = volume;
 }
 
-function downFile(content="README.md", filename="README.md") {
+function downFile(content="这是一个靠JS生成的文件(我这个人比较懒没做简历)。", filename="NidhoggDJoking.txt") {
 	// window.open('file:///E:/New/assets/download/README.md')
 
     // 创建隐藏的可下载链接
