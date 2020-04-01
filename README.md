@@ -1,5 +1,5 @@
-### 最初的做法，最初的心
-
 ### Github Pages 在国内跑起来很吃力
+
+[码云地址](https://nidhoggdjoking.gitee.io/eternal)
 
 
