@@ -2,6 +2,8 @@
 
 ### Github上不在更新了
 
+### JS 部分 压缩了
+
 
 [码云地址](https://nidhoggdjoking.gitee.io/eternal)
 
