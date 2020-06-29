@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Color Plus</title>
+</head>
+<style type="text/css">
+    * {
+        box-sizing: border-box;
+    }
+    
+    .color-picker {
+        width: 330px;
+        height: 442px;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 10px 40px rgba(10, 20, 70, 0.25);
+        background-color: #ffffff;
+    }
+    
+    .sat-lightness-picker {
+        position: relative;
+        height: 300px;
+        width: 300px;
+        -webkit-user-drag: none;
+        user-select: none;
+    }
+    
+    .white-overlay,
+    .black-overlay,
+    .color-underlay {
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .white-overlay {
+        background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%);
+        z-index: 1;
+    }
+    
+    .black-overlay {
+        background: linear-gradient(to bottom, transparent 0%, #000 100%);
+        z-index: 2;
+    }
+    
+    .color-underlay {
+        background: #ff0000;
+        z-index: 0;
+    }
+    
+    .sl-handle {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        margin-left: -6px;
+        margin-top: -6px;
+        background-color: transparent;
+        z-index: 4;
+        border-radius: 50%;
+        transform: translate3d(300px, 0, 0);
+        box-shadow: 0 0 0 3px white, 0 1px 3px 3px rgba(5, 10, 70, 0.33);
+    }
+    
+    .sl-handle:hover {
+        cursor: pointer;
+    }
+    
+    .sl-handle:active {
+        transform: scale(1.15);
+    }
+    
+    .hue-picker {
+        height: 15px;
+        width: 100%;
+        margin-top: 15px;
+        background: linear-gradient(to right, red 0%, #ff0 17%, lime 33%, cyan 50%, blue 66%, #f0f 83%, red 100%);
+        box-shadow: inset 0 0 0 3px white, 0 1px 4px rgba(5, 10, 70, 0.25);
+    }
+    
+    .transparency {
+        width: 99%;
+        margin-left: 2px;
+        background: transparent;
+        /*background: url(king.jpg);*/
+        box-shadow: inset 0 0 0 2px white, 0px 0px 9px rgba(5, 10, 70, 0.26);
+        height: 13px;
+        border-radius: 20px;
+    }
+    
+    .hue-picker input[type="range"] {
+        -webkit-appearance: none;
+        width: 100%;
+        margin: 0;
+        background: transparent;
+    }
+    
+    .transparency input[type="range"] {
+        position: relative;
+        width: 295px;
+        height: 9px;
+        border-radius: 20px;
+        top: -6px;
+    }
+    
+    .hue-picker input[type="range"]:focus {
+        outline: none;
+    }
+    
+    .hue-picker input[type="range"]::-webkit-slider-runnable-track {
+        background: transparent;
+        border: none;
+    }
+    
+    .hue-picker input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 12px;
+        height: 12px;
+        margin-bottom: 3px;
+        background-color: transparent;
+        border-radius: 50%;
+        box-shadow: 0 0 0 3px white, 0 1px 3px 3px rgba(5, 10, 70, 0.33);
+    }
+    
+    .transparency input[type="range"]::-webkit-slider-thumb {
+        margin-bottom: 1px;
+    }
+    
+    .color-output {
+        display: flex;
+        margin-top: 15px;
+        background-image: url(king.jpg);
+        background-position: 3px 4px;
+    }
+    
+    .color-output input {
+        box-shadow: inset 0 0 0 3px white, 0 1px 4px rgba(5, 10, 70, 0.1);
+        border: none;
+        width: 190px;
+        font-size: 16px;
+        font-family: "Menlo", monospace;
+        padding: 0 15px;
+        outline: none;
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .selected-color {
+        width: 100%;
+        height: 44px;
+        box-shadow: inset 0 0 0 3px #f9f9f9, 0 1px 4px rgba(5, 10, 70, 0.1);
+        background-color: cyan;
+    }
+</style>
+
+<body id="colorSample">
+    <div class="color-picker" id="colorPicker">
+        <div class="sat-lightness-picker" id="slPicker" draggable="false">
+            <div class="sl-handle" id="slInput" draggable="false"></div>
+            <div class="white-overlay"></div>
+            <div class="black-overlay"></div>
+            <div id="hueUnderlay" class="color-underlay"></div>
+        </div>
+        <div class="hue-picker">
+            <input id="hueRotation" min="0" max="360" value="0" type="range">
+        </div>
+        <div class="hue-picker transparency">
+            <input id="transparency" min="0" max="360" value="360" type="range">
+        </div>
+        <div class="color-output">
+            <div class="selected-color" id="selectedColor"></div>
+            <input type="text" id="hexInput" disabled="disabled">
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    const hueRotationInput = document.getElementById('hueRotation');
+    const hueUnderlay = document.getElementById('hueUnderlay');
+    const transparency = document.getElementById('transparency');
+    const slInput = document.getElementById('slInput');
+    const slPicker = document.getElementById('slPicker');
+    const selectedColor = document.getElementById('selectedColor');
+    const hexInput = document.getElementById('hexInput');
+
+    const PICKER_HEIGHT = 300;
+    const PICKER_WIDTH = 300;
+    let currentHue = 0;
+    // 颜色渐变条0到1 从左到右
+    let currentSaturation = 1;
+    let currentValue = 1;
+    let mouseDown = false;
+    var r, g, b, h = 1;
+    const rgbToHex = (r, g, b) => {
+        return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    }
+
+    function aToHex(num) {
+        return Math.round(num * 255).toString(16);
+    }
+    const rgbaTohex = (r, g, b, a) => {
+        return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1) + Math.round(a * 255).toString(16);
+    }
+
+    function hexToR(h) {
+        return parseInt((cutHex(h)).substring(0, 2), 16)
+    }
+
+    function hexToG(h) {
+        return parseInt((cutHex(h)).substring(2, 4), 16)
+    }
+
+    function hexToB(h) {
+        return parseInt((cutHex(h)).substring(4, 6), 16)
+    }
+
+    function cutHex(h) {
+        return h.charAt(0) == "#" ? h.substring(1, 7) : h
+    }
+
+    function hexToRgba(hex, opacity) {
+        return "rgba(" + parseInt("0x" + hex.slice(1, 3)) + "," + parseInt("0x" + hex.slice(3, 5)) + "," + parseInt("0x" + hex.slice(5, 7)) + "," + opacity + ")";
+    }
+
+    const hsvToRgb = (h, s, v) => {
+        var r, g, b;
+
+        var i = Math.floor(h * 6);
+        var f = h * 6 - i;
+        var p = v * (1 - s);
+        var q = v * (1 - f * s);
+        var t = v * (1 - (1 - f) * s);
+
+        switch (i % 6) {
+            case 0:
+                r = v, g = t, b = p;
+                break;
+            case 1:
+                r = q, g = v, b = p;
+                break;
+            case 2:
+                r = p, g = v, b = t;
+                break;
+            case 3:
+                r = p, g = q, b = v;
+                break;
+            case 4:
+                r = t, g = p, b = v;
+                break;
+            case 5:
+                r = v, g = p, b = q;
+                break;
+        }
+
+        return [Math.floor(r * 255), Math.floor(g * 255), Math.floor(b * 255)];
+    }
+
+    const getCurrentColor = () => {
+        return hsvToRgb(currentHue, currentSaturation, currentValue);
+    }
+
+    const updateColor = () => {
+        h = (transparency.value / 360).toFixed(2);
+
+        selectedColor.setAttribute('style', `background-color: rgba(${getCurrentColor()},${h})`);
+        // hexInput.value = rgbToHex(...getCurrentColor()); /*Hex写法*/
+        // hexInput.value = "rgb("+(getCurrentColor())+","+h+")"; /*Rgb写法*/
+        // transparency.value/360==1?hexInput.value = rgbToHex(...getCurrentColor()) : hexInput.value = "rgba("+(getCurrentColor())+","+h+")";
+        h = aToHex(h);
+        if (h == "ff") h = "";
+        hexInput.value = rgbToHex(...getCurrentColor()) + h;
+        transparency.setAttribute('style', `background:linear-gradient(to right, transparent 0%, rgb(${getCurrentColor()}) 100%`);
+    }
+
+    hueRotationInput.oninput = () => {
+        currentHue = (hueRotationInput.value / 360);
+        hueUnderlay.setAttribute('style', `background: rgb(${hsvToRgb(currentHue, 1, 1)})`); //布置取色板
+        transparency.setAttribute('style', `background:linear-gradient(to right, transparent 0%, rgb(${hsvToRgb(currentHue, 1, 1)}) 100%`);
+        updateColor();
+    }
+    transparency.oninput = () => {
+        updateColor();
+
+    }
+
+    const bindSlInputEvents = () => {
+        const offsetX = slPicker.offsetLeft;
+        const offsetY = slPicker.offsetTop;
+
+        const setSlPosition = (xPos, yPos, setting) => {
+            let x = xPos - offsetX;
+            let y = yPos - offsetY;
+
+            if (x <= 0) {
+                x = 0;
+            }
+            if (x >= PICKER_WIDTH) {
+                x = PICKER_WIDTH;
+            }
+            if (y <= 0) {
+                y = 0
+            }
+            if (y >= PICKER_HEIGHT) {
+                y = PICKER_HEIGHT;
+            }
+
+            currentSaturation = (x / PICKER_WIDTH);
+            currentValue = (1 - (y / PICKER_HEIGHT));
+            slInput.setAttribute('style', `transform: translate3d(${x}px, ${y}px, 1px)`);
+        }
+
+        const dragSlInput = e => {
+            if (mouseDown) {
+                setSlPosition(e.pageX, e.pageY);
+                updateColor();
+            }
+        }
+
+        document.onmousemove = dragSlInput;
+
+        slPicker.onmouseup = () => {
+            mouseDown = false;
+        }
+        document.onmouseup = () => {
+                mouseDown = false;
+            }
+            //点击取色面板
+        slPicker.onmousedown = e => {
+            mouseDown = true;
+            setSlPosition(e.pageX, e.pageY);
+            updateColor();
+        }
+
+        updateColor();
+    }
+
+    window.onresize = bindSlInputEvents;
+
+    bindSlInputEvents();
+</script>
+
+</html>
