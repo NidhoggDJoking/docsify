@@ -1,0 +1,26 @@
+    /* 自定义代码块 */
+    /* 边框 */
+    .markdown-section pre{
+        background-color:#2d2d2d;
+    }
+    /* 背景 */
+    .markdown-section pre>code{
+        background-color:#282c34;
+        color: #ffffff;
+    }
+    .token.function, .token.keyword {
+        color: #f08d49;
+    }
+    /* 标点 */
+    .token.punctuation {
+        color: #cc99cd;
+    }
+    .token.placeholder, .token.variable {
+        color: #ffee06;
+    }
+    .token.boolean, .token.number {
+        color: #fb0000;
+    }
+    .token.string {
+        color: #7ec699;
+    }

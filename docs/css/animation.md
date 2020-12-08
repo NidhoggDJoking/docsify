@@ -1,6 +1,6 @@
 ## CSS animation
 
-!> 注释：Internet Explorer 9，以及更早的版本，不支持 @keyframe 规则或 animation 属性。
+!> 注释：Internet Explorer 9，以及更早的版本，不支持 `@keyframe` 规则或 `animation` 属性。
 
 ```css
 div
@@ -128,6 +128,21 @@ transform: rotateX(120deg);
 
 
 !> 3D旋转的Z轴rotateZ相当于2D旋转的rotate   `transform: rotate(120deg) == transform: rotateZ(120deg)`
+
+<br>
+
+#### CSS3动画结束后停在最后一帧
+
+?> `animation-fill-mode: forwards;`   保留最后一帧的状态
+
+| 值 |描述 |
+| :-------- | :--------|
+| none | 不改变默认行为(默认) |
+| forwards | 当动画完成后，保持最后一个属性值（在最后一个关键帧中定义） |
+| backwards | 在 animation-delay 所指定的一段时间内，在动画显示之前，应用开始属性值（在第一个关键帧中定义） |
+| both | 向前和向后填充模式都被应用 |
+
+<br>
 
 #### [W3C传送门](https://www.w3school.com.cn/css3/css3_3dtransform.asp)
 

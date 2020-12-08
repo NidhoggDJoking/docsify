@@ -45,3 +45,58 @@ add.toString()
 
 // 返回 13
 ```
+```javascript
+class Point {
+    constructor() { }
+}
+Point.prototype.name = 'Joking';
+
+let p1 = new Point();
+console.log(p1.name);   //Joking
+
+let p2 = new Point();
+console.log(p2.name);   //Joking
+```
+>#### constructor方法
+
+?> `constructor`方法是类的默认方法，通过`new`命令生成对象实例时，自动调用该方法。一个类必须有`constructor`方法，如果没有显式定义，一个空的`constructor`方法会被默认添加。
+
+!> `constructor`方法默认返回实例对象（即this）
+
+```javascript
+class Point {
+	constructor() {
+	        return new Date();
+	        //return Object.create(null);
+	    }
+    }
+	let p = new Point();   //返回为Date对象
+	console.log(p); // Tue Dec 01 2020 17:30:00 GMT+0800 (中国标准时间)
+```
+
+### ES2019 : 私有类字段
+
+<br>
+
+>#### 类属性在默认情况下是公共的，可以被外部类检测或修改。在ES2019中，增加了定义私有类字段的能力，写法是使用一个#作为前缀。
+
+```javascript
+class ClassWithPrivateField {
+  #privateField
+}
+
+class ClassWithPrivateMethod {
+  #privateMethod() { 
+    return 'hello world'
+ }
+}
+
+class ClassWithPrivateStaticField {
+  static #PRIVATE_STATIC_FIELD
+}
+```
+
+
+<style>
+@import url('static/css/code2.css');
+</style>

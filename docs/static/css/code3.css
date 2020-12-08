@@ -1,0 +1,44 @@
+    /* 自定义代码块 */
+    /* 边框 */
+    
+    .markdown-section pre {
+        background-color: #2d2d2d;
+    }
+    /* 背景 */
+    
+    .markdown-section pre>code {
+        background-color: #2d2d2d;
+        color: #ffffff;
+    }
+    
+    .token.function,
+    .token.keyword {
+        color: #79dcfb;
+    }
+    /* 注释 */
+    
+    .token.cdata,
+    .token.comment,
+    .token.doctype,
+    .token.prolog {
+        color: #ffffff;
+    }
+    /* 标点 */
+    
+    .token.punctuation {
+        color: #fff;
+    }
+    
+    .token.placeholder,
+    .token.variable {
+        color: #ffee06;
+    }
+    
+    .token.boolean,
+    .token.number {
+        color: #ffea47;
+    }
+    
+    .token.string {
+        color: #00de65;
+    }

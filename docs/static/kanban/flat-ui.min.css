@@ -3,6 +3,18 @@
  * Copyright 2013-2015 Designmodo, Inc.
  */
 
+@import url('font/iconfont.css');
+
+.icon {
+    width: 25px;
+    height: 25px;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
 @font-face {
     font-family: Lato;
     font-style: normal;
@@ -2493,7 +2505,7 @@ fieldset[disabled] .input-group-btn .btn-default.active {
 }
 .progress {
     height: 12px;
-    background: #ebedef;
+    background: linear-gradient(45deg,#FA8BFF 0%,#2BD2FF 52%,#2BFF88 90%);
     border-radius: 32px;
     box-shadow: none
 }

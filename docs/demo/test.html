@@ -1,0 +1,4045 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <title>CodePen - Only CSS: Healing Star</title>
+    <style>
+        /* body {
+            background: radial-gradient(ellipse at center, #1b2749 0%, #090a0f 80%);
+            height: 100vh;
+            overflow: hidden;
+        } */
+        
+        .ball {
+            position: absolute;
+            top: calc(50% - 100px);
+            left: calc(50% - 100px);
+            width: 200px;
+            height: 200px;
+            -webkit-clip-path: circle(200px at center);
+            clip-path: circle(200px at center);
+        }
+        
+        .star {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            -webkit-animation: bling 6000ms linear infinite;
+            animation: bling 6000ms linear infinite;
+        }
+        
+        .star:nth-child(1) {
+            top: calc(50% - -2px);
+            left: calc(50% - -90px);
+            -webkit-animation-delay: -3632ms;
+            animation-delay: -3632ms;
+        }
+        
+        .star:nth-child(2) {
+            top: calc(50% - -136px);
+            left: calc(50% - 155px);
+            -webkit-animation-delay: -1046ms;
+            animation-delay: -1046ms;
+        }
+        
+        .star:nth-child(3) {
+            top: calc(50% - 167px);
+            left: calc(50% - 15px);
+            -webkit-animation-delay: -3030ms;
+            animation-delay: -3030ms;
+        }
+        
+        .star:nth-child(4) {
+            top: calc(50% - 87px);
+            left: calc(50% - -128px);
+            -webkit-animation-delay: -2868ms;
+            animation-delay: -2868ms;
+        }
+        
+        .star:nth-child(5) {
+            top: calc(50% - -66px);
+            left: calc(50% - 168px);
+            -webkit-animation-delay: -1338ms;
+            animation-delay: -1338ms;
+        }
+        
+        .star:nth-child(6) {
+            top: calc(50% - -144px);
+            left: calc(50% - -45px);
+            -webkit-animation-delay: -4263ms;
+            animation-delay: -4263ms;
+        }
+        
+        .star:nth-child(7) {
+            top: calc(50% - -16px);
+            left: calc(50% - 38px);
+            -webkit-animation-delay: -3489ms;
+            animation-delay: -3489ms;
+        }
+        
+        .star:nth-child(8) {
+            top: calc(50% - -185px);
+            left: calc(50% - -135px);
+            -webkit-animation-delay: -5754ms;
+            animation-delay: -5754ms;
+        }
+        
+        .star:nth-child(9) {
+            top: calc(50% - -77px);
+            left: calc(50% - 69px);
+            -webkit-animation-delay: -4581ms;
+            animation-delay: -4581ms;
+        }
+        
+        .star:nth-child(10) {
+            top: calc(50% - 128px);
+            left: calc(50% - 161px);
+            -webkit-animation-delay: -4444ms;
+            animation-delay: -4444ms;
+        }
+        
+        .star:nth-child(11) {
+            top: calc(50% - 182px);
+            left: calc(50% - -65px);
+            -webkit-animation-delay: -1471ms;
+            animation-delay: -1471ms;
+        }
+        
+        .star:nth-child(12) {
+            top: calc(50% - 91px);
+            left: calc(50% - -25px);
+            -webkit-animation-delay: -2771ms;
+            animation-delay: -2771ms;
+        }
+        
+        .star:nth-child(13) {
+            top: calc(50% - 32px);
+            left: calc(50% - -156px);
+            -webkit-animation-delay: -2720ms;
+            animation-delay: -2720ms;
+        }
+        
+        .star:nth-child(14) {
+            top: calc(50% - 46px);
+            left: calc(50% - 175px);
+            -webkit-animation-delay: -4901ms;
+            animation-delay: -4901ms;
+        }
+        
+        .star:nth-child(15) {
+            top: calc(50% - 92px);
+            left: calc(50% - -116px);
+            -webkit-animation-delay: -1342ms;
+            animation-delay: -1342ms;
+        }
+        
+        .star:nth-child(16) {
+            top: calc(50% - -72px);
+            left: calc(50% - -144px);
+            -webkit-animation-delay: -1773ms;
+            animation-delay: -1773ms;
+        }
+        
+        .star:nth-child(17) {
+            top: calc(50% - -169px);
+            left: calc(50% - -95px);
+            -webkit-animation-delay: -4378ms;
+            animation-delay: -4378ms;
+        }
+        
+        .star:nth-child(18) {
+            top: calc(50% - -173px);
+            left: calc(50% - -12px);
+            -webkit-animation-delay: -3569ms;
+            animation-delay: -3569ms;
+        }
+        
+        .star:nth-child(19) {
+            top: calc(50% - -144px);
+            left: calc(50% - -58px);
+            -webkit-animation-delay: -941ms;
+            animation-delay: -941ms;
+        }
+        
+        .star:nth-child(20) {
+            top: calc(50% - 65px);
+            left: calc(50% - -144px);
+            -webkit-animation-delay: -218ms;
+            animation-delay: -218ms;
+        }
+        
+        .star:nth-child(21) {
+            top: calc(50% - 154px);
+            left: calc(50% - -138px);
+            -webkit-animation-delay: -1936ms;
+            animation-delay: -1936ms;
+        }
+        
+        .star:nth-child(22) {
+            top: calc(50% - -159px);
+            left: calc(50% - -107px);
+            -webkit-animation-delay: -399ms;
+            animation-delay: -399ms;
+        }
+        
+        .star:nth-child(23) {
+            top: calc(50% - -23px);
+            left: calc(50% - 171px);
+            -webkit-animation-delay: -4477ms;
+            animation-delay: -4477ms;
+        }
+        
+        .star:nth-child(24) {
+            top: calc(50% - -168px);
+            left: calc(50% - -107px);
+            -webkit-animation-delay: -3210ms;
+            animation-delay: -3210ms;
+        }
+        
+        .star:nth-child(25) {
+            top: calc(50% - -58px);
+            left: calc(50% - 114px);
+            -webkit-animation-delay: -2304ms;
+            animation-delay: -2304ms;
+        }
+        
+        .star:nth-child(26) {
+            top: calc(50% - 72px);
+            left: calc(50% - -184px);
+            -webkit-animation-delay: -1035ms;
+            animation-delay: -1035ms;
+        }
+        
+        .star:nth-child(27) {
+            top: calc(50% - 181px);
+            left: calc(50% - -61px);
+            -webkit-animation-delay: -1254ms;
+            animation-delay: -1254ms;
+        }
+        
+        .star:nth-child(28) {
+            top: calc(50% - -37px);
+            left: calc(50% - -114px);
+            -webkit-animation-delay: -5945ms;
+            animation-delay: -5945ms;
+        }
+        
+        .star:nth-child(29) {
+            top: calc(50% - 152px);
+            left: calc(50% - -97px);
+            -webkit-animation-delay: -3516ms;
+            animation-delay: -3516ms;
+        }
+        
+        .star:nth-child(30) {
+            top: calc(50% - -177px);
+            left: calc(50% - -109px);
+            -webkit-animation-delay: -2581ms;
+            animation-delay: -2581ms;
+        }
+        
+        .star:nth-child(31) {
+            top: calc(50% - 190px);
+            left: calc(50% - -68px);
+            -webkit-animation-delay: -3331ms;
+            animation-delay: -3331ms;
+        }
+        
+        .star:nth-child(32) {
+            top: calc(50% - 189px);
+            left: calc(50% - 124px);
+            -webkit-animation-delay: -2145ms;
+            animation-delay: -2145ms;
+        }
+        
+        .star:nth-child(33) {
+            top: calc(50% - 172px);
+            left: calc(50% - -59px);
+            -webkit-animation-delay: -3662ms;
+            animation-delay: -3662ms;
+        }
+        
+        .star:nth-child(34) {
+            top: calc(50% - -154px);
+            left: calc(50% - -125px);
+            -webkit-animation-delay: -3613ms;
+            animation-delay: -3613ms;
+        }
+        
+        .star:nth-child(35) {
+            top: calc(50% - 149px);
+            left: calc(50% - 43px);
+            -webkit-animation-delay: -4333ms;
+            animation-delay: -4333ms;
+        }
+        
+        .star:nth-child(36) {
+            top: calc(50% - 134px);
+            left: calc(50% - 84px);
+            -webkit-animation-delay: -3295ms;
+            animation-delay: -3295ms;
+        }
+        
+        .star:nth-child(37) {
+            top: calc(50% - 199px);
+            left: calc(50% - 105px);
+            -webkit-animation-delay: -929ms;
+            animation-delay: -929ms;
+        }
+        
+        .star:nth-child(38) {
+            top: calc(50% - -65px);
+            left: calc(50% - 20px);
+            -webkit-animation-delay: -2593ms;
+            animation-delay: -2593ms;
+        }
+        
+        .star:nth-child(39) {
+            top: calc(50% - -163px);
+            left: calc(50% - -182px);
+            -webkit-animation-delay: -2906ms;
+            animation-delay: -2906ms;
+        }
+        
+        .star:nth-child(40) {
+            top: calc(50% - -122px);
+            left: calc(50% - 30px);
+            -webkit-animation-delay: -1358ms;
+            animation-delay: -1358ms;
+        }
+        
+        .star:nth-child(41) {
+            top: calc(50% - 62px);
+            left: calc(50% - -99px);
+            -webkit-animation-delay: -189ms;
+            animation-delay: -189ms;
+        }
+        
+        .star:nth-child(42) {
+            top: calc(50% - 18px);
+            left: calc(50% - -69px);
+            -webkit-animation-delay: -5152ms;
+            animation-delay: -5152ms;
+        }
+        
+        .star:nth-child(43) {
+            top: calc(50% - -12px);
+            left: calc(50% - 49px);
+            -webkit-animation-delay: -4272ms;
+            animation-delay: -4272ms;
+        }
+        
+        .star:nth-child(44) {
+            top: calc(50% - -35px);
+            left: calc(50% - 173px);
+            -webkit-animation-delay: -2068ms;
+            animation-delay: -2068ms;
+        }
+        
+        .star:nth-child(45) {
+            top: calc(50% - 180px);
+            left: calc(50% - 98px);
+            -webkit-animation-delay: -2673ms;
+            animation-delay: -2673ms;
+        }
+        
+        .star:nth-child(46) {
+            top: calc(50% - -103px);
+            left: calc(50% - -3px);
+            -webkit-animation-delay: -1889ms;
+            animation-delay: -1889ms;
+        }
+        
+        .star:nth-child(47) {
+            top: calc(50% - -138px);
+            left: calc(50% - 91px);
+            -webkit-animation-delay: -2492ms;
+            animation-delay: -2492ms;
+        }
+        
+        .star:nth-child(48) {
+            top: calc(50% - 51px);
+            left: calc(50% - 103px);
+            -webkit-animation-delay: -3048ms;
+            animation-delay: -3048ms;
+        }
+        
+        .star:nth-child(49) {
+            top: calc(50% - -104px);
+            left: calc(50% - 20px);
+            -webkit-animation-delay: -234ms;
+            animation-delay: -234ms;
+        }
+        
+        .star:nth-child(50) {
+            top: calc(50% - -126px);
+            left: calc(50% - -37px);
+            -webkit-animation-delay: -4585ms;
+            animation-delay: -4585ms;
+        }
+        
+        .star:nth-child(51) {
+            top: calc(50% - 87px);
+            left: calc(50% - -37px);
+            -webkit-animation-delay: -2195ms;
+            animation-delay: -2195ms;
+        }
+        
+        .star:nth-child(52) {
+            top: calc(50% - 102px);
+            left: calc(50% - 7px);
+            -webkit-animation-delay: -167ms;
+            animation-delay: -167ms;
+        }
+        
+        .star:nth-child(53) {
+            top: calc(50% - 71px);
+            left: calc(50% - 87px);
+            -webkit-animation-delay: -2715ms;
+            animation-delay: -2715ms;
+        }
+        
+        .star:nth-child(54) {
+            top: calc(50% - 48px);
+            left: calc(50% - 151px);
+            -webkit-animation-delay: -786ms;
+            animation-delay: -786ms;
+        }
+        
+        .star:nth-child(55) {
+            top: calc(50% - -79px);
+            left: calc(50% - -55px);
+            -webkit-animation-delay: -3856ms;
+            animation-delay: -3856ms;
+        }
+        
+        .star:nth-child(56) {
+            top: calc(50% - 24px);
+            left: calc(50% - 152px);
+            -webkit-animation-delay: -215ms;
+            animation-delay: -215ms;
+        }
+        
+        .star:nth-child(57) {
+            top: calc(50% - 75px);
+            left: calc(50% - -149px);
+            -webkit-animation-delay: -101ms;
+            animation-delay: -101ms;
+        }
+        
+        .star:nth-child(58) {
+            top: calc(50% - 94px);
+            left: calc(50% - 31px);
+            -webkit-animation-delay: -2331ms;
+            animation-delay: -2331ms;
+        }
+        
+        .star:nth-child(59) {
+            top: calc(50% - 56px);
+            left: calc(50% - 57px);
+            -webkit-animation-delay: -804ms;
+            animation-delay: -804ms;
+        }
+        
+        .star:nth-child(60) {
+            top: calc(50% - -76px);
+            left: calc(50% - -126px);
+            -webkit-animation-delay: -2359ms;
+            animation-delay: -2359ms;
+        }
+        
+        .star:nth-child(61) {
+            top: calc(50% - -6px);
+            left: calc(50% - 141px);
+            -webkit-animation-delay: -4577ms;
+            animation-delay: -4577ms;
+        }
+        
+        .star:nth-child(62) {
+            top: calc(50% - 37px);
+            left: calc(50% - -185px);
+            -webkit-animation-delay: -208ms;
+            animation-delay: -208ms;
+        }
+        
+        .star:nth-child(63) {
+            top: calc(50% - -131px);
+            left: calc(50% - 105px);
+            -webkit-animation-delay: -5661ms;
+            animation-delay: -5661ms;
+        }
+        
+        .star:nth-child(64) {
+            top: calc(50% - 83px);
+            left: calc(50% - 64px);
+            -webkit-animation-delay: -208ms;
+            animation-delay: -208ms;
+        }
+        
+        .star:nth-child(65) {
+            top: calc(50% - -195px);
+            left: calc(50% - 148px);
+            -webkit-animation-delay: -3202ms;
+            animation-delay: -3202ms;
+        }
+        
+        .star:nth-child(66) {
+            top: calc(50% - -117px);
+            left: calc(50% - -101px);
+            -webkit-animation-delay: -4989ms;
+            animation-delay: -4989ms;
+        }
+        
+        .star:nth-child(67) {
+            top: calc(50% - 49px);
+            left: calc(50% - 198px);
+            -webkit-animation-delay: -1970ms;
+            animation-delay: -1970ms;
+        }
+        
+        .star:nth-child(68) {
+            top: calc(50% - 114px);
+            left: calc(50% - 129px);
+            -webkit-animation-delay: -1860ms;
+            animation-delay: -1860ms;
+        }
+        
+        .star:nth-child(69) {
+            top: calc(50% - 82px);
+            left: calc(50% - -155px);
+            -webkit-animation-delay: -3254ms;
+            animation-delay: -3254ms;
+        }
+        
+        .star:nth-child(70) {
+            top: calc(50% - 135px);
+            left: calc(50% - -193px);
+            -webkit-animation-delay: -4693ms;
+            animation-delay: -4693ms;
+        }
+        
+        .star:nth-child(71) {
+            top: calc(50% - -187px);
+            left: calc(50% - 70px);
+            -webkit-animation-delay: -4012ms;
+            animation-delay: -4012ms;
+        }
+        
+        .star:nth-child(72) {
+            top: calc(50% - -29px);
+            left: calc(50% - -28px);
+            -webkit-animation-delay: -5077ms;
+            animation-delay: -5077ms;
+        }
+        
+        .star:nth-child(73) {
+            top: calc(50% - -95px);
+            left: calc(50% - 188px);
+            -webkit-animation-delay: -116ms;
+            animation-delay: -116ms;
+        }
+        
+        .star:nth-child(74) {
+            top: calc(50% - -15px);
+            left: calc(50% - -9px);
+            -webkit-animation-delay: -4008ms;
+            animation-delay: -4008ms;
+        }
+        
+        .star:nth-child(75) {
+            top: calc(50% - -28px);
+            left: calc(50% - -132px);
+            -webkit-animation-delay: -4030ms;
+            animation-delay: -4030ms;
+        }
+        
+        .star:nth-child(76) {
+            top: calc(50% - 120px);
+            left: calc(50% - 66px);
+            -webkit-animation-delay: -1295ms;
+            animation-delay: -1295ms;
+        }
+        
+        .star:nth-child(77) {
+            top: calc(50% - 199px);
+            left: calc(50% - 114px);
+            -webkit-animation-delay: -4476ms;
+            animation-delay: -4476ms;
+        }
+        
+        .star:nth-child(78) {
+            top: calc(50% - -7px);
+            left: calc(50% - -121px);
+            -webkit-animation-delay: -3677ms;
+            animation-delay: -3677ms;
+        }
+        
+        .star:nth-child(79) {
+            top: calc(50% - -166px);
+            left: calc(50% - -128px);
+            -webkit-animation-delay: -4286ms;
+            animation-delay: -4286ms;
+        }
+        
+        .star:nth-child(80) {
+            top: calc(50% - -108px);
+            left: calc(50% - 185px);
+            -webkit-animation-delay: -4ms;
+            animation-delay: -4ms;
+        }
+        
+        .star:nth-child(81) {
+            top: calc(50% - 107px);
+            left: calc(50% - -103px);
+            -webkit-animation-delay: -4059ms;
+            animation-delay: -4059ms;
+        }
+        
+        .star:nth-child(82) {
+            top: calc(50% - 182px);
+            left: calc(50% - 146px);
+            -webkit-animation-delay: -394ms;
+            animation-delay: -394ms;
+        }
+        
+        .star:nth-child(83) {
+            top: calc(50% - -36px);
+            left: calc(50% - -137px);
+            -webkit-animation-delay: -2739ms;
+            animation-delay: -2739ms;
+        }
+        
+        .star:nth-child(84) {
+            top: calc(50% - -110px);
+            left: calc(50% - 191px);
+            -webkit-animation-delay: -750ms;
+            animation-delay: -750ms;
+        }
+        
+        .star:nth-child(85) {
+            top: calc(50% - -42px);
+            left: calc(50% - -60px);
+            -webkit-animation-delay: -2552ms;
+            animation-delay: -2552ms;
+        }
+        
+        .star:nth-child(86) {
+            top: calc(50% - -66px);
+            left: calc(50% - -118px);
+            -webkit-animation-delay: -239ms;
+            animation-delay: -239ms;
+        }
+        
+        .star:nth-child(87) {
+            top: calc(50% - 26px);
+            left: calc(50% - -95px);
+            -webkit-animation-delay: -3426ms;
+            animation-delay: -3426ms;
+        }
+        
+        .star:nth-child(88) {
+            top: calc(50% - -128px);
+            left: calc(50% - 8px);
+            -webkit-animation-delay: -2189ms;
+            animation-delay: -2189ms;
+        }
+        
+        .star:nth-child(89) {
+            top: calc(50% - -154px);
+            left: calc(50% - 45px);
+            -webkit-animation-delay: -5599ms;
+            animation-delay: -5599ms;
+        }
+        
+        .star:nth-child(90) {
+            top: calc(50% - 161px);
+            left: calc(50% - 72px);
+            -webkit-animation-delay: -182ms;
+            animation-delay: -182ms;
+        }
+        
+        .star:nth-child(91) {
+            top: calc(50% - 134px);
+            left: calc(50% - 59px);
+            -webkit-animation-delay: -1378ms;
+            animation-delay: -1378ms;
+        }
+        
+        .star:nth-child(92) {
+            top: calc(50% - 144px);
+            left: calc(50% - 97px);
+            -webkit-animation-delay: -2252ms;
+            animation-delay: -2252ms;
+        }
+        
+        .star:nth-child(93) {
+            top: calc(50% - -70px);
+            left: calc(50% - 13px);
+            -webkit-animation-delay: -2387ms;
+            animation-delay: -2387ms;
+        }
+        
+        .star:nth-child(94) {
+            top: calc(50% - -16px);
+            left: calc(50% - 58px);
+            -webkit-animation-delay: -2179ms;
+            animation-delay: -2179ms;
+        }
+        
+        .star:nth-child(95) {
+            top: calc(50% - 88px);
+            left: calc(50% - 189px);
+            -webkit-animation-delay: -387ms;
+            animation-delay: -387ms;
+        }
+        
+        .star:nth-child(96) {
+            top: calc(50% - -169px);
+            left: calc(50% - -65px);
+            -webkit-animation-delay: -1729ms;
+            animation-delay: -1729ms;
+        }
+        
+        .star:nth-child(97) {
+            top: calc(50% - 193px);
+            left: calc(50% - 94px);
+            -webkit-animation-delay: -5145ms;
+            animation-delay: -5145ms;
+        }
+        
+        .star:nth-child(98) {
+            top: calc(50% - 186px);
+            left: calc(50% - 85px);
+            -webkit-animation-delay: -4122ms;
+            animation-delay: -4122ms;
+        }
+        
+        .star:nth-child(99) {
+            top: calc(50% - -176px);
+            left: calc(50% - 83px);
+            -webkit-animation-delay: -3393ms;
+            animation-delay: -3393ms;
+        }
+        
+        .star:nth-child(100) {
+            top: calc(50% - -72px);
+            left: calc(50% - -193px);
+            -webkit-animation-delay: -4192ms;
+            animation-delay: -4192ms;
+        }
+        
+        .star:nth-child(101) {
+            top: calc(50% - 45px);
+            left: calc(50% - -128px);
+            -webkit-animation-delay: -3072ms;
+            animation-delay: -3072ms;
+        }
+        
+        .star:nth-child(102) {
+            top: calc(50% - -81px);
+            left: calc(50% - 31px);
+            -webkit-animation-delay: -921ms;
+            animation-delay: -921ms;
+        }
+        
+        .star:nth-child(103) {
+            top: calc(50% - 30px);
+            left: calc(50% - -40px);
+            -webkit-animation-delay: -5952ms;
+            animation-delay: -5952ms;
+        }
+        
+        .star:nth-child(104) {
+            top: calc(50% - 170px);
+            left: calc(50% - 118px);
+            -webkit-animation-delay: -5050ms;
+            animation-delay: -5050ms;
+        }
+        
+        .star:nth-child(105) {
+            top: calc(50% - 168px);
+            left: calc(50% - -28px);
+            -webkit-animation-delay: -5795ms;
+            animation-delay: -5795ms;
+        }
+        
+        .star:nth-child(106) {
+            top: calc(50% - 20px);
+            left: calc(50% - -169px);
+            -webkit-animation-delay: -5843ms;
+            animation-delay: -5843ms;
+        }
+        
+        .star:nth-child(107) {
+            top: calc(50% - -32px);
+            left: calc(50% - -62px);
+            -webkit-animation-delay: -5774ms;
+            animation-delay: -5774ms;
+        }
+        
+        .star:nth-child(108) {
+            top: calc(50% - 84px);
+            left: calc(50% - 62px);
+            -webkit-animation-delay: -3829ms;
+            animation-delay: -3829ms;
+        }
+        
+        .star:nth-child(109) {
+            top: calc(50% - -26px);
+            left: calc(50% - -127px);
+            -webkit-animation-delay: -1961ms;
+            animation-delay: -1961ms;
+        }
+        
+        .star:nth-child(110) {
+            top: calc(50% - 49px);
+            left: calc(50% - 136px);
+            -webkit-animation-delay: -5194ms;
+            animation-delay: -5194ms;
+        }
+        
+        .star:nth-child(111) {
+            top: calc(50% - -165px);
+            left: calc(50% - 158px);
+            -webkit-animation-delay: -2244ms;
+            animation-delay: -2244ms;
+        }
+        
+        .star:nth-child(112) {
+            top: calc(50% - 148px);
+            left: calc(50% - -153px);
+            -webkit-animation-delay: -979ms;
+            animation-delay: -979ms;
+        }
+        
+        .star:nth-child(113) {
+            top: calc(50% - 160px);
+            left: calc(50% - 75px);
+            -webkit-animation-delay: -2984ms;
+            animation-delay: -2984ms;
+        }
+        
+        .star:nth-child(114) {
+            top: calc(50% - 138px);
+            left: calc(50% - -68px);
+            -webkit-animation-delay: -2771ms;
+            animation-delay: -2771ms;
+        }
+        
+        .star:nth-child(115) {
+            top: calc(50% - 33px);
+            left: calc(50% - -119px);
+            -webkit-animation-delay: -5950ms;
+            animation-delay: -5950ms;
+        }
+        
+        .star:nth-child(116) {
+            top: calc(50% - -164px);
+            left: calc(50% - 24px);
+            -webkit-animation-delay: -2584ms;
+            animation-delay: -2584ms;
+        }
+        
+        .star:nth-child(117) {
+            top: calc(50% - 91px);
+            left: calc(50% - -122px);
+            -webkit-animation-delay: -2670ms;
+            animation-delay: -2670ms;
+        }
+        
+        .star:nth-child(118) {
+            top: calc(50% - 95px);
+            left: calc(50% - -1px);
+            -webkit-animation-delay: -5134ms;
+            animation-delay: -5134ms;
+        }
+        
+        .star:nth-child(119) {
+            top: calc(50% - -23px);
+            left: calc(50% - 63px);
+            -webkit-animation-delay: -3037ms;
+            animation-delay: -3037ms;
+        }
+        
+        .star:nth-child(120) {
+            top: calc(50% - 148px);
+            left: calc(50% - 110px);
+            -webkit-animation-delay: -4091ms;
+            animation-delay: -4091ms;
+        }
+        
+        .star:nth-child(121) {
+            top: calc(50% - 200px);
+            left: calc(50% - -76px);
+            -webkit-animation-delay: -1061ms;
+            animation-delay: -1061ms;
+        }
+        
+        .star:nth-child(122) {
+            top: calc(50% - -87px);
+            left: calc(50% - -14px);
+            -webkit-animation-delay: -554ms;
+            animation-delay: -554ms;
+        }
+        
+        .star:nth-child(123) {
+            top: calc(50% - -104px);
+            left: calc(50% - 66px);
+            -webkit-animation-delay: -1024ms;
+            animation-delay: -1024ms;
+        }
+        
+        .star:nth-child(124) {
+            top: calc(50% - 64px);
+            left: calc(50% - 10px);
+            -webkit-animation-delay: -5906ms;
+            animation-delay: -5906ms;
+        }
+        
+        .star:nth-child(125) {
+            top: calc(50% - -23px);
+            left: calc(50% - 134px);
+            -webkit-animation-delay: -1521ms;
+            animation-delay: -1521ms;
+        }
+        
+        .star:nth-child(126) {
+            top: calc(50% - -113px);
+            left: calc(50% - 167px);
+            -webkit-animation-delay: -5043ms;
+            animation-delay: -5043ms;
+        }
+        
+        .star:nth-child(127) {
+            top: calc(50% - -7px);
+            left: calc(50% - -85px);
+            -webkit-animation-delay: -3691ms;
+            animation-delay: -3691ms;
+        }
+        
+        .star:nth-child(128) {
+            top: calc(50% - 142px);
+            left: calc(50% - 197px);
+            -webkit-animation-delay: -978ms;
+            animation-delay: -978ms;
+        }
+        
+        .star:nth-child(129) {
+            top: calc(50% - -81px);
+            left: calc(50% - 158px);
+            -webkit-animation-delay: -4181ms;
+            animation-delay: -4181ms;
+        }
+        
+        .star:nth-child(130) {
+            top: calc(50% - 32px);
+            left: calc(50% - -109px);
+            -webkit-animation-delay: -2179ms;
+            animation-delay: -2179ms;
+        }
+        
+        .star:nth-child(131) {
+            top: calc(50% - 25px);
+            left: calc(50% - 27px);
+            -webkit-animation-delay: -5270ms;
+            animation-delay: -5270ms;
+        }
+        
+        .star:nth-child(132) {
+            top: calc(50% - -76px);
+            left: calc(50% - 17px);
+            -webkit-animation-delay: -2146ms;
+            animation-delay: -2146ms;
+        }
+        
+        .star:nth-child(133) {
+            top: calc(50% - 146px);
+            left: calc(50% - -122px);
+            -webkit-animation-delay: -5307ms;
+            animation-delay: -5307ms;
+        }
+        
+        .star:nth-child(134) {
+            top: calc(50% - -100px);
+            left: calc(50% - 15px);
+            -webkit-animation-delay: -2782ms;
+            animation-delay: -2782ms;
+        }
+        
+        .star:nth-child(135) {
+            top: calc(50% - 75px);
+            left: calc(50% - -174px);
+            -webkit-animation-delay: -4155ms;
+            animation-delay: -4155ms;
+        }
+        
+        .star:nth-child(136) {
+            top: calc(50% - -143px);
+            left: calc(50% - 121px);
+            -webkit-animation-delay: -1538ms;
+            animation-delay: -1538ms;
+        }
+        
+        .star:nth-child(137) {
+            top: calc(50% - -66px);
+            left: calc(50% - -163px);
+            -webkit-animation-delay: -5624ms;
+            animation-delay: -5624ms;
+        }
+        
+        .star:nth-child(138) {
+            top: calc(50% - 129px);
+            left: calc(50% - 82px);
+            -webkit-animation-delay: -1881ms;
+            animation-delay: -1881ms;
+        }
+        
+        .star:nth-child(139) {
+            top: calc(50% - -130px);
+            left: calc(50% - -86px);
+            -webkit-animation-delay: -2594ms;
+            animation-delay: -2594ms;
+        }
+        
+        .star:nth-child(140) {
+            top: calc(50% - -44px);
+            left: calc(50% - -82px);
+            -webkit-animation-delay: -4536ms;
+            animation-delay: -4536ms;
+        }
+        
+        .star:nth-child(141) {
+            top: calc(50% - 97px);
+            left: calc(50% - 86px);
+            -webkit-animation-delay: -5510ms;
+            animation-delay: -5510ms;
+        }
+        
+        .star:nth-child(142) {
+            top: calc(50% - -26px);
+            left: calc(50% - -113px);
+            -webkit-animation-delay: -1185ms;
+            animation-delay: -1185ms;
+        }
+        
+        .star:nth-child(143) {
+            top: calc(50% - 27px);
+            left: calc(50% - -196px);
+            -webkit-animation-delay: -34ms;
+            animation-delay: -34ms;
+        }
+        
+        .star:nth-child(144) {
+            top: calc(50% - 104px);
+            left: calc(50% - -199px);
+            -webkit-animation-delay: -1836ms;
+            animation-delay: -1836ms;
+        }
+        
+        .star:nth-child(145) {
+            top: calc(50% - 121px);
+            left: calc(50% - 127px);
+            -webkit-animation-delay: -4149ms;
+            animation-delay: -4149ms;
+        }
+        
+        .star:nth-child(146) {
+            top: calc(50% - 9px);
+            left: calc(50% - -152px);
+            -webkit-animation-delay: -3090ms;
+            animation-delay: -3090ms;
+        }
+        
+        .star:nth-child(147) {
+            top: calc(50% - -109px);
+            left: calc(50% - 158px);
+            -webkit-animation-delay: -1609ms;
+            animation-delay: -1609ms;
+        }
+        
+        .star:nth-child(148) {
+            top: calc(50% - -184px);
+            left: calc(50% - 24px);
+            -webkit-animation-delay: -1956ms;
+            animation-delay: -1956ms;
+        }
+        
+        .star:nth-child(149) {
+            top: calc(50% - -191px);
+            left: calc(50% - -188px);
+            -webkit-animation-delay: -3372ms;
+            animation-delay: -3372ms;
+        }
+        
+        .star:nth-child(150) {
+            top: calc(50% - 150px);
+            left: calc(50% - -131px);
+            -webkit-animation-delay: -2407ms;
+            animation-delay: -2407ms;
+        }
+        
+        .star:nth-child(151) {
+            top: calc(50% - 160px);
+            left: calc(50% - 93px);
+            -webkit-animation-delay: -3779ms;
+            animation-delay: -3779ms;
+        }
+        
+        .star:nth-child(152) {
+            top: calc(50% - 121px);
+            left: calc(50% - 188px);
+            -webkit-animation-delay: -1601ms;
+            animation-delay: -1601ms;
+        }
+        
+        .star:nth-child(153) {
+            top: calc(50% - 87px);
+            left: calc(50% - 113px);
+            -webkit-animation-delay: -5378ms;
+            animation-delay: -5378ms;
+        }
+        
+        .star:nth-child(154) {
+            top: calc(50% - -66px);
+            left: calc(50% - 135px);
+            -webkit-animation-delay: -5701ms;
+            animation-delay: -5701ms;
+        }
+        
+        .star:nth-child(155) {
+            top: calc(50% - -66px);
+            left: calc(50% - -69px);
+            -webkit-animation-delay: -482ms;
+            animation-delay: -482ms;
+        }
+        
+        .star:nth-child(156) {
+            top: calc(50% - -4px);
+            left: calc(50% - -157px);
+            -webkit-animation-delay: -238ms;
+            animation-delay: -238ms;
+        }
+        
+        .star:nth-child(157) {
+            top: calc(50% - 54px);
+            left: calc(50% - -27px);
+            -webkit-animation-delay: -4878ms;
+            animation-delay: -4878ms;
+        }
+        
+        .star:nth-child(158) {
+            top: calc(50% - 26px);
+            left: calc(50% - 183px);
+            -webkit-animation-delay: -4847ms;
+            animation-delay: -4847ms;
+        }
+        
+        .star:nth-child(159) {
+            top: calc(50% - -150px);
+            left: calc(50% - -23px);
+            -webkit-animation-delay: -2255ms;
+            animation-delay: -2255ms;
+        }
+        
+        .star:nth-child(160) {
+            top: calc(50% - 137px);
+            left: calc(50% - 61px);
+            -webkit-animation-delay: -2019ms;
+            animation-delay: -2019ms;
+        }
+        
+        .star:nth-child(161) {
+            top: calc(50% - 93px);
+            left: calc(50% - -91px);
+            -webkit-animation-delay: -4460ms;
+            animation-delay: -4460ms;
+        }
+        
+        .star:nth-child(162) {
+            top: calc(50% - 33px);
+            left: calc(50% - 108px);
+            -webkit-animation-delay: -49ms;
+            animation-delay: -49ms;
+        }
+        
+        .star:nth-child(163) {
+            top: calc(50% - 194px);
+            left: calc(50% - -82px);
+            -webkit-animation-delay: -764ms;
+            animation-delay: -764ms;
+        }
+        
+        .star:nth-child(164) {
+            top: calc(50% - 69px);
+            left: calc(50% - -51px);
+            -webkit-animation-delay: -698ms;
+            animation-delay: -698ms;
+        }
+        
+        .star:nth-child(165) {
+            top: calc(50% - 96px);
+            left: calc(50% - 106px);
+            -webkit-animation-delay: -5527ms;
+            animation-delay: -5527ms;
+        }
+        
+        .star:nth-child(166) {
+            top: calc(50% - 191px);
+            left: calc(50% - 128px);
+            -webkit-animation-delay: -5338ms;
+            animation-delay: -5338ms;
+        }
+        
+        .star:nth-child(167) {
+            top: calc(50% - 191px);
+            left: calc(50% - 113px);
+            -webkit-animation-delay: -5419ms;
+            animation-delay: -5419ms;
+        }
+        
+        .star:nth-child(168) {
+            top: calc(50% - 47px);
+            left: calc(50% - -80px);
+            -webkit-animation-delay: -634ms;
+            animation-delay: -634ms;
+        }
+        
+        .star:nth-child(169) {
+            top: calc(50% - 134px);
+            left: calc(50% - -108px);
+            -webkit-animation-delay: -4725ms;
+            animation-delay: -4725ms;
+        }
+        
+        .star:nth-child(170) {
+            top: calc(50% - -184px);
+            left: calc(50% - 53px);
+            -webkit-animation-delay: -530ms;
+            animation-delay: -530ms;
+        }
+        
+        .star:nth-child(171) {
+            top: calc(50% - 190px);
+            left: calc(50% - 103px);
+            -webkit-animation-delay: -2739ms;
+            animation-delay: -2739ms;
+        }
+        
+        .star:nth-child(172) {
+            top: calc(50% - -75px);
+            left: calc(50% - -82px);
+            -webkit-animation-delay: -4509ms;
+            animation-delay: -4509ms;
+        }
+        
+        .star:nth-child(173) {
+            top: calc(50% - 5px);
+            left: calc(50% - -171px);
+            -webkit-animation-delay: -5141ms;
+            animation-delay: -5141ms;
+        }
+        
+        .star:nth-child(174) {
+            top: calc(50% - -70px);
+            left: calc(50% - -175px);
+            -webkit-animation-delay: -4917ms;
+            animation-delay: -4917ms;
+        }
+        
+        .star:nth-child(175) {
+            top: calc(50% - 42px);
+            left: calc(50% - -51px);
+            -webkit-animation-delay: -5049ms;
+            animation-delay: -5049ms;
+        }
+        
+        .star:nth-child(176) {
+            top: calc(50% - 175px);
+            left: calc(50% - 181px);
+            -webkit-animation-delay: -863ms;
+            animation-delay: -863ms;
+        }
+        
+        .star:nth-child(177) {
+            top: calc(50% - 90px);
+            left: calc(50% - 157px);
+            -webkit-animation-delay: -865ms;
+            animation-delay: -865ms;
+        }
+        
+        .star:nth-child(178) {
+            top: calc(50% - 163px);
+            left: calc(50% - -171px);
+            -webkit-animation-delay: -790ms;
+            animation-delay: -790ms;
+        }
+        
+        .star:nth-child(179) {
+            top: calc(50% - -25px);
+            left: calc(50% - -27px);
+            -webkit-animation-delay: -1465ms;
+            animation-delay: -1465ms;
+        }
+        
+        .star:nth-child(180) {
+            top: calc(50% - -27px);
+            left: calc(50% - -98px);
+            -webkit-animation-delay: -3250ms;
+            animation-delay: -3250ms;
+        }
+        
+        .star:nth-child(181) {
+            top: calc(50% - -98px);
+            left: calc(50% - -197px);
+            -webkit-animation-delay: -1923ms;
+            animation-delay: -1923ms;
+        }
+        
+        .star:nth-child(182) {
+            top: calc(50% - 137px);
+            left: calc(50% - -55px);
+            -webkit-animation-delay: -1728ms;
+            animation-delay: -1728ms;
+        }
+        
+        .star:nth-child(183) {
+            top: calc(50% - -77px);
+            left: calc(50% - 86px);
+            -webkit-animation-delay: -2827ms;
+            animation-delay: -2827ms;
+        }
+        
+        .star:nth-child(184) {
+            top: calc(50% - -167px);
+            left: calc(50% - -151px);
+            -webkit-animation-delay: -5230ms;
+            animation-delay: -5230ms;
+        }
+        
+        .star:nth-child(185) {
+            top: calc(50% - 53px);
+            left: calc(50% - -182px);
+            -webkit-animation-delay: -340ms;
+            animation-delay: -340ms;
+        }
+        
+        .star:nth-child(186) {
+            top: calc(50% - -111px);
+            left: calc(50% - 148px);
+            -webkit-animation-delay: -743ms;
+            animation-delay: -743ms;
+        }
+        
+        .star:nth-child(187) {
+            top: calc(50% - -100px);
+            left: calc(50% - 155px);
+            -webkit-animation-delay: -3158ms;
+            animation-delay: -3158ms;
+        }
+        
+        .star:nth-child(188) {
+            top: calc(50% - 86px);
+            left: calc(50% - -23px);
+            -webkit-animation-delay: -1196ms;
+            animation-delay: -1196ms;
+        }
+        
+        .star:nth-child(189) {
+            top: calc(50% - 88px);
+            left: calc(50% - 1px);
+            -webkit-animation-delay: -2486ms;
+            animation-delay: -2486ms;
+        }
+        
+        .star:nth-child(190) {
+            top: calc(50% - 26px);
+            left: calc(50% - -171px);
+            -webkit-animation-delay: -3707ms;
+            animation-delay: -3707ms;
+        }
+        
+        .star:nth-child(191) {
+            top: calc(50% - 24px);
+            left: calc(50% - -103px);
+            -webkit-animation-delay: -1336ms;
+            animation-delay: -1336ms;
+        }
+        
+        .star:nth-child(192) {
+            top: calc(50% - -194px);
+            left: calc(50% - 57px);
+            -webkit-animation-delay: -3990ms;
+            animation-delay: -3990ms;
+        }
+        
+        .star:nth-child(193) {
+            top: calc(50% - -177px);
+            left: calc(50% - 124px);
+            -webkit-animation-delay: -3719ms;
+            animation-delay: -3719ms;
+        }
+        
+        .star:nth-child(194) {
+            top: calc(50% - 169px);
+            left: calc(50% - -91px);
+            -webkit-animation-delay: -1149ms;
+            animation-delay: -1149ms;
+        }
+        
+        .star:nth-child(195) {
+            top: calc(50% - 26px);
+            left: calc(50% - -181px);
+            -webkit-animation-delay: -3327ms;
+            animation-delay: -3327ms;
+        }
+        
+        .star:nth-child(196) {
+            top: calc(50% - -11px);
+            left: calc(50% - 130px);
+            -webkit-animation-delay: -2319ms;
+            animation-delay: -2319ms;
+        }
+        
+        .star:nth-child(197) {
+            top: calc(50% - -102px);
+            left: calc(50% - 146px);
+            -webkit-animation-delay: -4520ms;
+            animation-delay: -4520ms;
+        }
+        
+        .star:nth-child(198) {
+            top: calc(50% - -11px);
+            left: calc(50% - -44px);
+            -webkit-animation-delay: -2312ms;
+            animation-delay: -2312ms;
+        }
+        
+        .star:nth-child(199) {
+            top: calc(50% - 191px);
+            left: calc(50% - -101px);
+            -webkit-animation-delay: -5397ms;
+            animation-delay: -5397ms;
+        }
+        
+        .star:nth-child(200) {
+            top: calc(50% - -123px);
+            left: calc(50% - -13px);
+            -webkit-animation-delay: -4097ms;
+            animation-delay: -4097ms;
+        }
+        
+        @-webkit-keyframes bling {
+            0% {
+                -webkit-transform: scale(0) translateY(-300px);
+                transform: scale(0) translateY(-300px);
+                background: #ff00ff;
+            }
+            50% {
+                -webkit-transform: scale(1) translateY(0);
+                transform: scale(1) translateY(0);
+                background: #ffffff;
+            }
+            100% {
+                -webkit-transform: scale(0) translateY(300px);
+                transform: scale(0) translateY(300px);
+                background: #0000ff;
+            }
+        }
+        
+        @keyframes bling {
+            0% {
+                -webkit-transform: scale(0) translateY(-300px);
+                transform: scale(0) translateY(-300px);
+                background: #ff00ff;
+            }
+            50% {
+                -webkit-transform: scale(1) translateY(0);
+                transform: scale(1) translateY(0);
+                background: #ffffff;
+            }
+            100% {
+                -webkit-transform: scale(0) translateY(300px);
+                transform: scale(0) translateY(300px);
+                background: #0000ff;
+            }
+        }
+        
+        .bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .line {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            -webkit-animation: move 4000ms linear infinite;
+            animation: move 4000ms linear infinite;
+            -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+        
+        .line:nth-child(1) {
+            top: 33%;
+            left: 97%;
+            top: calc(50% + -24px);
+            left: calc(50% + 48px);
+            -webkit-animation-delay: -2997ms;
+            animation-delay: -2997ms;
+            -webkit-animation-duration: 6809ms;
+            animation-duration: 6809ms;
+        }
+        
+        .line:nth-child(2) {
+            top: 41%;
+            left: 64%;
+            top: calc(50% + -86px);
+            left: calc(50% + 47px);
+            -webkit-animation-delay: -4380ms;
+            animation-delay: -4380ms;
+            -webkit-animation-duration: 6177ms;
+            animation-duration: 6177ms;
+        }
+        
+        .line:nth-child(3) {
+            top: 22%;
+            left: 31%;
+            top: calc(50% + -133px);
+            left: calc(50% + 66px);
+            -webkit-animation-delay: -3249ms;
+            animation-delay: -3249ms;
+            -webkit-animation-duration: 3944ms;
+            animation-duration: 3944ms;
+        }
+        
+        .line:nth-child(4) {
+            top: 6%;
+            left: 17%;
+            top: calc(50% + -115px);
+            left: calc(50% + -37px);
+            -webkit-animation-delay: -3949ms;
+            animation-delay: -3949ms;
+            -webkit-animation-duration: 5277ms;
+            animation-duration: 5277ms;
+        }
+        
+        .line:nth-child(5) {
+            top: 23%;
+            left: 1%;
+            top: calc(50% + -204px);
+            left: calc(50% + -154px);
+            -webkit-animation-delay: -807ms;
+            animation-delay: -807ms;
+            -webkit-animation-duration: 4883ms;
+            animation-duration: 4883ms;
+        }
+        
+        .line:nth-child(6) {
+            top: 32%;
+            left: 95%;
+            top: calc(50% + -18px);
+            left: calc(50% + -162px);
+            -webkit-animation-delay: -1971ms;
+            animation-delay: -1971ms;
+            -webkit-animation-duration: 5083ms;
+            animation-duration: 5083ms;
+        }
+        
+        .line:nth-child(7) {
+            top: 62%;
+            left: 54%;
+            top: calc(50% + -186px);
+            left: calc(50% + -128px);
+            -webkit-animation-delay: -4130ms;
+            animation-delay: -4130ms;
+            -webkit-animation-duration: 5254ms;
+            animation-duration: 5254ms;
+        }
+        
+        .line:nth-child(8) {
+            top: 26%;
+            left: 39%;
+            top: calc(50% + -4px);
+            left: calc(50% + -93px);
+            -webkit-animation-delay: -4167ms;
+            animation-delay: -4167ms;
+            -webkit-animation-duration: 3179ms;
+            animation-duration: 3179ms;
+        }
+        
+        .line:nth-child(9) {
+            top: 84%;
+            left: 77%;
+            top: calc(50% + -214px);
+            left: calc(50% + -13px);
+            -webkit-animation-delay: -2908ms;
+            animation-delay: -2908ms;
+            -webkit-animation-duration: 4965ms;
+            animation-duration: 4965ms;
+        }
+        
+        .line:nth-child(10) {
+            top: 13%;
+            left: 18%;
+            top: calc(50% + -280px);
+            left: calc(50% + -20px);
+            -webkit-animation-delay: -5149ms;
+            animation-delay: -5149ms;
+            -webkit-animation-duration: 3757ms;
+            animation-duration: 3757ms;
+        }
+        
+        .line:nth-child(11) {
+            top: 91%;
+            left: 18%;
+            top: calc(50% + -90px);
+            left: calc(50% + -91px);
+            -webkit-animation-delay: -4454ms;
+            animation-delay: -4454ms;
+            -webkit-animation-duration: 4660ms;
+            animation-duration: 4660ms;
+        }
+        
+        .line:nth-child(12) {
+            top: 21%;
+            left: 85%;
+            top: calc(50% + -160px);
+            left: calc(50% + 133px);
+            -webkit-animation-delay: -4803ms;
+            animation-delay: -4803ms;
+            -webkit-animation-duration: 4838ms;
+            animation-duration: 4838ms;
+        }
+        
+        .line:nth-child(13) {
+            top: 74%;
+            left: 94%;
+            top: calc(50% + -90px);
+            left: calc(50% + 148px);
+            -webkit-animation-delay: -232ms;
+            animation-delay: -232ms;
+            -webkit-animation-duration: 5717ms;
+            animation-duration: 5717ms;
+        }
+        
+        .line:nth-child(14) {
+            top: 13%;
+            left: 68%;
+            top: calc(50% + -130px);
+            left: calc(50% + -114px);
+            -webkit-animation-delay: -977ms;
+            animation-delay: -977ms;
+            -webkit-animation-duration: 5364ms;
+            animation-duration: 5364ms;
+        }
+        
+        .line:nth-child(15) {
+            top: 13%;
+            left: 64%;
+            top: calc(50% + -261px);
+            left: calc(50% + -163px);
+            -webkit-animation-delay: -2382ms;
+            animation-delay: -2382ms;
+            -webkit-animation-duration: 3316ms;
+            animation-duration: 3316ms;
+        }
+        
+        .line:nth-child(16) {
+            top: 39%;
+            left: 11%;
+            top: calc(50% + -120px);
+            left: calc(50% + -26px);
+            -webkit-animation-delay: -3214ms;
+            animation-delay: -3214ms;
+            -webkit-animation-duration: 5576ms;
+            animation-duration: 5576ms;
+        }
+        
+        .line:nth-child(17) {
+            top: 71%;
+            left: 30%;
+            top: calc(50% + -101px);
+            left: calc(50% + -11px);
+            -webkit-animation-delay: -5219ms;
+            animation-delay: -5219ms;
+            -webkit-animation-duration: 3627ms;
+            animation-duration: 3627ms;
+        }
+        
+        .line:nth-child(18) {
+            top: 90%;
+            left: 82%;
+            top: calc(50% + -101px);
+            left: calc(50% + -95px);
+            -webkit-animation-delay: -553ms;
+            animation-delay: -553ms;
+            -webkit-animation-duration: 4441ms;
+            animation-duration: 4441ms;
+        }
+        
+        .line:nth-child(19) {
+            top: 89%;
+            left: 62%;
+            top: calc(50% + -187px);
+            left: calc(50% + 121px);
+            -webkit-animation-delay: -4175ms;
+            animation-delay: -4175ms;
+            -webkit-animation-duration: 5010ms;
+            animation-duration: 5010ms;
+        }
+        
+        .line:nth-child(20) {
+            top: 92%;
+            left: 3%;
+            top: calc(50% + -9px);
+            left: calc(50% + 125px);
+            -webkit-animation-delay: -2769ms;
+            animation-delay: -2769ms;
+            -webkit-animation-duration: 5543ms;
+            animation-duration: 5543ms;
+        }
+        
+        .line:nth-child(21) {
+            top: 51%;
+            left: 46%;
+            top: calc(50% + -104px);
+            left: calc(50% + 73px);
+            -webkit-animation-delay: -2335ms;
+            animation-delay: -2335ms;
+            -webkit-animation-duration: 5709ms;
+            animation-duration: 5709ms;
+        }
+        
+        .line:nth-child(22) {
+            top: 45%;
+            left: 100%;
+            top: calc(50% + -210px);
+            left: calc(50% + 89px);
+            -webkit-animation-delay: -1281ms;
+            animation-delay: -1281ms;
+            -webkit-animation-duration: 3358ms;
+            animation-duration: 3358ms;
+        }
+        
+        .line:nth-child(23) {
+            top: 50%;
+            left: 24%;
+            top: calc(50% + -8px);
+            left: calc(50% + -58px);
+            -webkit-animation-delay: -5535ms;
+            animation-delay: -5535ms;
+            -webkit-animation-duration: 6016ms;
+            animation-duration: 6016ms;
+        }
+        
+        .line:nth-child(24) {
+            top: 98%;
+            left: 93%;
+            top: calc(50% + -267px);
+            left: calc(50% + 132px);
+            -webkit-animation-delay: -827ms;
+            animation-delay: -827ms;
+            -webkit-animation-duration: 5074ms;
+            animation-duration: 5074ms;
+        }
+        
+        .line:nth-child(25) {
+            top: 95%;
+            left: 6%;
+            top: calc(50% + -37px);
+            left: calc(50% + -175px);
+            -webkit-animation-delay: -2778ms;
+            animation-delay: -2778ms;
+            -webkit-animation-duration: 6447ms;
+            animation-duration: 6447ms;
+        }
+        
+        .line:nth-child(26) {
+            top: 99%;
+            left: 67%;
+            top: calc(50% + -259px);
+            left: calc(50% + 13px);
+            -webkit-animation-delay: -2537ms;
+            animation-delay: -2537ms;
+            -webkit-animation-duration: 5783ms;
+            animation-duration: 5783ms;
+        }
+        
+        .line:nth-child(27) {
+            top: 82%;
+            left: 9%;
+            top: calc(50% + -77px);
+            left: calc(50% + -82px);
+            -webkit-animation-delay: -2514ms;
+            animation-delay: -2514ms;
+            -webkit-animation-duration: 3850ms;
+            animation-duration: 3850ms;
+        }
+        
+        .line:nth-child(28) {
+            top: 43%;
+            left: 49%;
+            top: calc(50% + -15px);
+            left: calc(50% + -116px);
+            -webkit-animation-delay: -1248ms;
+            animation-delay: -1248ms;
+            -webkit-animation-duration: 6631ms;
+            animation-duration: 6631ms;
+        }
+        
+        .line:nth-child(29) {
+            top: 41%;
+            left: 92%;
+            top: calc(50% + -114px);
+            left: calc(50% + -103px);
+            -webkit-animation-delay: -4375ms;
+            animation-delay: -4375ms;
+            -webkit-animation-duration: 5880ms;
+            animation-duration: 5880ms;
+        }
+        
+        .line:nth-child(30) {
+            top: 52%;
+            left: 23%;
+            top: calc(50% + -143px);
+            left: calc(50% + -57px);
+            -webkit-animation-delay: -912ms;
+            animation-delay: -912ms;
+            -webkit-animation-duration: 5222ms;
+            animation-duration: 5222ms;
+        }
+        
+        .line:nth-child(31) {
+            top: 51%;
+            left: 68%;
+            top: calc(50% + -98px);
+            left: calc(50% + -49px);
+            -webkit-animation-delay: -1318ms;
+            animation-delay: -1318ms;
+            -webkit-animation-duration: 4505ms;
+            animation-duration: 4505ms;
+        }
+        
+        .line:nth-child(32) {
+            top: 33%;
+            left: 28%;
+            top: calc(50% + -47px);
+            left: calc(50% + 23px);
+            -webkit-animation-delay: -3479ms;
+            animation-delay: -3479ms;
+            -webkit-animation-duration: 4135ms;
+            animation-duration: 4135ms;
+        }
+        
+        .line:nth-child(33) {
+            top: 96%;
+            left: 91%;
+            top: calc(50% + -271px);
+            left: calc(50% + -80px);
+            -webkit-animation-delay: -5040ms;
+            animation-delay: -5040ms;
+            -webkit-animation-duration: 3535ms;
+            animation-duration: 3535ms;
+        }
+        
+        .line:nth-child(34) {
+            top: 72%;
+            left: 20%;
+            top: calc(50% + -203px);
+            left: calc(50% + 21px);
+            -webkit-animation-delay: -4410ms;
+            animation-delay: -4410ms;
+            -webkit-animation-duration: 5024ms;
+            animation-duration: 5024ms;
+        }
+        
+        .line:nth-child(35) {
+            top: 94%;
+            left: 79%;
+            top: calc(50% + -58px);
+            left: calc(50% + -48px);
+            -webkit-animation-delay: -4208ms;
+            animation-delay: -4208ms;
+            -webkit-animation-duration: 4789ms;
+            animation-duration: 4789ms;
+        }
+        
+        .line:nth-child(36) {
+            top: 76%;
+            left: 59%;
+            top: calc(50% + -180px);
+            left: calc(50% + 4px);
+            -webkit-animation-delay: -2380ms;
+            animation-delay: -2380ms;
+            -webkit-animation-duration: 5867ms;
+            animation-duration: 5867ms;
+        }
+        
+        .line:nth-child(37) {
+            top: 42%;
+            left: 6%;
+            top: calc(50% + -139px);
+            left: calc(50% + -164px);
+            -webkit-animation-delay: -5826ms;
+            animation-delay: -5826ms;
+            -webkit-animation-duration: 5405ms;
+            animation-duration: 5405ms;
+        }
+        
+        .line:nth-child(38) {
+            top: 40%;
+            left: 9%;
+            top: calc(50% + -108px);
+            left: calc(50% + -6px);
+            -webkit-animation-delay: -672ms;
+            animation-delay: -672ms;
+            -webkit-animation-duration: 3609ms;
+            animation-duration: 3609ms;
+        }
+        
+        .line:nth-child(39) {
+            top: 38%;
+            left: 68%;
+            top: calc(50% + -109px);
+            left: calc(50% + 0px);
+            -webkit-animation-delay: -309ms;
+            animation-delay: -309ms;
+            -webkit-animation-duration: 3748ms;
+            animation-duration: 3748ms;
+        }
+        
+        .line:nth-child(40) {
+            top: 6%;
+            left: 97%;
+            top: calc(50% + -44px);
+            left: calc(50% + 86px);
+            -webkit-animation-delay: -998ms;
+            animation-delay: -998ms;
+            -webkit-animation-duration: 6234ms;
+            animation-duration: 6234ms;
+        }
+        
+        .line:nth-child(41) {
+            top: 23%;
+            left: 74%;
+            top: calc(50% + -21px);
+            left: calc(50% + 8px);
+            -webkit-animation-delay: -5533ms;
+            animation-delay: -5533ms;
+            -webkit-animation-duration: 6700ms;
+            animation-duration: 6700ms;
+        }
+        
+        .line:nth-child(42) {
+            top: 25%;
+            left: 58%;
+            top: calc(50% + -137px);
+            left: calc(50% + 88px);
+            -webkit-animation-delay: -4951ms;
+            animation-delay: -4951ms;
+            -webkit-animation-duration: 5269ms;
+            animation-duration: 5269ms;
+        }
+        
+        .line:nth-child(43) {
+            top: 46%;
+            left: 74%;
+            top: calc(50% + -132px);
+            left: calc(50% + -131px);
+            -webkit-animation-delay: -5994ms;
+            animation-delay: -5994ms;
+            -webkit-animation-duration: 6714ms;
+            animation-duration: 6714ms;
+        }
+        
+        .line:nth-child(44) {
+            top: 15%;
+            left: 99%;
+            top: calc(50% + -158px);
+            left: calc(50% + 63px);
+            -webkit-animation-delay: -1466ms;
+            animation-delay: -1466ms;
+            -webkit-animation-duration: 5213ms;
+            animation-duration: 5213ms;
+        }
+        
+        .line:nth-child(45) {
+            top: 54%;
+            left: 96%;
+            top: calc(50% + -146px);
+            left: calc(50% + 48px);
+            -webkit-animation-delay: -1331ms;
+            animation-delay: -1331ms;
+            -webkit-animation-duration: 4989ms;
+            animation-duration: 4989ms;
+        }
+        
+        .line:nth-child(46) {
+            top: 93%;
+            left: 87%;
+            top: calc(50% + 0px);
+            left: calc(50% + -69px);
+            -webkit-animation-delay: -1809ms;
+            animation-delay: -1809ms;
+            -webkit-animation-duration: 4512ms;
+            animation-duration: 4512ms;
+        }
+        
+        .line:nth-child(47) {
+            top: 19%;
+            left: 66%;
+            top: calc(50% + -8px);
+            left: calc(50% + 45px);
+            -webkit-animation-delay: -4492ms;
+            animation-delay: -4492ms;
+            -webkit-animation-duration: 3761ms;
+            animation-duration: 3761ms;
+        }
+        
+        .line:nth-child(48) {
+            top: 70%;
+            left: 61%;
+            top: calc(50% + -90px);
+            left: calc(50% + 30px);
+            -webkit-animation-delay: -2596ms;
+            animation-delay: -2596ms;
+            -webkit-animation-duration: 6869ms;
+            animation-duration: 6869ms;
+        }
+        
+        .line:nth-child(49) {
+            top: 72%;
+            left: 25%;
+            top: calc(50% + -15px);
+            left: calc(50% + 72px);
+            -webkit-animation-delay: -4751ms;
+            animation-delay: -4751ms;
+            -webkit-animation-duration: 4045ms;
+            animation-duration: 4045ms;
+        }
+        
+        .line:nth-child(50) {
+            top: 20%;
+            left: 17%;
+            top: calc(50% + -203px);
+            left: calc(50% + -56px);
+            -webkit-animation-delay: -3349ms;
+            animation-delay: -3349ms;
+            -webkit-animation-duration: 3184ms;
+            animation-duration: 3184ms;
+        }
+        
+        .line:nth-child(51) {
+            top: 12%;
+            left: 75%;
+            top: calc(50% + -264px);
+            left: calc(50% + 78px);
+            -webkit-animation-delay: -2827ms;
+            animation-delay: -2827ms;
+            -webkit-animation-duration: 3375ms;
+            animation-duration: 3375ms;
+        }
+        
+        .line:nth-child(52) {
+            top: 62%;
+            left: 73%;
+            top: calc(50% + -271px);
+            left: calc(50% + 33px);
+            -webkit-animation-delay: -2537ms;
+            animation-delay: -2537ms;
+            -webkit-animation-duration: 3945ms;
+            animation-duration: 3945ms;
+        }
+        
+        .line:nth-child(53) {
+            top: 67%;
+            left: 14%;
+            top: calc(50% + -290px);
+            left: calc(50% + -105px);
+            -webkit-animation-delay: -3898ms;
+            animation-delay: -3898ms;
+            -webkit-animation-duration: 5786ms;
+            animation-duration: 5786ms;
+        }
+        
+        .line:nth-child(54) {
+            top: 57%;
+            left: 7%;
+            top: calc(50% + -266px);
+            left: calc(50% + 63px);
+            -webkit-animation-delay: -4889ms;
+            animation-delay: -4889ms;
+            -webkit-animation-duration: 6814ms;
+            animation-duration: 6814ms;
+        }
+        
+        .line:nth-child(55) {
+            top: 30%;
+            left: 41%;
+            top: calc(50% + -1px);
+            left: calc(50% + -8px);
+            -webkit-animation-delay: -982ms;
+            animation-delay: -982ms;
+            -webkit-animation-duration: 4134ms;
+            animation-duration: 4134ms;
+        }
+        
+        .line:nth-child(56) {
+            top: 75%;
+            left: 19%;
+            top: calc(50% + -116px);
+            left: calc(50% + -151px);
+            -webkit-animation-delay: -4897ms;
+            animation-delay: -4897ms;
+            -webkit-animation-duration: 3611ms;
+            animation-duration: 3611ms;
+        }
+        
+        .line:nth-child(57) {
+            top: 63%;
+            left: 66%;
+            top: calc(50% + -131px);
+            left: calc(50% + 78px);
+            -webkit-animation-delay: -3431ms;
+            animation-delay: -3431ms;
+            -webkit-animation-duration: 5204ms;
+            animation-duration: 5204ms;
+        }
+        
+        .line:nth-child(58) {
+            top: 77%;
+            left: 83%;
+            top: calc(50% + -126px);
+            left: calc(50% + 71px);
+            -webkit-animation-delay: -3678ms;
+            animation-delay: -3678ms;
+            -webkit-animation-duration: 6248ms;
+            animation-duration: 6248ms;
+        }
+        
+        .line:nth-child(59) {
+            top: 90%;
+            left: 19%;
+            top: calc(50% + -99px);
+            left: calc(50% + -136px);
+            -webkit-animation-delay: -3914ms;
+            animation-delay: -3914ms;
+            -webkit-animation-duration: 6391ms;
+            animation-duration: 6391ms;
+        }
+        
+        .line:nth-child(60) {
+            top: 31%;
+            left: 22%;
+            top: calc(50% + -29px);
+            left: calc(50% + -116px);
+            -webkit-animation-delay: -5692ms;
+            animation-delay: -5692ms;
+            -webkit-animation-duration: 6596ms;
+            animation-duration: 6596ms;
+        }
+        
+        .line:nth-child(61) {
+            top: 23%;
+            left: 48%;
+            top: calc(50% + -257px);
+            left: calc(50% + -90px);
+            -webkit-animation-delay: -762ms;
+            animation-delay: -762ms;
+            -webkit-animation-duration: 4736ms;
+            animation-duration: 4736ms;
+        }
+        
+        .line:nth-child(62) {
+            top: 56%;
+            left: 5%;
+            top: calc(50% + -69px);
+            left: calc(50% + 176px);
+            -webkit-animation-delay: -3242ms;
+            animation-delay: -3242ms;
+            -webkit-animation-duration: 3156ms;
+            animation-duration: 3156ms;
+        }
+        
+        .line:nth-child(63) {
+            top: 38%;
+            left: 32%;
+            top: calc(50% + -29px);
+            left: calc(50% + -118px);
+            -webkit-animation-delay: -715ms;
+            animation-delay: -715ms;
+            -webkit-animation-duration: 6209ms;
+            animation-duration: 6209ms;
+        }
+        
+        .line:nth-child(64) {
+            top: 77%;
+            left: 25%;
+            top: calc(50% + -212px);
+            left: calc(50% + -140px);
+            -webkit-animation-delay: -3007ms;
+            animation-delay: -3007ms;
+            -webkit-animation-duration: 6317ms;
+            animation-duration: 6317ms;
+        }
+        
+        .line:nth-child(65) {
+            top: 6%;
+            left: 64%;
+            top: calc(50% + -26px);
+            left: calc(50% + 124px);
+            -webkit-animation-delay: -1067ms;
+            animation-delay: -1067ms;
+            -webkit-animation-duration: 4913ms;
+            animation-duration: 4913ms;
+        }
+        
+        .line:nth-child(66) {
+            top: 93%;
+            left: 4%;
+            top: calc(50% + -63px);
+            left: calc(50% + -89px);
+            -webkit-animation-delay: -3952ms;
+            animation-delay: -3952ms;
+            -webkit-animation-duration: 6669ms;
+            animation-duration: 6669ms;
+        }
+        
+        .line:nth-child(67) {
+            top: 68%;
+            left: 97%;
+            top: calc(50% + -227px);
+            left: calc(50% + -128px);
+            -webkit-animation-delay: -1000ms;
+            animation-delay: -1000ms;
+            -webkit-animation-duration: 5320ms;
+            animation-duration: 5320ms;
+        }
+        
+        .line:nth-child(68) {
+            top: 80%;
+            left: 66%;
+            top: calc(50% + -41px);
+            left: calc(50% + 59px);
+            -webkit-animation-delay: -128ms;
+            animation-delay: -128ms;
+            -webkit-animation-duration: 6589ms;
+            animation-duration: 6589ms;
+        }
+        
+        .line:nth-child(69) {
+            top: 8%;
+            left: 50%;
+            top: calc(50% + -254px);
+            left: calc(50% + -71px);
+            -webkit-animation-delay: -2286ms;
+            animation-delay: -2286ms;
+            -webkit-animation-duration: 6723ms;
+            animation-duration: 6723ms;
+        }
+        
+        .line:nth-child(70) {
+            top: 29%;
+            left: 53%;
+            top: calc(50% + -141px);
+            left: calc(50% + 97px);
+            -webkit-animation-delay: -1623ms;
+            animation-delay: -1623ms;
+            -webkit-animation-duration: 5835ms;
+            animation-duration: 5835ms;
+        }
+        
+        .line:nth-child(71) {
+            top: 85%;
+            left: 4%;
+            top: calc(50% + -71px);
+            left: calc(50% + -27px);
+            -webkit-animation-delay: -2237ms;
+            animation-delay: -2237ms;
+            -webkit-animation-duration: 5353ms;
+            animation-duration: 5353ms;
+        }
+        
+        .line:nth-child(72) {
+            top: 25%;
+            left: 38%;
+            top: calc(50% + -127px);
+            left: calc(50% + 10px);
+            -webkit-animation-delay: -861ms;
+            animation-delay: -861ms;
+            -webkit-animation-duration: 6640ms;
+            animation-duration: 6640ms;
+        }
+        
+        .line:nth-child(73) {
+            top: 29%;
+            left: 31%;
+            top: calc(50% + -140px);
+            left: calc(50% + -40px);
+            -webkit-animation-delay: -4489ms;
+            animation-delay: -4489ms;
+            -webkit-animation-duration: 5158ms;
+            animation-duration: 5158ms;
+        }
+        
+        .line:nth-child(74) {
+            top: 15%;
+            left: 64%;
+            top: calc(50% + -29px);
+            left: calc(50% + 161px);
+            -webkit-animation-delay: -2500ms;
+            animation-delay: -2500ms;
+            -webkit-animation-duration: 5428ms;
+            animation-duration: 5428ms;
+        }
+        
+        .line:nth-child(75) {
+            top: 81%;
+            left: 48%;
+            top: calc(50% + -112px);
+            left: calc(50% + 25px);
+            -webkit-animation-delay: -5436ms;
+            animation-delay: -5436ms;
+            -webkit-animation-duration: 3848ms;
+            animation-duration: 3848ms;
+        }
+        
+        .line:nth-child(76) {
+            top: 11%;
+            left: 39%;
+            top: calc(50% + -173px);
+            left: calc(50% + -66px);
+            -webkit-animation-delay: -4162ms;
+            animation-delay: -4162ms;
+            -webkit-animation-duration: 4302ms;
+            animation-duration: 4302ms;
+        }
+        
+        .line:nth-child(77) {
+            top: 30%;
+            left: 9%;
+            top: calc(50% + -91px);
+            left: calc(50% + 16px);
+            -webkit-animation-delay: -5624ms;
+            animation-delay: -5624ms;
+            -webkit-animation-duration: 4316ms;
+            animation-duration: 4316ms;
+        }
+        
+        .line:nth-child(78) {
+            top: 97%;
+            left: 100%;
+            top: calc(50% + -99px);
+            left: calc(50% + -174px);
+            -webkit-animation-delay: -5052ms;
+            animation-delay: -5052ms;
+            -webkit-animation-duration: 4390ms;
+            animation-duration: 4390ms;
+        }
+        
+        .line:nth-child(79) {
+            top: 14%;
+            left: 29%;
+            top: calc(50% + -197px);
+            left: calc(50% + -115px);
+            -webkit-animation-delay: -3697ms;
+            animation-delay: -3697ms;
+            -webkit-animation-duration: 6648ms;
+            animation-duration: 6648ms;
+        }
+        
+        .line:nth-child(80) {
+            top: 98%;
+            left: 2%;
+            top: calc(50% + -132px);
+            left: calc(50% + 14px);
+            -webkit-animation-delay: -281ms;
+            animation-delay: -281ms;
+            -webkit-animation-duration: 4318ms;
+            animation-duration: 4318ms;
+        }
+        
+        .line:nth-child(81) {
+            top: 83%;
+            left: 94%;
+            top: calc(50% + -142px);
+            left: calc(50% + 129px);
+            -webkit-animation-delay: -3878ms;
+            animation-delay: -3878ms;
+            -webkit-animation-duration: 5146ms;
+            animation-duration: 5146ms;
+        }
+        
+        .line:nth-child(82) {
+            top: 40%;
+            left: 57%;
+            top: calc(50% + -74px);
+            left: calc(50% + -6px);
+            -webkit-animation-delay: -5224ms;
+            animation-delay: -5224ms;
+            -webkit-animation-duration: 3538ms;
+            animation-duration: 3538ms;
+        }
+        
+        .line:nth-child(83) {
+            top: 41%;
+            left: 72%;
+            top: calc(50% + -116px);
+            left: calc(50% + -178px);
+            -webkit-animation-delay: -2409ms;
+            animation-delay: -2409ms;
+            -webkit-animation-duration: 3836ms;
+            animation-duration: 3836ms;
+        }
+        
+        .line:nth-child(84) {
+            top: 78%;
+            left: 5%;
+            top: calc(50% + -76px);
+            left: calc(50% + 138px);
+            -webkit-animation-delay: -4027ms;
+            animation-delay: -4027ms;
+            -webkit-animation-duration: 5044ms;
+            animation-duration: 5044ms;
+        }
+        
+        .line:nth-child(85) {
+            top: 59%;
+            left: 87%;
+            top: calc(50% + -221px);
+            left: calc(50% + 165px);
+            -webkit-animation-delay: -3874ms;
+            animation-delay: -3874ms;
+            -webkit-animation-duration: 6051ms;
+            animation-duration: 6051ms;
+        }
+        
+        .line:nth-child(86) {
+            top: 54%;
+            left: 68%;
+            top: calc(50% + -165px);
+            left: calc(50% + -72px);
+            -webkit-animation-delay: -2896ms;
+            animation-delay: -2896ms;
+            -webkit-animation-duration: 5483ms;
+            animation-duration: 5483ms;
+        }
+        
+        .line:nth-child(87) {
+            top: 93%;
+            left: 96%;
+            top: calc(50% + -239px);
+            left: calc(50% + -42px);
+            -webkit-animation-delay: -4875ms;
+            animation-delay: -4875ms;
+            -webkit-animation-duration: 6348ms;
+            animation-duration: 6348ms;
+        }
+        
+        .line:nth-child(88) {
+            top: 2%;
+            left: 25%;
+            top: calc(50% + -90px);
+            left: calc(50% + 94px);
+            -webkit-animation-delay: -2950ms;
+            animation-delay: -2950ms;
+            -webkit-animation-duration: 5431ms;
+            animation-duration: 5431ms;
+        }
+        
+        .line:nth-child(89) {
+            top: 21%;
+            left: 36%;
+            top: calc(50% + -170px);
+            left: calc(50% + -154px);
+            -webkit-animation-delay: -5381ms;
+            animation-delay: -5381ms;
+            -webkit-animation-duration: 3518ms;
+            animation-duration: 3518ms;
+        }
+        
+        .line:nth-child(90) {
+            top: 97%;
+            left: 43%;
+            top: calc(50% + -267px);
+            left: calc(50% + 121px);
+            -webkit-animation-delay: -4703ms;
+            animation-delay: -4703ms;
+            -webkit-animation-duration: 5549ms;
+            animation-duration: 5549ms;
+        }
+        
+        .line:nth-child(91) {
+            top: 50%;
+            left: 23%;
+            top: calc(50% + -189px);
+            left: calc(50% + -122px);
+            -webkit-animation-delay: -937ms;
+            animation-delay: -937ms;
+            -webkit-animation-duration: 6842ms;
+            animation-duration: 6842ms;
+        }
+        
+        .line:nth-child(92) {
+            top: 41%;
+            left: 83%;
+            top: calc(50% + -164px);
+            left: calc(50% + -54px);
+            -webkit-animation-delay: -2629ms;
+            animation-delay: -2629ms;
+            -webkit-animation-duration: 4846ms;
+            animation-duration: 4846ms;
+        }
+        
+        .line:nth-child(93) {
+            top: 65%;
+            left: 95%;
+            top: calc(50% + -123px);
+            left: calc(50% + -30px);
+            -webkit-animation-delay: -5432ms;
+            animation-delay: -5432ms;
+            -webkit-animation-duration: 4352ms;
+            animation-duration: 4352ms;
+        }
+        
+        .line:nth-child(94) {
+            top: 39%;
+            left: 50%;
+            top: calc(50% + -33px);
+            left: calc(50% + 173px);
+            -webkit-animation-delay: -568ms;
+            animation-delay: -568ms;
+            -webkit-animation-duration: 4946ms;
+            animation-duration: 4946ms;
+        }
+        
+        .line:nth-child(95) {
+            top: 91%;
+            left: 63%;
+            top: calc(50% + -195px);
+            left: calc(50% + -138px);
+            -webkit-animation-delay: -119ms;
+            animation-delay: -119ms;
+            -webkit-animation-duration: 6155ms;
+            animation-duration: 6155ms;
+        }
+        
+        .line:nth-child(96) {
+            top: 2%;
+            left: 70%;
+            top: calc(50% + -132px);
+            left: calc(50% + -70px);
+            -webkit-animation-delay: -4275ms;
+            animation-delay: -4275ms;
+            -webkit-animation-duration: 4207ms;
+            animation-duration: 4207ms;
+        }
+        
+        .line:nth-child(97) {
+            top: 60%;
+            left: 39%;
+            top: calc(50% + -273px);
+            left: calc(50% + -91px);
+            -webkit-animation-delay: -4758ms;
+            animation-delay: -4758ms;
+            -webkit-animation-duration: 6001ms;
+            animation-duration: 6001ms;
+        }
+        
+        .line:nth-child(98) {
+            top: 63%;
+            left: 37%;
+            top: calc(50% + -153px);
+            left: calc(50% + 58px);
+            -webkit-animation-delay: -5842ms;
+            animation-delay: -5842ms;
+            -webkit-animation-duration: 3388ms;
+            animation-duration: 3388ms;
+        }
+        
+        .line:nth-child(99) {
+            top: 95%;
+            left: 97%;
+            top: calc(50% + -140px);
+            left: calc(50% + -10px);
+            -webkit-animation-delay: -711ms;
+            animation-delay: -711ms;
+            -webkit-animation-duration: 4045ms;
+            animation-duration: 4045ms;
+        }
+        
+        .line:nth-child(100) {
+            top: 3%;
+            left: 9%;
+            top: calc(50% + -237px);
+            left: calc(50% + -141px);
+            -webkit-animation-delay: -15ms;
+            animation-delay: -15ms;
+            -webkit-animation-duration: 6673ms;
+            animation-duration: 6673ms;
+        }
+        
+        .line:nth-child(101) {
+            top: 95%;
+            left: 20%;
+            top: calc(50% + -174px);
+            left: calc(50% + 94px);
+            -webkit-animation-delay: -3971ms;
+            animation-delay: -3971ms;
+            -webkit-animation-duration: 4452ms;
+            animation-duration: 4452ms;
+        }
+        
+        .line:nth-child(102) {
+            top: 67%;
+            left: 64%;
+            top: calc(50% + -255px);
+            left: calc(50% + 94px);
+            -webkit-animation-delay: -4627ms;
+            animation-delay: -4627ms;
+            -webkit-animation-duration: 6536ms;
+            animation-duration: 6536ms;
+        }
+        
+        .line:nth-child(103) {
+            top: 76%;
+            left: 48%;
+            top: calc(50% + -105px);
+            left: calc(50% + 132px);
+            -webkit-animation-delay: -5037ms;
+            animation-delay: -5037ms;
+            -webkit-animation-duration: 6065ms;
+            animation-duration: 6065ms;
+        }
+        
+        .line:nth-child(104) {
+            top: 89%;
+            left: 1%;
+            top: calc(50% + -142px);
+            left: calc(50% + -45px);
+            -webkit-animation-delay: -1284ms;
+            animation-delay: -1284ms;
+            -webkit-animation-duration: 5940ms;
+            animation-duration: 5940ms;
+        }
+        
+        .line:nth-child(105) {
+            top: 59%;
+            left: 21%;
+            top: calc(50% + -141px);
+            left: calc(50% + 37px);
+            -webkit-animation-delay: -5771ms;
+            animation-delay: -5771ms;
+            -webkit-animation-duration: 5804ms;
+            animation-duration: 5804ms;
+        }
+        
+        .line:nth-child(106) {
+            top: 42%;
+            left: 78%;
+            top: calc(50% + -18px);
+            left: calc(50% + -45px);
+            -webkit-animation-delay: -5325ms;
+            animation-delay: -5325ms;
+            -webkit-animation-duration: 4258ms;
+            animation-duration: 4258ms;
+        }
+        
+        .line:nth-child(107) {
+            top: 63%;
+            left: 32%;
+            top: calc(50% + -30px);
+            left: calc(50% + -27px);
+            -webkit-animation-delay: -3026ms;
+            animation-delay: -3026ms;
+            -webkit-animation-duration: 6862ms;
+            animation-duration: 6862ms;
+        }
+        
+        .line:nth-child(108) {
+            top: 43%;
+            left: 16%;
+            top: calc(50% + -246px);
+            left: calc(50% + 147px);
+            -webkit-animation-delay: -4627ms;
+            animation-delay: -4627ms;
+            -webkit-animation-duration: 3360ms;
+            animation-duration: 3360ms;
+        }
+        
+        .line:nth-child(109) {
+            top: 44%;
+            left: 67%;
+            top: calc(50% + -54px);
+            left: calc(50% + -57px);
+            -webkit-animation-delay: -4201ms;
+            animation-delay: -4201ms;
+            -webkit-animation-duration: 5008ms;
+            animation-duration: 5008ms;
+        }
+        
+        .line:nth-child(110) {
+            top: 57%;
+            left: 53%;
+            top: calc(50% + -101px);
+            left: calc(50% + 26px);
+            -webkit-animation-delay: -2744ms;
+            animation-delay: -2744ms;
+            -webkit-animation-duration: 5051ms;
+            animation-duration: 5051ms;
+        }
+        
+        .line:nth-child(111) {
+            top: 74%;
+            left: 71%;
+            top: calc(50% + -173px);
+            left: calc(50% + 90px);
+            -webkit-animation-delay: -3024ms;
+            animation-delay: -3024ms;
+            -webkit-animation-duration: 6398ms;
+            animation-duration: 6398ms;
+        }
+        
+        .line:nth-child(112) {
+            top: 12%;
+            left: 56%;
+            top: calc(50% + -131px);
+            left: calc(50% + 101px);
+            -webkit-animation-delay: -2268ms;
+            animation-delay: -2268ms;
+            -webkit-animation-duration: 4964ms;
+            animation-duration: 4964ms;
+        }
+        
+        .line:nth-child(113) {
+            top: 64%;
+            left: 51%;
+            top: calc(50% + -46px);
+            left: calc(50% + -5px);
+            -webkit-animation-delay: -4608ms;
+            animation-delay: -4608ms;
+            -webkit-animation-duration: 4461ms;
+            animation-duration: 4461ms;
+        }
+        
+        .line:nth-child(114) {
+            top: 7%;
+            left: 29%;
+            top: calc(50% + -245px);
+            left: calc(50% + -131px);
+            -webkit-animation-delay: -60ms;
+            animation-delay: -60ms;
+            -webkit-animation-duration: 6114ms;
+            animation-duration: 6114ms;
+        }
+        
+        .line:nth-child(115) {
+            top: 88%;
+            left: 69%;
+            top: calc(50% + -108px);
+            left: calc(50% + 158px);
+            -webkit-animation-delay: -183ms;
+            animation-delay: -183ms;
+            -webkit-animation-duration: 5631ms;
+            animation-duration: 5631ms;
+        }
+        
+        .line:nth-child(116) {
+            top: 35%;
+            left: 29%;
+            top: calc(50% + -227px);
+            left: calc(50% + 110px);
+            -webkit-animation-delay: -2039ms;
+            animation-delay: -2039ms;
+            -webkit-animation-duration: 6024ms;
+            animation-duration: 6024ms;
+        }
+        
+        .line:nth-child(117) {
+            top: 64%;
+            left: 80%;
+            top: calc(50% + -45px);
+            left: calc(50% + -30px);
+            -webkit-animation-delay: -4870ms;
+            animation-delay: -4870ms;
+            -webkit-animation-duration: 3965ms;
+            animation-duration: 3965ms;
+        }
+        
+        .line:nth-child(118) {
+            top: 88%;
+            left: 66%;
+            top: calc(50% + -176px);
+            left: calc(50% + 43px);
+            -webkit-animation-delay: -5507ms;
+            animation-delay: -5507ms;
+            -webkit-animation-duration: 4044ms;
+            animation-duration: 4044ms;
+        }
+        
+        .line:nth-child(119) {
+            top: 30%;
+            left: 46%;
+            top: calc(50% + -162px);
+            left: calc(50% + 124px);
+            -webkit-animation-delay: -1213ms;
+            animation-delay: -1213ms;
+            -webkit-animation-duration: 4035ms;
+            animation-duration: 4035ms;
+        }
+        
+        .line:nth-child(120) {
+            top: 84%;
+            left: 10%;
+            top: calc(50% + -131px);
+            left: calc(50% + 10px);
+            -webkit-animation-delay: -1111ms;
+            animation-delay: -1111ms;
+            -webkit-animation-duration: 6515ms;
+            animation-duration: 6515ms;
+        }
+        
+        .line:nth-child(121) {
+            top: 52%;
+            left: 43%;
+            top: calc(50% + -277px);
+            left: calc(50% + 81px);
+            -webkit-animation-delay: -1082ms;
+            animation-delay: -1082ms;
+            -webkit-animation-duration: 5304ms;
+            animation-duration: 5304ms;
+        }
+        
+        .line:nth-child(122) {
+            top: 94%;
+            left: 23%;
+            top: calc(50% + -265px);
+            left: calc(50% + -178px);
+            -webkit-animation-delay: -1823ms;
+            animation-delay: -1823ms;
+            -webkit-animation-duration: 4074ms;
+            animation-duration: 4074ms;
+        }
+        
+        .line:nth-child(123) {
+            top: 35%;
+            left: 12%;
+            top: calc(50% + -273px);
+            left: calc(50% + 88px);
+            -webkit-animation-delay: -974ms;
+            animation-delay: -974ms;
+            -webkit-animation-duration: 6907ms;
+            animation-duration: 6907ms;
+        }
+        
+        .line:nth-child(124) {
+            top: 95%;
+            left: 56%;
+            top: calc(50% + -167px);
+            left: calc(50% + -177px);
+            -webkit-animation-delay: -1291ms;
+            animation-delay: -1291ms;
+            -webkit-animation-duration: 4046ms;
+            animation-duration: 4046ms;
+        }
+        
+        .line:nth-child(125) {
+            top: 28%;
+            left: 5%;
+            top: calc(50% + -86px);
+            left: calc(50% + 155px);
+            -webkit-animation-delay: -5600ms;
+            animation-delay: -5600ms;
+            -webkit-animation-duration: 6610ms;
+            animation-duration: 6610ms;
+        }
+        
+        .line:nth-child(126) {
+            top: 79%;
+            left: 6%;
+            top: calc(50% + -46px);
+            left: calc(50% + -28px);
+            -webkit-animation-delay: -321ms;
+            animation-delay: -321ms;
+            -webkit-animation-duration: 3857ms;
+            animation-duration: 3857ms;
+        }
+        
+        .line:nth-child(127) {
+            top: 29%;
+            left: 41%;
+            top: calc(50% + -262px);
+            left: calc(50% + 64px);
+            -webkit-animation-delay: -2461ms;
+            animation-delay: -2461ms;
+            -webkit-animation-duration: 5825ms;
+            animation-duration: 5825ms;
+        }
+        
+        .line:nth-child(128) {
+            top: 91%;
+            left: 83%;
+            top: calc(50% + -183px);
+            left: calc(50% + -174px);
+            -webkit-animation-delay: -4846ms;
+            animation-delay: -4846ms;
+            -webkit-animation-duration: 5260ms;
+            animation-duration: 5260ms;
+        }
+        
+        .line:nth-child(129) {
+            top: 93%;
+            left: 26%;
+            top: calc(50% + -264px);
+            left: calc(50% + 107px);
+            -webkit-animation-delay: -1995ms;
+            animation-delay: -1995ms;
+            -webkit-animation-duration: 4111ms;
+            animation-duration: 4111ms;
+        }
+        
+        .line:nth-child(130) {
+            top: 26%;
+            left: 18%;
+            top: calc(50% + -128px);
+            left: calc(50% + -35px);
+            -webkit-animation-delay: -4054ms;
+            animation-delay: -4054ms;
+            -webkit-animation-duration: 6878ms;
+            animation-duration: 6878ms;
+        }
+        
+        .line:nth-child(131) {
+            top: 74%;
+            left: 68%;
+            top: calc(50% + -250px);
+            left: calc(50% + 26px);
+            -webkit-animation-delay: -4951ms;
+            animation-delay: -4951ms;
+            -webkit-animation-duration: 5744ms;
+            animation-duration: 5744ms;
+        }
+        
+        .line:nth-child(132) {
+            top: 78%;
+            left: 56%;
+            top: calc(50% + -156px);
+            left: calc(50% + -25px);
+            -webkit-animation-delay: -5838ms;
+            animation-delay: -5838ms;
+            -webkit-animation-duration: 5565ms;
+            animation-duration: 5565ms;
+        }
+        
+        .line:nth-child(133) {
+            top: 19%;
+            left: 23%;
+            top: calc(50% + -188px);
+            left: calc(50% + -51px);
+            -webkit-animation-delay: -2228ms;
+            animation-delay: -2228ms;
+            -webkit-animation-duration: 6036ms;
+            animation-duration: 6036ms;
+        }
+        
+        .line:nth-child(134) {
+            top: 11%;
+            left: 11%;
+            top: calc(50% + -116px);
+            left: calc(50% + 47px);
+            -webkit-animation-delay: -3242ms;
+            animation-delay: -3242ms;
+            -webkit-animation-duration: 5858ms;
+            animation-duration: 5858ms;
+        }
+        
+        .line:nth-child(135) {
+            top: 81%;
+            left: 20%;
+            top: calc(50% + -273px);
+            left: calc(50% + -91px);
+            -webkit-animation-delay: -4391ms;
+            animation-delay: -4391ms;
+            -webkit-animation-duration: 3843ms;
+            animation-duration: 3843ms;
+        }
+        
+        .line:nth-child(136) {
+            top: 45%;
+            left: 70%;
+            top: calc(50% + -31px);
+            left: calc(50% + 89px);
+            -webkit-animation-delay: -2244ms;
+            animation-delay: -2244ms;
+            -webkit-animation-duration: 3571ms;
+            animation-duration: 3571ms;
+        }
+        
+        .line:nth-child(137) {
+            top: 74%;
+            left: 21%;
+            top: calc(50% + -261px);
+            left: calc(50% + 144px);
+            -webkit-animation-delay: -2183ms;
+            animation-delay: -2183ms;
+            -webkit-animation-duration: 3941ms;
+            animation-duration: 3941ms;
+        }
+        
+        .line:nth-child(138) {
+            top: 71%;
+            left: 14%;
+            top: calc(50% + -198px);
+            left: calc(50% + -34px);
+            -webkit-animation-delay: -2851ms;
+            animation-delay: -2851ms;
+            -webkit-animation-duration: 6317ms;
+            animation-duration: 6317ms;
+        }
+        
+        .line:nth-child(139) {
+            top: 1%;
+            left: 52%;
+            top: calc(50% + -26px);
+            left: calc(50% + -55px);
+            -webkit-animation-delay: -2473ms;
+            animation-delay: -2473ms;
+            -webkit-animation-duration: 6394ms;
+            animation-duration: 6394ms;
+        }
+        
+        .line:nth-child(140) {
+            top: 83%;
+            left: 62%;
+            top: calc(50% + -66px);
+            left: calc(50% + 69px);
+            -webkit-animation-delay: -2275ms;
+            animation-delay: -2275ms;
+            -webkit-animation-duration: 6711ms;
+            animation-duration: 6711ms;
+        }
+        
+        .line:nth-child(141) {
+            top: 23%;
+            left: 33%;
+            top: calc(50% + -253px);
+            left: calc(50% + -74px);
+            -webkit-animation-delay: -4188ms;
+            animation-delay: -4188ms;
+            -webkit-animation-duration: 6928ms;
+            animation-duration: 6928ms;
+        }
+        
+        .line:nth-child(142) {
+            top: 43%;
+            left: 67%;
+            top: calc(50% + -210px);
+            left: calc(50% + -109px);
+            -webkit-animation-delay: -1353ms;
+            animation-delay: -1353ms;
+            -webkit-animation-duration: 5075ms;
+            animation-duration: 5075ms;
+        }
+        
+        .line:nth-child(143) {
+            top: 21%;
+            left: 90%;
+            top: calc(50% + -98px);
+            left: calc(50% + -140px);
+            -webkit-animation-delay: -1987ms;
+            animation-delay: -1987ms;
+            -webkit-animation-duration: 6502ms;
+            animation-duration: 6502ms;
+        }
+        
+        .line:nth-child(144) {
+            top: 52%;
+            left: 67%;
+            top: calc(50% + -226px);
+            left: calc(50% + 149px);
+            -webkit-animation-delay: -3419ms;
+            animation-delay: -3419ms;
+            -webkit-animation-duration: 3088ms;
+            animation-duration: 3088ms;
+        }
+        
+        .line:nth-child(145) {
+            top: 93%;
+            left: 11%;
+            top: calc(50% + -96px);
+            left: calc(50% + 17px);
+            -webkit-animation-delay: -3150ms;
+            animation-delay: -3150ms;
+            -webkit-animation-duration: 5163ms;
+            animation-duration: 5163ms;
+        }
+        
+        .line:nth-child(146) {
+            top: 28%;
+            left: 10%;
+            top: calc(50% + -133px);
+            left: calc(50% + 123px);
+            -webkit-animation-delay: -588ms;
+            animation-delay: -588ms;
+            -webkit-animation-duration: 5748ms;
+            animation-duration: 5748ms;
+        }
+        
+        .line:nth-child(147) {
+            top: 70%;
+            left: 17%;
+            top: calc(50% + -159px);
+            left: calc(50% + -119px);
+            -webkit-animation-delay: -1563ms;
+            animation-delay: -1563ms;
+            -webkit-animation-duration: 4075ms;
+            animation-duration: 4075ms;
+        }
+        
+        .line:nth-child(148) {
+            top: 65%;
+            left: 17%;
+            top: calc(50% + -114px);
+            left: calc(50% + 59px);
+            -webkit-animation-delay: -4167ms;
+            animation-delay: -4167ms;
+            -webkit-animation-duration: 3480ms;
+            animation-duration: 3480ms;
+        }
+        
+        .line:nth-child(149) {
+            top: 69%;
+            left: 78%;
+            top: calc(50% + -184px);
+            left: calc(50% + 85px);
+            -webkit-animation-delay: -429ms;
+            animation-delay: -429ms;
+            -webkit-animation-duration: 3097ms;
+            animation-duration: 3097ms;
+        }
+        
+        .line:nth-child(150) {
+            top: 51%;
+            left: 63%;
+            top: calc(50% + -80px);
+            left: calc(50% + -79px);
+            -webkit-animation-delay: -491ms;
+            animation-delay: -491ms;
+            -webkit-animation-duration: 4239ms;
+            animation-duration: 4239ms;
+        }
+        
+        .line:nth-child(151) {
+            top: 30%;
+            left: 69%;
+            top: calc(50% + -86px);
+            left: calc(50% + -172px);
+            -webkit-animation-delay: -2995ms;
+            animation-delay: -2995ms;
+            -webkit-animation-duration: 4061ms;
+            animation-duration: 4061ms;
+        }
+        
+        .line:nth-child(152) {
+            top: 59%;
+            left: 94%;
+            top: calc(50% + -208px);
+            left: calc(50% + -168px);
+            -webkit-animation-delay: -3931ms;
+            animation-delay: -3931ms;
+            -webkit-animation-duration: 6399ms;
+            animation-duration: 6399ms;
+        }
+        
+        .line:nth-child(153) {
+            top: 75%;
+            left: 42%;
+            top: calc(50% + -194px);
+            left: calc(50% + 22px);
+            -webkit-animation-delay: -646ms;
+            animation-delay: -646ms;
+            -webkit-animation-duration: 3722ms;
+            animation-duration: 3722ms;
+        }
+        
+        .line:nth-child(154) {
+            top: 8%;
+            left: 22%;
+            top: calc(50% + -270px);
+            left: calc(50% + -75px);
+            -webkit-animation-delay: -561ms;
+            animation-delay: -561ms;
+            -webkit-animation-duration: 5216ms;
+            animation-duration: 5216ms;
+        }
+        
+        .line:nth-child(155) {
+            top: 73%;
+            left: 21%;
+            top: calc(50% + -33px);
+            left: calc(50% + -149px);
+            -webkit-animation-delay: -2952ms;
+            animation-delay: -2952ms;
+            -webkit-animation-duration: 4544ms;
+            animation-duration: 4544ms;
+        }
+        
+        .line:nth-child(156) {
+            top: 34%;
+            left: 100%;
+            top: calc(50% + -30px);
+            left: calc(50% + -49px);
+            -webkit-animation-delay: -144ms;
+            animation-delay: -144ms;
+            -webkit-animation-duration: 3627ms;
+            animation-duration: 3627ms;
+        }
+        
+        .line:nth-child(157) {
+            top: 88%;
+            left: 30%;
+            top: calc(50% + -203px);
+            left: calc(50% + 14px);
+            -webkit-animation-delay: -3412ms;
+            animation-delay: -3412ms;
+            -webkit-animation-duration: 6657ms;
+            animation-duration: 6657ms;
+        }
+        
+        .line:nth-child(158) {
+            top: 11%;
+            left: 20%;
+            top: calc(50% + -282px);
+            left: calc(50% + -122px);
+            -webkit-animation-delay: -4688ms;
+            animation-delay: -4688ms;
+            -webkit-animation-duration: 5316ms;
+            animation-duration: 5316ms;
+        }
+        
+        .line:nth-child(159) {
+            top: 27%;
+            left: 4%;
+            top: calc(50% + -226px);
+            left: calc(50% + -9px);
+            -webkit-animation-delay: -1748ms;
+            animation-delay: -1748ms;
+            -webkit-animation-duration: 5492ms;
+            animation-duration: 5492ms;
+        }
+        
+        .line:nth-child(160) {
+            top: 13%;
+            left: 79%;
+            top: calc(50% + -184px);
+            left: calc(50% + 15px);
+            -webkit-animation-delay: -3430ms;
+            animation-delay: -3430ms;
+            -webkit-animation-duration: 5763ms;
+            animation-duration: 5763ms;
+        }
+        
+        .line:nth-child(161) {
+            top: 56%;
+            left: 45%;
+            top: calc(50% + -244px);
+            left: calc(50% + -131px);
+            -webkit-animation-delay: -2097ms;
+            animation-delay: -2097ms;
+            -webkit-animation-duration: 3962ms;
+            animation-duration: 3962ms;
+        }
+        
+        .line:nth-child(162) {
+            top: 52%;
+            left: 95%;
+            top: calc(50% + -283px);
+            left: calc(50% + 68px);
+            -webkit-animation-delay: -2998ms;
+            animation-delay: -2998ms;
+            -webkit-animation-duration: 3089ms;
+            animation-duration: 3089ms;
+        }
+        
+        .line:nth-child(163) {
+            top: 24%;
+            left: 43%;
+            top: calc(50% + -97px);
+            left: calc(50% + 100px);
+            -webkit-animation-delay: -3262ms;
+            animation-delay: -3262ms;
+            -webkit-animation-duration: 3569ms;
+            animation-duration: 3569ms;
+        }
+        
+        .line:nth-child(164) {
+            top: 28%;
+            left: 51%;
+            top: calc(50% + -278px);
+            left: calc(50% + -56px);
+            -webkit-animation-delay: -2802ms;
+            animation-delay: -2802ms;
+            -webkit-animation-duration: 4361ms;
+            animation-duration: 4361ms;
+        }
+        
+        .line:nth-child(165) {
+            top: 30%;
+            left: 94%;
+            top: calc(50% + -179px);
+            left: calc(50% + 118px);
+            -webkit-animation-delay: -1579ms;
+            animation-delay: -1579ms;
+            -webkit-animation-duration: 5247ms;
+            animation-duration: 5247ms;
+        }
+        
+        .line:nth-child(166) {
+            top: 65%;
+            left: 38%;
+            top: calc(50% + -183px);
+            left: calc(50% + 64px);
+            -webkit-animation-delay: -653ms;
+            animation-delay: -653ms;
+            -webkit-animation-duration: 6453ms;
+            animation-duration: 6453ms;
+        }
+        
+        .line:nth-child(167) {
+            top: 60%;
+            left: 73%;
+            top: calc(50% + -297px);
+            left: calc(50% + 107px);
+            -webkit-animation-delay: -1548ms;
+            animation-delay: -1548ms;
+            -webkit-animation-duration: 6999ms;
+            animation-duration: 6999ms;
+        }
+        
+        .line:nth-child(168) {
+            top: 33%;
+            left: 80%;
+            top: calc(50% + -184px);
+            left: calc(50% + 167px);
+            -webkit-animation-delay: -5106ms;
+            animation-delay: -5106ms;
+            -webkit-animation-duration: 6363ms;
+            animation-duration: 6363ms;
+        }
+        
+        .line:nth-child(169) {
+            top: 78%;
+            left: 54%;
+            top: calc(50% + -31px);
+            left: calc(50% + 58px);
+            -webkit-animation-delay: -3768ms;
+            animation-delay: -3768ms;
+            -webkit-animation-duration: 3305ms;
+            animation-duration: 3305ms;
+        }
+        
+        .line:nth-child(170) {
+            top: 72%;
+            left: 38%;
+            top: calc(50% + -29px);
+            left: calc(50% + -179px);
+            -webkit-animation-delay: -3229ms;
+            animation-delay: -3229ms;
+            -webkit-animation-duration: 3025ms;
+            animation-duration: 3025ms;
+        }
+        
+        .line:nth-child(171) {
+            top: 35%;
+            left: 69%;
+            top: calc(50% + -255px);
+            left: calc(50% + -88px);
+            -webkit-animation-delay: -2465ms;
+            animation-delay: -2465ms;
+            -webkit-animation-duration: 5293ms;
+            animation-duration: 5293ms;
+        }
+        
+        .line:nth-child(172) {
+            top: 17%;
+            left: 83%;
+            top: calc(50% + -137px);
+            left: calc(50% + 20px);
+            -webkit-animation-delay: -4549ms;
+            animation-delay: -4549ms;
+            -webkit-animation-duration: 4494ms;
+            animation-duration: 4494ms;
+        }
+        
+        .line:nth-child(173) {
+            top: 1%;
+            left: 92%;
+            top: calc(50% + -216px);
+            left: calc(50% + -70px);
+            -webkit-animation-delay: -565ms;
+            animation-delay: -565ms;
+            -webkit-animation-duration: 6415ms;
+            animation-duration: 6415ms;
+        }
+        
+        .line:nth-child(174) {
+            top: 42%;
+            left: 50%;
+            top: calc(50% + -129px);
+            left: calc(50% + 90px);
+            -webkit-animation-delay: -2187ms;
+            animation-delay: -2187ms;
+            -webkit-animation-duration: 6074ms;
+            animation-duration: 6074ms;
+        }
+        
+        .line:nth-child(175) {
+            top: 22%;
+            left: 61%;
+            top: calc(50% + -176px);
+            left: calc(50% + -84px);
+            -webkit-animation-delay: -3183ms;
+            animation-delay: -3183ms;
+            -webkit-animation-duration: 6106ms;
+            animation-duration: 6106ms;
+        }
+        
+        .line:nth-child(176) {
+            top: 46%;
+            left: 7%;
+            top: calc(50% + -44px);
+            left: calc(50% + -45px);
+            -webkit-animation-delay: -1487ms;
+            animation-delay: -1487ms;
+            -webkit-animation-duration: 5794ms;
+            animation-duration: 5794ms;
+        }
+        
+        .line:nth-child(177) {
+            top: 12%;
+            left: 94%;
+            top: calc(50% + -43px);
+            left: calc(50% + 20px);
+            -webkit-animation-delay: -3779ms;
+            animation-delay: -3779ms;
+            -webkit-animation-duration: 4332ms;
+            animation-duration: 4332ms;
+        }
+        
+        .line:nth-child(178) {
+            top: 46%;
+            left: 69%;
+            top: calc(50% + -186px);
+            left: calc(50% + -59px);
+            -webkit-animation-delay: -2127ms;
+            animation-delay: -2127ms;
+            -webkit-animation-duration: 5274ms;
+            animation-duration: 5274ms;
+        }
+        
+        .line:nth-child(179) {
+            top: 8%;
+            left: 16%;
+            top: calc(50% + -18px);
+            left: calc(50% + 70px);
+            -webkit-animation-delay: -3898ms;
+            animation-delay: -3898ms;
+            -webkit-animation-duration: 4961ms;
+            animation-duration: 4961ms;
+        }
+        
+        .line:nth-child(180) {
+            top: 82%;
+            left: 88%;
+            top: calc(50% + -266px);
+            left: calc(50% + -151px);
+            -webkit-animation-delay: -1239ms;
+            animation-delay: -1239ms;
+            -webkit-animation-duration: 3033ms;
+            animation-duration: 3033ms;
+        }
+        
+        .line:nth-child(181) {
+            top: 48%;
+            left: 52%;
+            top: calc(50% + -165px);
+            left: calc(50% + 96px);
+            -webkit-animation-delay: -4611ms;
+            animation-delay: -4611ms;
+            -webkit-animation-duration: 5974ms;
+            animation-duration: 5974ms;
+        }
+        
+        .line:nth-child(182) {
+            top: 40%;
+            left: 100%;
+            top: calc(50% + -233px);
+            left: calc(50% + -168px);
+            -webkit-animation-delay: -2607ms;
+            animation-delay: -2607ms;
+            -webkit-animation-duration: 4569ms;
+            animation-duration: 4569ms;
+        }
+        
+        .line:nth-child(183) {
+            top: 34%;
+            left: 83%;
+            top: calc(50% + -271px);
+            left: calc(50% + -128px);
+            -webkit-animation-delay: -5959ms;
+            animation-delay: -5959ms;
+            -webkit-animation-duration: 3655ms;
+            animation-duration: 3655ms;
+        }
+        
+        .line:nth-child(184) {
+            top: 33%;
+            left: 50%;
+            top: calc(50% + -20px);
+            left: calc(50% + -148px);
+            -webkit-animation-delay: -888ms;
+            animation-delay: -888ms;
+            -webkit-animation-duration: 4024ms;
+            animation-duration: 4024ms;
+        }
+        
+        .line:nth-child(185) {
+            top: 44%;
+            left: 16%;
+            top: calc(50% + -8px);
+            left: calc(50% + -20px);
+            -webkit-animation-delay: -2212ms;
+            animation-delay: -2212ms;
+            -webkit-animation-duration: 4657ms;
+            animation-duration: 4657ms;
+        }
+        
+        .line:nth-child(186) {
+            top: 48%;
+            left: 27%;
+            top: calc(50% + -240px);
+            left: calc(50% + 130px);
+            -webkit-animation-delay: -4397ms;
+            animation-delay: -4397ms;
+            -webkit-animation-duration: 5906ms;
+            animation-duration: 5906ms;
+        }
+        
+        .line:nth-child(187) {
+            top: 53%;
+            left: 42%;
+            top: calc(50% + -160px);
+            left: calc(50% + 101px);
+            -webkit-animation-delay: -2863ms;
+            animation-delay: -2863ms;
+            -webkit-animation-duration: 4910ms;
+            animation-duration: 4910ms;
+        }
+        
+        .line:nth-child(188) {
+            top: 98%;
+            left: 91%;
+            top: calc(50% + -166px);
+            left: calc(50% + 76px);
+            -webkit-animation-delay: -3884ms;
+            animation-delay: -3884ms;
+            -webkit-animation-duration: 6461ms;
+            animation-duration: 6461ms;
+        }
+        
+        .line:nth-child(189) {
+            top: 54%;
+            left: 81%;
+            top: calc(50% + -100px);
+            left: calc(50% + -98px);
+            -webkit-animation-delay: -2043ms;
+            animation-delay: -2043ms;
+            -webkit-animation-duration: 4373ms;
+            animation-duration: 4373ms;
+        }
+        
+        .line:nth-child(190) {
+            top: 29%;
+            left: 17%;
+            top: calc(50% + -79px);
+            left: calc(50% + 165px);
+            -webkit-animation-delay: -2574ms;
+            animation-delay: -2574ms;
+            -webkit-animation-duration: 5037ms;
+            animation-duration: 5037ms;
+        }
+        
+        .line:nth-child(191) {
+            top: 36%;
+            left: 89%;
+            top: calc(50% + -249px);
+            left: calc(50% + 34px);
+            -webkit-animation-delay: -2049ms;
+            animation-delay: -2049ms;
+            -webkit-animation-duration: 3391ms;
+            animation-duration: 3391ms;
+        }
+        
+        .line:nth-child(192) {
+            top: 36%;
+            left: 46%;
+            top: calc(50% + -266px);
+            left: calc(50% + -88px);
+            -webkit-animation-delay: -708ms;
+            animation-delay: -708ms;
+            -webkit-animation-duration: 3394ms;
+            animation-duration: 3394ms;
+        }
+        
+        .line:nth-child(193) {
+            top: 7%;
+            left: 84%;
+            top: calc(50% + -285px);
+            left: calc(50% + -66px);
+            -webkit-animation-delay: -1547ms;
+            animation-delay: -1547ms;
+            -webkit-animation-duration: 4008ms;
+            animation-duration: 4008ms;
+        }
+        
+        .line:nth-child(194) {
+            top: 55%;
+            left: 57%;
+            top: calc(50% + -21px);
+            left: calc(50% + 68px);
+            -webkit-animation-delay: -5109ms;
+            animation-delay: -5109ms;
+            -webkit-animation-duration: 5909ms;
+            animation-duration: 5909ms;
+        }
+        
+        .line:nth-child(195) {
+            top: 11%;
+            left: 21%;
+            top: calc(50% + -74px);
+            left: calc(50% + -52px);
+            -webkit-animation-delay: -2117ms;
+            animation-delay: -2117ms;
+            -webkit-animation-duration: 5020ms;
+            animation-duration: 5020ms;
+        }
+        
+        .line:nth-child(196) {
+            top: 10%;
+            left: 48%;
+            top: calc(50% + -50px);
+            left: calc(50% + -51px);
+            -webkit-animation-delay: -5014ms;
+            animation-delay: -5014ms;
+            -webkit-animation-duration: 3705ms;
+            animation-duration: 3705ms;
+        }
+        
+        .line:nth-child(197) {
+            top: 61%;
+            left: 96%;
+            top: calc(50% + -81px);
+            left: calc(50% + -143px);
+            -webkit-animation-delay: -5107ms;
+            animation-delay: -5107ms;
+            -webkit-animation-duration: 3394ms;
+            animation-duration: 3394ms;
+        }
+        
+        .line:nth-child(198) {
+            top: 83%;
+            left: 41%;
+            top: calc(50% + -169px);
+            left: calc(50% + -63px);
+            -webkit-animation-delay: -275ms;
+            animation-delay: -275ms;
+            -webkit-animation-duration: 3475ms;
+            animation-duration: 3475ms;
+        }
+        
+        .line:nth-child(199) {
+            top: 55%;
+            left: 45%;
+            top: calc(50% + -245px);
+            left: calc(50% + -178px);
+            -webkit-animation-delay: -2308ms;
+            animation-delay: -2308ms;
+            -webkit-animation-duration: 3996ms;
+            animation-duration: 3996ms;
+        }
+        
+        .line:nth-child(200) {
+            top: 72%;
+            left: 91%;
+            top: calc(50% + -54px);
+            left: calc(50% + -101px);
+            -webkit-animation-delay: -865ms;
+            animation-delay: -865ms;
+            -webkit-animation-duration: 5602ms;
+            animation-duration: 5602ms;
+        }
+        
+        @-webkit-keyframes move {
+            0% {
+                -webkit-transform: translateY(200px) scale(0);
+                transform: translateY(200px) scale(0);
+                background: #ff00ff;
+            }
+            50% {
+                -webkit-transform: translateY(0) scale(1);
+                transform: translateY(0) scale(1);
+                background: #ffffff;
+            }
+            100% {
+                -webkit-transform: translateY(-200px) scale(0);
+                transform: translateY(-200px) scale(0);
+                background: #0000ff;
+            }
+        }
+        
+        @keyframes move {
+            0% {
+                -webkit-transform: translateY(200px) scale(0);
+                transform: translateY(200px) scale(0);
+                background: #ff00ff;
+            }
+            50% {
+                -webkit-transform: translateY(0) scale(1);
+                transform: translateY(0) scale(1);
+                background: #ffffff;
+            }
+            100% {
+                -webkit-transform: translateY(-200px) scale(0);
+                transform: translateY(-200px) scale(0);
+                background: #0000ff;
+            }
+        }
+    </style>
+    <!-- <script>
+        window.console = window.console || function(t) {};
+    </script>
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script> -->
+</head>
+
+<body translate="no">
+    <div class="ball">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+    <div class="bg">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+
+</body>
+
+</html>

@@ -31,6 +31,8 @@ const btn = document.querySelector('#replication');
 
 <br>
 
+<br>
+
 #### 如果停止思念可能我们连对面的容貌都会忘的一干二净，人的记忆好像一块不靠谱的磁盘永远不知道哪天它就消磁了。
 
 <script>
@@ -53,6 +55,7 @@ const btn = document.querySelector('#replication');
 </script>
 
 <style>
+/* @import url('static/css/code.css'); */
 /* #recommended{
     height: 30px;
     line-height: 30px;

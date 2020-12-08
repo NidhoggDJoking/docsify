@@ -30,16 +30,52 @@
 	<div class="shadow"></div>
 </div>
 
+<pre id="code" class="ace_editor" style="min-height:400px">
+<textarea class="ace_text-input">
+/**
+ * @param a: An integer
+ * @param b: An integer
+ * @return: The sum of a and b 
+ */
+const aplusb = function (a, b) {
+      while (b != 0) {
+            var _a = a ^ b;
+            var _b = (a & b) << 1;
+            a = _a;
+            b = _b;
+        }
+        return a;
+}
+</textarea>
+</pre>
+
+<br>
+
+```javascript
+const aplusb = function (a, b) {
+      while (b != 0) {
+            var _a = a ^ b;
+            var _b = (a & b) << 1;
+            a = _a;
+            b = _b;
+        }
+        return a;
+}
+```
+
 <style>
-  @import url(https://fonts.googleapis.com/css?family=Lato:700);
+
+@import url(https://fonts.googleapis.com/css?family=Lato:700);
+
 body {
   background-color:#F3F1E9;
 }
+
 .clock {
   width: 150px;
   height:75px;
   position:absolute;
-  top:50%;
+  top:10%;
   left:50%;
   transform:translate(-50%,-50%);
 }
@@ -148,6 +184,12 @@ div[class^='inner'],div[class*=' inner']{
   background-color:transparent;
   box-shadow:0 20px 4px 0px rgba(0,0,0,0.1);
 }
+#code{
+  margin-top:150px;
+}
+.ace_scroller{
+  background-color:#1d1d1d;
+}
 </style>
 <script>
   $(document).ready(function(){
@@ -170,4 +212,36 @@ div[class^='inner'],div[class*=' inner']{
     }
   }
 });
+// ===========代码分割线===========
+  //初始化对象
+  editor = ace.edit("code");
+
+  //设置风格和语言（更多风格和语言，请到github上相应目录查看）
+  theme = "chaos"
+  language = "javascript"
+  editor.setTheme("ace/theme/" + theme);
+  editor.session.setMode("ace/mode/" + language);
+
+  //字体大小
+  editor.setFontSize(18);
+
+  //设置只读（true时只读，用于展示代码）
+  editor.setReadOnly(false);
+
+  //自动换行,设置为off关闭
+  editor.setOption("wrap", "free")
+
+        //启用提示菜单
+  ace.require("ace/ext/language_tools");
+  editor.setOptions({
+      enableBasicAutocompletion: true,
+      enableSnippets: true,
+      enableLiveAutocompletion: true
+  });
+  // 移动光标
+  editor.moveCursorTo(0, 0);
+  // ctrl + F 触发搜索
+  // editor.execCommand('find');
+  // 获取代码内容
+  // console.log(editor.getValue())
 </script>

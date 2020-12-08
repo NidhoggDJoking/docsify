@@ -3,123 +3,210 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>NidhoggDJoking</title>
+    <title>Departures~あなたにおくるアイの歌~</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="description" content="Description">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="shortcut icon " type="images/x-icon" href="https://blog-static.cnblogs.com/files/NidhoggDJoking/fly.gif">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon " type="images/x-icon"
+        href="https://gitee.com/NidhoggDJoking/Evolution/raw/master/docs/static/png/favicon.png">
     <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+
     <!-- 难看的主题 自定义吧 -->
     <!-- <link rel="stylesheet" href="//unpkg.com/docsify/themes/buble.css"> -->
     <!-- <link rel="stylesheet" href="//unpkg.com/docsify/themes/dark.css"> -->
     <!-- <link rel="stylesheet" href="//unpkg.com/docsify/themes/pure.css"> -->
     <!-- <link rel="stylesheet" href="//unpkg.com/docsify/themes/dolphin.css"> -->
-
+    <!-- 纳兰迦 -- 猫猫飞行员 专用样式-->
     <style>
-        /* .markdown-section pre>code {
-            background-color: #282c34;
-        } */
-        
+        /* 阿里全局矢量图 */
+        @import url('//at.alicdn.com/t/font_2102225_1kzd6uwfb75j.css');
+
         .docsify-copy-code-button {
             right: 10px !important;
+        }
+
+        .iframe-top {
+            position: fixed;
+            right: 0;
+            bottom: 33%;
+            z-index: 10;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes cat {
+            from {
+                bottom: 33%;
+            }
+
+            to {
+                bottom: 70%;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .iframe-top {
+                display: none;
+            }
+
+            #topCat {
+                display: none;
+            }
         }
     </style>
 </head>
 
 <body>
+    <div class="iframe-top">
+        <iframe id="topCat" frameBorder="0" src="demo/top.html" width="250px" height="250px"></iframe>
+    </div>
     <!-- 全局看板娘 -->
     <link rel="stylesheet" type="text/css" href="./static/kanban/waifu.css" />
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <!-- 工具选项 -->
     <link rel="stylesheet" type="text/css" href="./static/kanban/flat-ui.min.css" />
+
+    <script src="./static/kanban/font/iconfont.js"></script>
     <div class="waifu" id="waifu">
         <!-- <div class="waifu-tips" style="opacity: 1;"></div> -->
         <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
         <div class="waifu-tool">
+            <svg class="icon fui-home" aria-hidden="true">
+                <use xlink:href="#icon-xihuan"></use>
+            </svg>
+            <svg class="icon fui-photo" aria-hidden="true">
+                <use xlink:href="#icon-xunzhang"></use>
+            </svg>
+            <svg class="icon fui-user" aria-hidden="true">
+                <use xlink:href="#icon-iconMBEfengge-"></use>
+            </svg>
+            <svg class="icon fui-cross" aria-hidden="true">
+                <use xlink:href="#icon-feiji"></use>
+            </svg>
+            <!-- <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-biaoqing"></use>
+            </svg>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-jiazai"></use>
+            </svg>
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-tongzhi"></use>
+            </svg> -->
+            <!-- 老版单色图标方案 废弃 -->
+            <!-- 首页 -->
             <!-- <span class="fui-home"></span> -->
+            <!-- 说骚话 -->
             <!-- <span class="fui-chat"></span> -->
+            <!-- 模型替换 -->
             <!-- <span class="fui-eye"></span> -->
-            <span class="fui-user"></span>
+            <!-- 改变皮肤 -->
+            <!-- <span class="fui-user"></span> -->
+            <!-- 拍照截图 -->
             <!-- <span class="fui-photo"></span> -->
+            <!-- 路由跳转 -->
             <!-- <span class="fui-info-circle"></span> -->
+            <!-- 关闭 -->
             <!-- <span class="fui-cross"></span> -->
         </div>
     </div>
     <script src="./static/kanban/live2d.min.js"></script>
     <script src="./static/kanban/waifu-tips.js"></script>
     <script type="text/javascript">
-        initModel()
+        initModel();
+        console.log("%c渐入佳境", " text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);font-size:3em")
     </script>
     <!-- 看板娘 -->
-    <a href="https://github.com/NidhoggDJoking" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+    <a href="https://github.com/NidhoggDJoking" class="github-corner" aria-label="View source on GitHub"><svg width="80"
+            height="80" viewBox="0 0 250 250"
+            style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+            <path
+                d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+                fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+            <path
+                d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+                fill="currentColor" class="octo-body"></path>
+        </svg></a>
     <style>
-        @font-face {
-            font-family: QuTi;
-            src: url("static/font/HYZengXiangChanQuTiW.ttf");
-        }
-        
         @font-face {
             font-family: Ha;
             src: url("static/font/HanyiSentySuciTablet.ttf");
         }
-        
+
         @font-face {
             font-family: Elgatino;
             src: url("static/font/Elgatino.ttf");
         }
-        
+
+        /* 彩色字体 */
         @font-face {
             font-family: SentyCandy;
             src: url("static/font/SentyCandy-color.ttf");
         }
-        
+
         @font-face {
             font-family: HYRunYuan;
             src: url("static/font/HYRunYuan-55W.ttf");
         }
+
         /* 日语书法 */
-        
+
         @font-face {
             font-family: HYDiS;
             src: url("static/font/HYDiShengYingXiongTiW.ttf");
         }
-        
+
         @font-face {
             font-family: GlastonburyD;
             src: url("static/font/GlastonburyD.ttf");
         }
-        
+
         @font-face {
             font-family: ZolaD;
             src: url("static/font/ZolaD-Reg.ttf");
         }
-        
-        * {}
-        
+
+        @font-face {
+            font-family: CooperBlaOutConD;
+            src: url("static/font/CooperBlaOutConD.ttf");
+        }
+
+        /* 英语专用 */
+        @font-face {
+            font-family: RegIta;
+            src: url("static/font/CrawModURW-RegIta.ttf");
+        }
+
+        /* 自动转大写 */
+        @font-face {
+            font-family: StencilD;
+            src: url("static/font/StencilD.ttf");
+        }
+
         #nidhoggdjoking a span {
             font-family: GlastonburyD;
         }
-        
+
         #見つけてくれてありがとう {
             font-family: HYDiS;
             color: #900000;
         }
-        
+
         #見つけてくれてありがとう span {
             /* color: #8a0000; */
             background: linear-gradient(to right, red, blue);
             -webkit-background-clip: text;
             color: transparent;
         }
-        
+
         .cover-main blockquote p {
             font-family: HYRunYuan;
         }
-        
+
         .cover-main ul li {
             font-family: HYRunYuan;
         }
-        
+
         .app-name-link>h4 {
             font-family: HYDiS;
             color: #ff0074;
@@ -130,86 +217,95 @@
             -webkit-background-clip: text;
             color: transparent; */
         }
-        
+
         .github-corner:hover .octo-arm {
             animation: octocat-wave 560ms ease-in-out
         }
-        
+
         .github-corner svg {
             height: 60px;
             width: 60px;
         }
+
         /* 导航栏滑动条 */
-        
+
         .sidebar::-webkit-scrollbar {
             width: 0px;
         }
-        
+
         .sidebar:hover::-webkit-scrollbar {
             width: 2px;
         }
-        
+
         .sidebar:hover::-webkit-scrollbar-thumb {
             background: linear-gradient(45deg, #1dfff5, #fff256, #ff008d);
         }
-        
+
         @keyframes octocat-wave {
+
             0%,
             100% {
                 transform: rotate(0)
             }
+
             20%,
             60% {
                 transform: rotate(-25deg)
             }
+
             40%,
             80% {
                 transform: rotate(10deg)
             }
         }
-        
+
         @media (max-width:500px) {
             .github-corner:hover .octo-arm {
                 animation: none
             }
+
             .github-corner .octo-arm {
                 animation: octocat-wave 560ms ease-in-out
             }
         }
-        
-         ::-webkit-scrollbar-track {
+
+        ::-webkit-scrollbar-track {
             border-radius: 15px;
             background-color: #fff;
             -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
         }
+
         /*滑动条*/
-        
-         ::-webkit-scrollbar {
+
+        ::-webkit-scrollbar {
             width: 8px;
             background-color: #fff00;
             border-radius: 15px;
         }
+
         /*滑块*/
-        
-         ::-webkit-scrollbar-thumb {
+
+        ::-webkit-scrollbar-thumb {
             border-radius: 15px;
             /* background-color: #b3b3b3; */
             -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
             background: linear-gradient(45deg, #fffa1d, #59ff56, #00d7ff);
         }
+
         /* 外嵌 iframe 去除边框 */
-        
+
         .markdown-section iframe {
             border: 0;
         }
+
         /* 海螺搜索 */
-        
+
         .input-wrap>input[type=search] {
             letter-spacing: 5px;
             font-family: SentyCandy;
             font-size: 25px;
         }
-        
+
         .search p.empty {
             font-family: SentyCandy;
             font-size: 25px;
@@ -225,7 +321,7 @@
             name: '<h4 style="letter-spacing:1px;"> 💖ゆずりは 祈り </h4>',
             // 左上角Github图标(我的不用他的,自己自定义一个)
             // repo: 'NidhoggDJoking',
-            maxLevel: 2,
+            maxLevel: 3,
             // h1-h5级别标签将写入目录
             // subMaxLevel: 2,
             // 执行文档里的 script 标签里的脚本，只执行第一个 script
@@ -239,7 +335,7 @@
             // 切换页面后是否自动跳转到页面顶部
             auto2top: true,
             // 网页标签图标(已经写在link里了)
-            // logo: 'https://blog-static.cnblogs.com/files/NidhoggDJoking/fly.gif'0,
+            // logo: 'https://blog-static.cnblogs.com/files/NidhoggDJoking/fly.gif',
             // themeColor: '#3F51B5',
             // 评论
             // disqus: 'shortname',
@@ -262,7 +358,7 @@
             },
             // 自定义插件
             plugins: [
-                function(hook) {
+                function (hook) {
                     var footer = [
                         '<hr/>',
                         '<footer style="text-align: right">',
@@ -271,7 +367,7 @@
                         '</footer>'
                     ].join('')
 
-                    hook.afterEach(function(html) {
+                    hook.afterEach(function (html) {
                         return html + footer
                     })
 
@@ -288,21 +384,93 @@
         var audio = document.getElementById('music');
         audio.pause();
         // ctrl + 回车销毁
-        $(document).keydown(function(e) {　　　　
-            if (e.ctrlKey && e.keyCode == 13) {　　　　　　
-                $("#music").remove();　　　
-            }　　
+        $(document).keydown(function (e) {
+            if (e.ctrlKey && e.keyCode == 13) {
+                $("#music").remove();
+            }
         });
         // 回车暂停或播放
-        $(document).keydown(function(event) {　　　　
-            if (event.keyCode == 13) {　　　　　　
+        $(document).keydown(function (event) {
+            if (event.keyCode == 13) {
                 if (audio.paused) {
                     audio.play();
                 } else {
                     audio.pause();
-                }　　　　
-            }　　
+                }
+            }
         });
+        // TOP  Cat
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                // document.querySelector(".iframe-top").style.display = "block";
+                $('.iframe-top').fadeIn();
+            } else {
+                // document.querySelector(".iframe-top").style.display = "none";
+                $('.iframe-top').fadeOut();
+            }
+        };
+
+        // js操控iframe元素
+        // var IframeOnClick = {  
+        //     resolution: 200,  
+        //     iframes: [],  
+        //     interval: null,  
+        //     Iframe: function() {  
+        //         this.element = arguments[0];  
+        //         this.cb = arguments[1];   
+        //         this.hasTracked = false;  
+        //     },  
+        //     track: function(element, cb) {  
+        //         this.iframes.push(new this.Iframe(element, cb));  
+        //         if (!this.interval) {  
+        //             var _this = this;  
+        //             this.interval = setInterval(function() { _this.checkClick();}, this.resolution);
+        //         }  
+        //     },  
+        //     checkClick: function() {  
+        //         if (document.activeElement) {  
+        //             var activeElement = document.activeElement;  
+        //             for (var i in this.iframes) {  
+        //                 if (activeElement === this.iframes[i].element) { // user is in this Iframe  
+        //                     if (this.iframes[i].hasTracked == false) {   
+        //                         this.iframes[i].cb.apply(window, []);   
+        //                         this.iframes[i].hasTracked = true;  
+        //                     }  
+        //                 } else {  
+        //                     this.iframes[i].hasTracked = false;  
+        //                 }  
+        //             }  
+        //         }  
+        //     }  
+        // };  
+        // 回到顶部
+        // IframeOnClick.track(document.getElementById("topCat"), function() {
+        //    var djs = setInterval(function(){ 
+        //         var oTop = document.body.scrollTop || document.documentElement.scrollTop;
+        //         if(oTop > 0){
+        //             document.body.scrollTop = document.documentElement.scrollTop = oTop - 50;
+        //         }else{
+        //             clearInterval(djs);
+        //         }
+        //      }, 10);
+        // }); 
+
+        // 在Iframe 调用承载页方法
+        function parentJO() {
+            $('.iframe-top').css('animation', 'cat 1s')
+            $('.iframe-top').css('animation-fill-mode', 'forwards')
+            var djs = setInterval(function () {
+                var oTop = document.body.scrollTop || document.documentElement.scrollTop;
+                if (oTop > 0) {
+                    document.body.scrollTop = document.documentElement.scrollTop = oTop - 50;
+                } else {
+                    clearInterval(djs);
+                    $('.iframe-top').css('animation', 'none')
+                    $('.iframe-top').hide();
+                }
+            }, 10);
+        }
     </script>
     <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 
@@ -314,9 +482,10 @@
     <!-- 搜索组件 -->
     <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
     <!-- 代码高亮 -->
-    <!-- <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>-->
+    <!-- <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script> -->
     <!-- <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-php.min.js"></script>  -->
     <!-- <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
 
     <!-- 兼容 Vue (不兼容其他组件)-->
     <!-- <script src="//unpkg.com/vue"></script>
@@ -338,6 +507,11 @@
     <!-- <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script> -->
     <!-- 天气 -->
     <!-- <script defer src="https://widget.heweather.net/standard/static/js/he-standard-common.js?v=1.1"></script> -->
+    <!-- 代码编辑器 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type="text/javascript"
+        charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ext-language_tools.js" type="text/javascript"
+        charset="utf-8"></script>
 </body>
 
 </html>

@@ -11,7 +11,7 @@ arr.push(6)
 console.log(arr)
 console.timeEnd()
 
-// default: 0.409912109375ms
+// default: 0.4ms 左右
 
 console.time()
 var arr2 = [1,2,3,4,5];
@@ -20,7 +20,7 @@ arr2[arr2.length] = 6
 console.log(arr2)
 console.timeEnd()
 
-// default: 0.2548828125ms
+// default: 0.2ms 左右
 ```
 
 <!-- <iframe
@@ -29,7 +29,46 @@ console.timeEnd()
   sandbox="allow-scripts allow-same-origin">
 </iframe> -->
 
+>#### 对象方法的调用：
+
+```javascript
+function first(){
+　　this.say = function(){}
+}
+```
+
+```javascript
+function last(){
+  this.say = function(){}
+  return this;
+}
+```
+
+```javascript
+console.time();
+var t = new first();
+for (var i=0;i<100000;i++) {
+  t.say();
+}
+console.timeEnd()
+// default: 2ms 左右
+```
+
+```javascript
+console.time();
+for (var i=0;i<100000;i++) {
+  last().say();
+}
+console.timeEnd()
+// default: 6ms 左右
+```
+
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=446 height=86 src="//music.163.com/outchain/player?type=2&id=418708145&auto=0&height=66"></iframe>
 
 
-?> 下面的方法明显快一些
+<!-- ?> 下面的方法明显快一些 -->
+
+
+<style>
+@import url('static/css/code2.css');
+</style>

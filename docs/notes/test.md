@@ -1,10 +1,10 @@
-#### 这个字很小，小到只能填满一颗心的程度，但这个字却很长，长到一生的距离去等候。
+<!-- #### 这个字很小，小到只能填满一颗心的程度，但这个字却很长，长到一生的距离去等候。 -->
 
 <br>
  
 <!--<span style="color:#ff97d5;font-size:22px;font-weight:600;">祈</span> -->
 
-<a class="vip" href="https://gitee.com/NidhoggDJoking/Evolution/pages" target="_blank">Vip过期了得手动更新了😂</a>
+<a class="vip" href="https://gitee.com/NidhoggDJoking/Evolution/pages" target="_blank">VIP 过期了得手动更新了 😂</a>
 
 <br>
 
@@ -18,8 +18,8 @@
 
 <style>
     .vip{
-        font-size: 28px;
-        color: #00c1ca !important;
+        font-size: 20px;
+        color: #00b7bf !important;
     }
     a{
         text-decoration:none;

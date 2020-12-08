@@ -1,0 +1,510 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/normalize.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            --hue: 12;
+            --star: #f7c655;
+            --bg: #262626;
+            --strap: #212121;
+            --red: #ed685e;
+            --orange: #ed975e;
+            --lime: #e4ed5e;
+            --green: #84ed5e;
+            --turquoise: #5ee4ed;
+            --purple: #685eed;
+            --indigo: #975eed;
+            --violet: #ed5eb4;
+            --tail: hsl(var(--hue), 27%, 62%);
+            --stroke: #1a1a1a;
+            --muzzle: hsl(var(--hue), 43%, 89%);
+            --dark: hsl(var(--hue), 33%, 67%);
+            --light: hsl(var(--hue), 65%, 79%);
+            --strap: #333;
+            /* background: var(--bg); */
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        svg {
+            width: 100%;
+            height: 110vmin;
+            display: none;
+        }
+
+        .stars path {
+            fill: var(--star);
+        }
+        .kitty{
+            cursor: pointer;
+        }
+        .kitty__light {
+            fill: var(--light);
+        }
+
+        .kitty__dark {
+            fill: var(--dark);
+        }
+
+        .kitty__dark-stroke {
+            stroke: var(--dark);
+        }
+
+        .kitty__stroke {
+            stroke: var(--stroke);
+        }
+
+        .kitty__fill {
+            fill: var(--stroke);
+        }
+
+        .kitty__muzzle {
+            fill: var(--muzzle);
+        }
+
+        .kitty__tail {
+            stroke: var(--tail);
+        }
+
+        .rocket__strap {
+            fill: var(--strap);
+        }
+
+        .rocket__body path:nth-of-type(1) {
+            fill: #a6a6a6;
+        }
+
+        .rocket__body path:nth-of-type(2) {
+            fill: #333;
+        }
+
+        .rocket__body path:nth-of-type(3) {
+            fill: #d9d9d9;
+        }
+
+        .rocket__body path:nth-of-type(4) {
+            fill: #4d4d4d;
+        }
+
+        .rocket__stream path:nth-of-type(1),
+        .rocket__bubbles path:nth-of-type(1),
+        .rocket__stream path:nth-of-type(8),
+        .rocket__bubbles path:nth-of-type(8) {
+            fill: var(--red);
+        }
+
+        .rocket__stream path:nth-of-type(2),
+        .rocket__bubbles path:nth-of-type(2),
+        .rocket__stream path:nth-of-type(9),
+        .rocket__bubbles path:nth-of-type(9) {
+            fill: var(--orange);
+        }
+
+        .rocket__stream path:nth-of-type(3),
+        .rocket__bubbles path:nth-of-type(3),
+        .rocket__stream path:nth-of-type(10),
+        .rocket__bubbles path:nth-of-type(10) {
+            fill: var(--lime);
+        }
+
+        .rocket__stream path:nth-of-type(4),
+        .rocket__bubbles path:nth-of-type(4),
+        .rocket__stream path:nth-of-type(11),
+        .rocket__bubbles path:nth-of-type(11) {
+            fill: var(--green);
+        }
+
+        .rocket__stream path:nth-of-type(5),
+        .rocket__bubbles path:nth-of-type(5),
+        .rocket__stream path:nth-of-type(12),
+        .rocket__bubbles path:nth-of-type(12) {
+            fill: var(--turquoise);
+        }
+
+        .rocket__stream path:nth-of-type(6),
+        .rocket__bubbles path:nth-of-type(6),
+        .rocket__stream path:nth-of-type(13),
+        .rocket__bubbles path:nth-of-type(13) {
+            fill: var(--purple);
+        }
+
+        .rocket__stream path:nth-of-type(7),
+        .rocket__bubbles path:nth-of-type(7),
+        .rocket__stream path:nth-of-type(14),
+        .rocket__bubbles path:nth-of-type(14) {
+            fill: var(--indigo);
+        }
+
+        .rocket__stream path:nth-of-type(8),
+        .rocket__bubbles path:nth-of-type(8),
+        .rocket__stream path:nth-of-type(15),
+        .rocket__bubbles path:nth-of-type(15) {
+            fill: var(--violet);
+        }
+    </style>
+    <script>
+        window.console = window.console || function (t) {};
+    </script>
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
+</head>
+
+<body translate="no" style="--hue:0;">
+    <svg class="scene" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1006 998" clip-rule="evenodd"
+        fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" style="display: block;">
+        <g class="rocket">
+            <g class="rocket__stream">
+                <path d="M745 608h6v263h-6z"></path>
+                <path d="M761 608h6v263h-6z"></path>
+                <path d="M755 608h6v263h-6z"></path>
+                <path d="M749 608h6v263h-6z"></path>
+                <path d="M778 608h6v263h-6z"></path>
+                <path d="M772 608h6v263h-6z"></path>
+                <path d="M767 608h6v263h-6z"></path>
+            </g>
+            <g class="rocket__bubbles">
+                <path d="M717 869a25 25 0 1150 0 25 25 0 01-50 0z" data-svg-origin="742.0000305175781 868.9654541015625"
+                    transform="matrix(0.1869,0,0,0.1869,603.32022,706.55581)"
+                    style="transform-origin: 0px 0px 0px; opacity: 1;"></path>
+                <path d="M704 873a25 25 0 1150 0 25 25 0 01-50 0z" data-svg-origin="729 872.9999389648438"
+                    transform="matrix(2.4059,0,0,2.4059,-1024.9011,-1227.35061)"
+                    style="transform-origin: 0px 0px 0px; opacity: 0.2354;"></path>
+                <path d="M736 863a25 25 0 1150 0 25 25 0 01-50 0z" data-svg-origin="760.9999389648438 862.9827575683594"
+                    transform="matrix(2.4571,0,0,2.4571,-1108.85301,-1257.45218)"
+                    style="transform-origin: 0px 0px 0px; opacity: 0.1071;"></path>
+                <path d="M774 865a25 25 0 1150 0 25 25 0 01-50 0z" data-svg-origin="799 864.9999389648438"
+                    transform="matrix(2.1578,0,0,2.1578,-925.0822,-1001.49693)"
+                    style="transform-origin: 0px 0px 0px; opacity: 0.8556;"></path>
+                <path d="M720 884a25 25 0 1150 0 25 25 0 01-50 0z" data-svg-origin="745 884"
+                    transform="matrix(2.0296,0,0,2.0296,-767.052,-910.1664)"
+                    style="transform-origin: 0px 0px 0px; opacity: 1;"></path>
+                <path d="M719 876a25 25 0 1150 0 25 25 0 01-50 0z" data-svg-origin="744 876"
+                    transform="matrix(2.039,0,0,2.039,-773.016,-910.164)"
+                    style="transform-origin: 0px 0px 0px; opacity: 1;"></path>
+                <path d="M765 879a25 25 0 1150 0 25 25 0 01-50 0z" data-svg-origin="789.9999389648438 879"
+                    transform="matrix(0.607,0,0,0.607,310.46998,345.447)"
+                    style="transform-origin: 0px 0px 0px; opacity: 1;"></path>
+                <path d="M738 884a25 25 0 1150 0 25 25 0 01-50 0z" data-svg-origin="762.9999389648438 883.9827575683594"
+                    transform="matrix(0.0767,0,0,0.0767,704.47784,816.18128)"
+                    style="transform-origin: 0px 0px 0px; opacity: 1;"></path>
+                <path d="M721 851a25 25 0 1150 0 25 25 0 01-50 0z" data-svg-origin="746 851"
+                    transform="matrix(0.2128,0,0,0.2128,587.2512,669.9072)"
+                    style="transform-origin: 0px 0px 0px; opacity: 1;"></path>
+                <path d="M716 876a25 25 0 1150 0 25 25 0 01-50 0z" data-svg-origin="741 876"
+                    transform="matrix(2.4992,0,0,2.4992,-1110.9072,-1313.2992)"
+                    style="transform-origin: 0px 0px 0px; opacity: 0.0019;"></path>
+                <path d="M747 881a25 25 0 1150 0 25 25 0 01-50 0z" data-svg-origin="772 880.9999389648438"
+                    transform="matrix(1.0006,0,0,1.0006,-0.4632,-0.5286)"
+                    style="transform-origin: 0px 0px 0px; opacity: 1;"></path>
+                <path d="M764 882a25 25 0 1150 0 25 25 0 01-50 0z" data-svg-origin="788.9999389648438 881.9654235839844"
+                    transform="matrix(2.4092,0,0,2.4092,-1111.85871,-1242.86567)"
+                    style="transform-origin: 0px 0px 0px; opacity: 0.2271;"></path>
+                <path d="M766 852a25 25 0 1150 0 25 25 0 01-50 0z" data-svg-origin="791 851.9999389648438"
+                    transform="matrix(0.8545,0,0,0.8545,115.0905,123.96599)"
+                    style="transform-origin: 0px 0px 0px; opacity: 1;"></path>
+                <path d="M735 847a25 25 0 1150 0 25 25 0 01-50 0z" data-svg-origin="760 847"
+                    transform="matrix(2.381,0,0,2.381,-1049.56,-1169.707)"
+                    style="transform-origin: 0px 0px 0px; opacity: 0.2974;"></path>
+            </g>
+            <g class="rocket__body">
+                <path d="M743 602h43v9h-43z"></path>
+                <path d="M776 601h10v10h-10z"></path>
+                <path d="M764 442c-17 0-31 15-31 33v129h63V475c0-18-14-33-32-33z"></path>
+                <path d="M764 442c18 0 32 15 32 33v129h-8V475c0-16-12-30-27-32l3-1z"></path>
+            </g>
+        </g>
+        <g class="kitty" onclick="myFunction()">
+            <g class="kitty__tails">
+                <path class="kitty__tail"
+                    d="M698.36 618.12 C696.84 634.12 691.52 656.12 693.68 671.12 696.08 683.12 704.44 693 705.2 706 705.84 722.12 700.64 738.12 699 752.12 "
+                    fill="none" stroke-width="20"
+                    data-original="M698 618c-2 16-9 38-6 53 3 12 14 22 15 35 1 16-6 32-8 46"></path>
+                <path class="kitty__tail" d="M701 619c2 16 9 38 5 53-2 12-13 21-14 34-2 17 6 33 7 47" fill="none"
+                    stroke-width="20" style="display: none;"></path>
+            </g>
+            <g class="kitty__leg kitty__leg--right" data-svg-origin="670.5 594.15"
+                transform="matrix(0.99997,-0.00787,0.00787,0.99997,-4.65585,5.29466)"
+                style="transform-origin: 0px 0px 0px;">
+                <path class="kitty__light"
+                    d="M670 588c8 0 15 7 15 15v93c0 8-7 15-15 15s-14-7-14-15v-93c0-8 6-15 14-15z"></path>
+                <path class="kitty__dark"
+                    d="M677 590l2 7v94c0 8-6 14-14 14l-7-2c2 5 7 8 12 8 8 0 15-7 15-15v-93c0-6-3-10-8-13z"></path>
+            </g>
+            <g class="kitty__leg kitty__leg--left" data-svg-origin="729.5 597.1"
+                transform="matrix(0.99997,0.00787,-0.00787,0.99997,4.72106,-5.72325)"
+                style="transform-origin: 0px 0px 0px;">
+                <path class="kitty__light"
+                    d="M730 591c8 0 14 6 14 14v94c0 8-6 14-14 14s-15-6-15-14v-94c0-8 7-14 15-14z"></path>
+                <path class="kitty__dark"
+                    d="M737 593l2 6v94c0 8-7 15-15 15-3 0-5-1-7-3 2 5 7 8 13 8 8 0 14-6 14-14v-94c0-5-3-10-7-12z">
+                </path>
+            </g>
+            <g class="kitty__body">
+                <path class="kitty__light"
+                    d="M699 446c27 0 49 22 49 48v97c0 27-22 48-49 48s-49-21-49-48v-97c0-26 22-48 49-48z"></path>
+                <path class="kitty__dark"
+                    d="M699 639c27 0 49-22 49-48l1-98c-1-15-10-28-21-37 5 8 9 17 9 27v97c1 27-21 48-48 49-12 0-22-4-30-10 9 12 24 20 40 20z">
+                </path>
+            </g>
+            <path class="rocket__strap"
+                d="M652 509l91-11c5-1 9 3 10 7v1c0 5-3 9-8 10l-91 11c-5 0-9-3-10-8v-1c0-5 3-9 8-9z"></path>
+            <g class="kitty__arm kitty__arm--right" data-svg-origin="733.5808563232422 485.69129791259763"
+                transform="matrix(0.99997,0.00787,-0.00787,0.99997,3.8444,-5.75871)"
+                style="transform-origin: 0px 0px 0px;">
+                <path class="kitty__light"
+                    d="M734 468c8 2 13 10 11 18l-20 91c-2 8-10 13-18 11s-13-10-11-17l21-92c2-8 9-13 17-11z"></path>
+                <path class="kitty__dark"
+                    d="M741 471v8l-21 91c-1 8-9 13-17 11l-7-4c2 5 6 10 11 11 8 2 16-3 18-11l21-92c1-5-1-10-5-14z">
+                </path>
+            </g>
+            <g class="kitty__arm kitty__arm--left" data-svg-origin="657.4705200195312 492.69129791259763"
+                transform="matrix(0.99997,0.00787,-0.00787,0.99997,3.8972,-5.15951)"
+                style="transform-origin: 0px 0px 0px;">
+                <path class="kitty__light"
+                    d="M659 475c8 2 13 10 11 18l-22 91c-2 8-10 13-18 11s-13-10-11-18l23-91c1-8 9-13 17-11z"></path>
+                <path class="kitty__dark"
+                    d="M665 479l1 7-23 91c-1 8-9 13-17 11l-7-4c2 5 6 9 11 11 8 2 16-3 18-11l22-91c1-5-1-10-5-14z">
+                </path>
+            </g>
+            <g class="kitty__head" data-svg-origin="728.75 459.9906692504883"
+                transform="matrix(0.99997,0.00787,-0.00787,0.99997,3.64199,-5.72146)"
+                style="transform-origin: 0px 0px 0px;">
+                <g class="kitty__stroke" fill="none" stroke-width="5">
+                    <path d="M548 467c-18 10-38 13-54 26"></path>
+                    <path d="M560 485l-48 31"></path>
+                    <path d="M574 495c-9 7-14 19-17 30"></path>
+                    <path d="M745 351c7-13 31-22 43-30"></path>
+                    <path d="M757 374c11-8 24-19 38-12"></path>
+                    <path d="M760 390c10-6 38 4 47 9"></path>
+                </g>
+                <path class="kitty__light"
+                    d="M652 326c4-107 90-53 73 8 48 34 64 104-5 155-94 71-188 9-181-68-37-57-22-143 46-67"></path>
+                <path class="kitty__muzzle" d="M616 454c-7-14 5-34 28-46 22-11 46-9 53 5s-5 35-27 46c-23 12-47 9-54-5z">
+                </path>
+                <g class="kitty__eye kitty__eye--left" data-svg-origin="570.9999694824219 440.00001525878906"
+                    transform="matrix(0.90631,-0.42262,0.42262,0.90631,-132.45582,282.53961)"
+                    style="transform-origin: 0px 0px 0px;">
+                    <path class="kitty__stroke kitty__fill" d="M565 444a7 7 0 1112-8 7 7 0 01-12 8z" stroke-width="5">
+                    </path>
+                </g>
+                <g class="kitty__eye kitty__eye--right" data-svg-origin="717.5635681152344 372.7518615722656"
+                    transform="matrix(0.90631,-0.42262,0.42262,0.90631,-90.30386,338.17984)"
+                    style="transform-origin: 0px 0px 0px;">
+                    <path class="kitty__stroke kitty__fill" d="M712 377a7 7 0 1112-7 7 7 0 01-12 7z" stroke-width="5">
+                    </path>
+                </g>
+                <path class="kitty__light" d="M570 369c9-8 15-20 25-27 22-15 47-18 72-16"></path>
+                <path class="kitty__dark-stroke" d="M690 287c-18-22-28 18-25 30v3" fill="none" stroke-width="4"></path>
+                <path class="kitty__dark-stroke" d="M536 352c-6-8 2-21 11-15 6 5 12 9 17 15 1 2 7 10 8 9" fill="none"
+                    stroke-width="4"></path>
+                <path class="kitty__stroke" d="M631 451c19 7 15-12 26-15 4-2 10 3 16 0 2-2 14-11 11-13" fill="none"
+                    stroke-width="4"></path>
+                <path class="kitty__stroke" d="M644 426c-1-3 1-5 4-7 3-1 7-1 8 1s-1 5-4 7c-4 1-7 1-8-1z"
+                    stroke-width="2"></path>
+                <path class="kitty__dark"
+                    d="M695 267c14 12 23 35 17 59 47 34 63 104-6 155-47 36-94 38-129 21 35 25 89 28 143-13 69-51 53-121 5-155 9-31-10-61-30-67z">
+                </path>
+            </g>
+        </g>
+        <g class="stars">
+            <path d="M908 657l-10-9-13 4 5-12-8-11h13l8-10 4 13 13 4-11 7z" fill-rule="nonzero"
+                data-svg-origin="901 638" transform="matrix(-0.17389,-0.82027,0.82027,-0.17389,534.34263,369.19019)"
+                style="transform-origin: 0px 0px 0px;"></path>
+            <path d="M1128 89l-10-8-13 3 5-12-8-11 13 1 8-11 4 13 13 4-11 8z" fill-rule="nonzero"
+                data-svg-origin="1121 70" transform="matrix(0.00847,-0.41351,0.41351,0.00847,1082.55943,-638.46009)"
+                style="transform-origin: 0px 0px 0px;"></path>
+            <path d="M296 287l-10-9-13 4 5-12-8-11h13l8-10 4 13 12 4-11 7z" fill-rule="nonzero"
+                data-svg-origin="288.5 268" transform="matrix(-0.71585,0.48273,-0.48273,-0.71585,624.39437,1082.4809)"
+                style="transform-origin: 0px 0px 0px;"></path>
+            <path d="M188 991l-10-8-13 4 5-13-8-11 13 1 8-11 4 13 13 4-11 8z" fill-rule="nonzero"
+                data-svg-origin="181 972" transform="matrix(0.62142,-0.44497,0.44497,0.62142,-363.98786,1525.74063)"
+                style="transform-origin: 0px 0px 0px;"></path>
+            <path d="M1227 1137l-10-9-13 4 5-12-8-11h13l8-10 4 13 12 4-11 7z" fill-rule="nonzero"
+                data-svg-origin="1219.5 1118" transform="matrix(0.19374,-0.05821,0.05821,0.19374,918.15529,1652.39828)"
+                style="transform-origin: 0px 0px 0px;"></path>
+        </g>
+    </svg>
+    <script src="../static/js/gsap.min.js"></script>
+    <script src="../static/js/MorphSVGPlugin3.min.js"></script>
+    <script id="rendered-js">
+        const {
+            gsap: {
+                set,
+                to,
+                timeline,
+                utils: {
+                    random
+                }
+            }
+        } =
+
+        window;
+
+        const TAILS = [...document.querySelectorAll('.kitty__tail')];
+        const STARS = [...document.querySelectorAll('.stars path')];
+        const BUBBLES = [...document.querySelectorAll('.rocket__bubbles path')];
+        const EYES = [...document.querySelectorAll('.kitty__eye')];
+
+        set('.scene', {
+            display: 'block'
+        });
+
+        set(TAILS[1], {
+            display: 'none'
+        });
+        to(TAILS[0], {
+            duration: 0.1,
+            ease: 'none',
+            yoyo: true,
+            repeat: -1,
+            morphSVG: TAILS[1]
+        });
+
+
+        set('.stars path', {
+            y: -1185,
+            transformOrigin: '50% 50%',
+            rotation: 'random(0, 360)',
+            scale: 'random(0.2, 1.2)'
+        });
+
+
+        STARS.forEach((star) =>
+            to(star, {
+                repeat: -1,
+                duration: 'random(4, 10)',
+                delay: () => 'random(-10, -5)',
+                y: 1185,
+                ease: 'none'
+            }));
+
+
+
+        set(BUBBLES, {
+            scale: 0,
+            transformOrigin: '50% 50%'
+        });
+        BUBBLES.forEach((bubble) =>
+            timeline({
+                repeat: -1,
+                yoyo: true
+            }).to(bubble, {
+                duration: 0.5,
+                scale: 2.5
+            }).
+
+            to(
+                bubble, {
+                    duration: 0.2,
+                    opacity: 0
+                },
+
+                '>-0.2').
+
+            seek(Math.random()));
+
+
+        set(EYES, {
+            transformOrigin: '50% 50%',
+            rotate: -25
+        });
+
+        const blink = () => {
+            const delay = random(2, 5);
+            to(EYES, {
+                delay,
+                duration: 0.1,
+                repeat: 1,
+                yoyo: true,
+                scaleY: 0,
+                onComplete: () => blink()
+            });
+
+        };
+        blink();
+
+        to('.kitty__head', {
+            repeat: -1,
+            yoyo: true,
+            rotate: 2,
+            duration: 0.1,
+            transformOrigin: '75% 75%'
+        });
+
+
+        to('.kitty__arm', {
+            repeat: -1,
+            yoyo: true,
+            rotate: 2,
+            duration: 0.1,
+            transformOrigin: '75% 15%'
+        });
+
+        to('.kitty__leg--left', {
+            repeat: -1,
+            yoyo: true,
+            rotate: 2,
+            duration: 0.1,
+            transformOrigin: '50% 5%'
+        });
+
+        to('.kitty__leg--right', {
+            repeat: -1,
+            yoyo: true,
+            rotate: -2,
+            duration: 0.1,
+            transformOrigin: '50% 5%'
+        });
+
+        const PARTY = timeline({
+            paused: true
+        }).
+        fromTo(
+            document.body, {
+                '--hue': 0
+            },
+
+            {
+                '--hue': 360,
+                repeat: 10,
+                ease: 'none'
+            });
+
+
+        const keys = [];
+        const shouldWeParty = e => {
+            keys.push(e.key);
+            if (
+                keys.slice(keys.length - 5, keys.length).join('').toLowerCase() === 'party') {
+                // Let's party
+                keys.length = 0;
+                PARTY.restart();
+            }
+        };
+        window.addEventListener('keyup', shouldWeParty);
+        //# sourceURL=pen.js
+    </script>
+    <script>
+    // 在Iframe 调用承载页方法
+       function myFunction(){
+           window.parent.parentJO();
+       }
+    </script>
+</body>
+
+</html>

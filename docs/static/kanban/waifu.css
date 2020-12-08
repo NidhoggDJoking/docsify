@@ -50,15 +50,19 @@
 
 .waifu-tool {
     display: none;
+    flex-direction: column;
     color: #aaa;
-    top: 50px;
+    top: 10px;
     right: 10px;
     font-size: 14px;
-    position: absolute
+    position: absolute;
+    transition: 0.5s all;
 }
 
 .waifu:hover .waifu-tool {
-    display: block
+    /* display: block */
+    display: flex;
+    transition: 0.5s all;
 }
 
 .waifu-tool span {
@@ -70,7 +74,7 @@
 }
 
 .waifu-tool span:hover {
-    color: #34495e
+    color: #34495e;
 }
 
 .waifu #live2d {
