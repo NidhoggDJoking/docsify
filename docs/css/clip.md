@@ -144,11 +144,57 @@
 <hr>
 
 
-
-
-
 #### [CSS clip-path 生成器](https://www.html.cn/tool/css-clip-path/)
 
+<br/>
+
+ `clip-path CSS` 属性可以创建一个只有元素的部分区域可以显示的剪切区域。区域内的部分显示，区域外的隐藏。剪切区域是被引用内嵌的URL定义的路径或者外部 SVG 的路径。
+
+<div class="clipath">Hello</div>
+
+```html
+<div class="clipath">Hello</div>
+```
+
+```css
+.clipath {
+    position: relative;
+    margin: auto;
+    width: 160px;
+    line-height: 160px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.clipath::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid gold;
+    transition: all .5s;
+    animation: clippath 3s infinite linear;
+}
+
+@keyframes clippath {
+    0%,
+    100% {
+        clip-path: inset(0 0 95% 0);
+    }
+
+    25% {
+        clip-path: inset(0 95% 0 0);
+    }
+    50% {
+        clip-path: inset(95% 0 0 0);
+    }
+    75% {
+        clip-path: inset(0 0 0 95%);
+    }
+}
+```
 
 <script>
 $('.clipbox').click(function(){
@@ -276,4 +322,42 @@ $('.clipbox').click(function(){
     }
 }
 
+
+.clipath {
+    position: relative;
+    margin: auto;
+    width: 160px;
+    line-height: 160px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.clipath::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid gold;
+    transition: all .5s;
+    animation: clippath 3s infinite linear;
+}
+
+@keyframes clippath {
+    0%,
+    100% {
+        clip-path: inset(0 0 95% 0);
+    }
+
+    25% {
+        clip-path: inset(0 95% 0 0);
+    }
+    50% {
+        clip-path: inset(95% 0 0 0);
+    }
+    75% {
+        clip-path: inset(0 0 0 95%);
+    }
+}
 </style>

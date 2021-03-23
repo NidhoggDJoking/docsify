@@ -7,7 +7,7 @@
 ?> 谷歌公司由于掌握了 Chrome 浏览器，一直在推动浏览器的原生组件，即 Web Components API。<br>
 相比第三方框架，原生组件简单直接，符合直觉，不用加载任何外部模块，代码量小。目前，它还在不断发展，但已经可用于生产环境
 
-# `简单示例`
+#### `简单示例`
 
 <div>
     <user-card
@@ -79,7 +79,7 @@
     </template>
 </div>
 
-> ##### 声明模板，HTML和CSS都可以写入进来但JS不行
+> #### 声明模板，HTML和CSS都可以写入进来但JS不行
 ```HTML
     <template id="userCardTemplate">  
         <img class="image">
@@ -146,7 +146,13 @@
     </template>
 ```
 
-> ##### 组件模板继承`HTMLElement`
+### [Web Components](https://developer.mozilla.org/zh-CN/docs/Web/Web_Components/Using_custom_elements)
+
+?> Web Components 标准非常重要的一个特性是，它使开发者能够将HTML页面的功能封装为 custom elements（自定义标签），而往常，开发者不得不写一大堆冗长、深层嵌套的标签来实现同样的页面功能。
+
+<br>
+
+> #### 组件模板继承`HTMLElement`
 ```javascript
 class UserCard extends HTMLElement {
   constructor() {
@@ -165,13 +171,122 @@ class UserCard extends HTMLElement {
 window.customElements.define('user-card', UserCard);
 ```
 
-> ##### 使用组件
+> #### 使用组件
 ```HTML
     <user-card
         image="https://cdn.jsdelivr.net/gh/nidhoggdjoking/CDN@1.0/img/inori.png"
         name="Inori"
         email="nidhoggdjoking@gmail.com">
     </user-card>
+```
+
+> #### 添加样式
+
+自定义元素通过`window.customElements.define`注册后是可以直接在css中当做普通标签编写样式
+
+```css
+user-card {
+  /* ... */
+}
+```
+
+
+### Switch 开关
+
+<div>
+    <j-switch checked="true"></j-switch>
+    <template id="switchTemplate">  
+        <div class="switch">
+            <input type="checkbox"  id="radio-switch-joking"  style="display: none" />
+            <label for="radio-switch-joking">
+                <div></div>
+            </label>
+        </div>
+        <style>
+        :host {
+        }
+        .switch>label {
+                display: flex;
+                border-radius: 99px;
+                height: 32px;
+                width: 64px;
+                background-color: #f9f9f9;
+                border: 1px solid #c5c5c5;
+                justify-content: flex-start;
+            }
+            .switch>input[type=checkbox]:checked+label {
+                background-color: #357edd;
+                border: 1px solid #357edd;
+                justify-content: flex-end;
+            }
+            .switch>label>div {
+                border-radius: 9999px;
+                width: 32px;
+                background-color: #FFF;
+                border: 1px solid rgba(0, 0, 0, .3);
+            }
+            .switch>input[type=checkbox]:checked+label>div {
+                border: 1px solid rgba(156, 156, 156, 0.3);
+            }
+        </style>
+    </template>
+</div>
+
+```html
+<!-- 使用 -->
+<j-switch checked="true"></j-switch>
+
+<!-- 模板 -->
+<template id="switchTemplate">  
+    <div class="switch">
+        <input type="checkbox"  id="radio-switch-joking"  style="display: none" />
+        <label for="radio-switch-joking">
+            <div></div>
+        </label>
+    </div>
+    <style>
+    :host {
+    }
+    .switch>label {
+        display: flex;
+        border-radius: 99px;
+        height: 32px;
+        width: 64px;
+        background-color: #f9f9f9;
+        border: 1px solid #c5c5c5;
+        justify-content: flex-start;
+            }
+    .switch>input[type=checkbox]:checked+label {
+        background-color: #357edd;
+        border: 1px solid #357edd;
+        justify-content: flex-end;
+    }
+    .switch>label>div {
+        border-radius: 9999px;
+        width: 32px;
+        background-color: #FFF;
+        border: 1px solid rgba(0, 0, 0, .3);
+    }
+    .switch>input[type=checkbox]:checked+label>div {
+        border: 1px solid rgba(156, 156, 156, 0.3);
+    }
+    </style>
+</template>
+```
+
+```js
+class JSwitch extends HTMLElement {
+    constructor() {
+    super();
+    var shadow2 = this.attachShadow( { mode: 'closed' } );
+    var templateElem2 = document.getElementById('switchTemplate');
+    var content = templateElem2.content.cloneNode(true);
+    content.querySelector('#radio-switch-joking').checked = JSON.parse(this.getAttribute('checked'));
+    shadow2.appendChild(content);
+  }
+}
+
+window.customElements.define('j-switch', JSwitch);
 ```
 
 <br/>
@@ -195,6 +310,29 @@ class UserCard extends HTMLElement {
   }
 }
 window.customElements.define('user-card', UserCard);
+
+
+class JSwitch extends HTMLElement {
+    constructor() {
+    super();
+    var shadow2 = this.attachShadow( { mode: 'closed' } );
+    var templateElem2 = document.getElementById('switchTemplate');
+    var content = templateElem2.content.cloneNode(true);
+    // console.log('checked',this.getAttribute('checked'))
+    // console.log('checked-type',typeof this.getAttribute('checked'))
+    // this.getAttribute 返回的是字符串
+    // console.log('checked-bool',Boolean(this.getAttribute('checked')))
+    // Boolean('false') === true;
+    // console.log('checked-json',JSON.parse(this.getAttribute('checked')))
+    // content.querySelector('#radio-switch-joking').checked = Boolean(this.getAttribute('checked'));
+    content.querySelector('#radio-switch-joking').checked = JSON.parse(this.getAttribute('checked'));
+    // console.log('joking',content.querySelector('#radio-switch-joking').checked)
+    // content.querySelector('#radio-switch-joking').setAttribute('checked', this.getAttribute('checked'));
+    shadow2.appendChild(content);
+  }
+}
+
+window.customElements.define('j-switch', JSwitch);
 </script>
 
 

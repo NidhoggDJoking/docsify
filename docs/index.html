@@ -60,62 +60,6 @@
     <div class="iframe-top">
         <iframe id="topCat" frameBorder="0" src="demo/top.html" width="250px" height="250px"></iframe>
     </div>
-    <!-- 全局看板娘 -->
-    <link rel="stylesheet" type="text/css" href="./static/kanban/waifu.css" />
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <!-- 工具选项 -->
-    <link rel="stylesheet" type="text/css" href="./static/kanban/flat-ui.min.css" />
-
-    <script src="./static/kanban/font/iconfont.js"></script>
-    <div class="waifu" id="waifu">
-        <!-- <div class="waifu-tips" style="opacity: 1;"></div> -->
-        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
-        <div class="waifu-tool">
-            <svg class="icon fui-home" aria-hidden="true">
-                <use xlink:href="#icon-xihuan"></use>
-            </svg>
-            <svg class="icon fui-photo" aria-hidden="true">
-                <use xlink:href="#icon-xunzhang"></use>
-            </svg>
-            <svg class="icon fui-user" aria-hidden="true">
-                <use xlink:href="#icon-iconMBEfengge-"></use>
-            </svg>
-            <svg class="icon fui-cross" aria-hidden="true">
-                <use xlink:href="#icon-feiji"></use>
-            </svg>
-            <!-- <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-biaoqing"></use>
-            </svg>
-            <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-jiazai"></use>
-            </svg>
-            <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-tongzhi"></use>
-            </svg> -->
-            <!-- 老版单色图标方案 废弃 -->
-            <!-- 首页 -->
-            <!-- <span class="fui-home"></span> -->
-            <!-- 说骚话 -->
-            <!-- <span class="fui-chat"></span> -->
-            <!-- 模型替换 -->
-            <!-- <span class="fui-eye"></span> -->
-            <!-- 改变皮肤 -->
-            <!-- <span class="fui-user"></span> -->
-            <!-- 拍照截图 -->
-            <!-- <span class="fui-photo"></span> -->
-            <!-- 路由跳转 -->
-            <!-- <span class="fui-info-circle"></span> -->
-            <!-- 关闭 -->
-            <!-- <span class="fui-cross"></span> -->
-        </div>
-    </div>
-    <script src="./static/kanban/live2d.min.js"></script>
-    <script src="./static/kanban/waifu-tips.js"></script>
-    <script type="text/javascript">
-        initModel();
-        console.log("%c渐入佳境", " text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);font-size:3em")
-    </script>
-    <!-- 看板娘 -->
     <a href="https://github.com/NidhoggDJoking" class="github-corner" aria-label="View source on GitHub"><svg width="80"
             height="80" viewBox="0 0 250 250"
             style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
@@ -213,9 +157,6 @@
             text-align: left;
             margin-left: 12px;
             margin-bottom: 20px;
-            /* background: linear-gradient(to right, red, blue);
-            -webkit-background-clip: text;
-            color: transparent; */
         }
 
         .github-corner:hover .octo-arm {
@@ -403,58 +344,11 @@
         window.onscroll = function () { scrollFunction() };
         function scrollFunction() {
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                // document.querySelector(".iframe-top").style.display = "block";
                 $('.iframe-top').fadeIn();
             } else {
-                // document.querySelector(".iframe-top").style.display = "none";
                 $('.iframe-top').fadeOut();
             }
         };
-
-        // js操控iframe元素
-        // var IframeOnClick = {  
-        //     resolution: 200,  
-        //     iframes: [],  
-        //     interval: null,  
-        //     Iframe: function() {  
-        //         this.element = arguments[0];  
-        //         this.cb = arguments[1];   
-        //         this.hasTracked = false;  
-        //     },  
-        //     track: function(element, cb) {  
-        //         this.iframes.push(new this.Iframe(element, cb));  
-        //         if (!this.interval) {  
-        //             var _this = this;  
-        //             this.interval = setInterval(function() { _this.checkClick();}, this.resolution);
-        //         }  
-        //     },  
-        //     checkClick: function() {  
-        //         if (document.activeElement) {  
-        //             var activeElement = document.activeElement;  
-        //             for (var i in this.iframes) {  
-        //                 if (activeElement === this.iframes[i].element) { // user is in this Iframe  
-        //                     if (this.iframes[i].hasTracked == false) {   
-        //                         this.iframes[i].cb.apply(window, []);   
-        //                         this.iframes[i].hasTracked = true;  
-        //                     }  
-        //                 } else {  
-        //                     this.iframes[i].hasTracked = false;  
-        //                 }  
-        //             }  
-        //         }  
-        //     }  
-        // };  
-        // 回到顶部
-        // IframeOnClick.track(document.getElementById("topCat"), function() {
-        //    var djs = setInterval(function(){ 
-        //         var oTop = document.body.scrollTop || document.documentElement.scrollTop;
-        //         if(oTop > 0){
-        //             document.body.scrollTop = document.documentElement.scrollTop = oTop - 50;
-        //         }else{
-        //             clearInterval(djs);
-        //         }
-        //      }, 10);
-        // }); 
 
         // 在Iframe 调用承载页方法
         function parentJO() {
@@ -473,41 +367,11 @@
         }
     </script>
     <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-
-    <!-- 评论(没成功) -->
-    <!-- <script src="//unpkg.com/docsify/lib/plugins/disqus.min.js"></script> -->
-    <!-- 代码复制 -->
     <script src="//unpkg.com/docsify-copy-code"></script>
 
     <!-- 搜索组件 -->
     <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
-    <!-- 代码高亮 -->
-    <!-- <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script> -->
-    <!-- <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-php.min.js"></script>  -->
-    <!-- <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js"></script> -->
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
-
-    <!-- 兼容 Vue (不兼容其他组件)-->
-    <!-- <script src="//unpkg.com/vue"></script>
-    <script src="//unpkg.com/docsify"></script> -->
-
-    <!-- inject css file -->
-    <!-- <link rel="stylesheet" href="//unpkg.com/vuep/dist/vuep.css"> -->
-
-    <!-- inject javascript file -->
-    <!-- <script src="//unpkg.com/vue"></script>
-    <script src="//unpkg.com/vuep"></script>
-    <script src="//unpkg.com/docsify"></script> -->
-
-    <!-- or use the compressed files -->
-    <!-- <script src="//unpkg.com/vue/dist/vue.min.js"></script> -->
-    <!-- <script src="//unpkg.com/vuep/dist/vuep.min.js"></script> -->
-    <!-- <script src="//unpkg.com/docsify/lib/docsify.min.js"></script> -->
-    <!-- 分页(与底部签名不搭) -->
-    <!-- <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script> -->
-    <!-- 天气 -->
-    <!-- <script defer src="https://widget.heweather.net/standard/static/js/he-standard-common.js?v=1.1"></script> -->
-    <!-- 代码编辑器 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type="text/javascript"
         charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ext-language_tools.js" type="text/javascript"

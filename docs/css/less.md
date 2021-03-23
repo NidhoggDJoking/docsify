@@ -361,7 +361,7 @@ module.exports = {
 
 > `main.js` 无须引入全局Less文件，直接使用即可:
 
-# `base.less`
+### `base.less`
 
 ```css
 @width:calc(100% - 1rem);

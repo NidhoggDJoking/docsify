@@ -36,6 +36,11 @@
     // 其实这个写法更不错
     // let imgs = document.querySelectorAll('[data-src]')
     let imgArr = Array.prototype.slice.call(imgs)
+    // 类数组对象 to 普通数组
+    // ES2015 
+    // The Array.from() method creates a new Array instance
+    // from an array-like or iterable object.
+    // => Array.from(imgs)
     // 简而言之: 每当有新的元素进入通过滚动条出现在屏幕范围内触发 如下图：
     const io = new IntersectionObserver(ioes => {
     ioes.forEach(ioe => {

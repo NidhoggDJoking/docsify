@@ -101,6 +101,13 @@ console.log(12 | 10); //返回值14
 
 ```
 
+`奇技淫巧 - 向下取整`
+
+```javascript
+3.1415926535 | 0
+// 3
+```
+
 ### "^" 运算符
 
 > #### " ^ " 运算符（位异或）用于对两个二进制操作数逐位进行比较。
@@ -139,10 +146,10 @@ console.log( ~ 12 == -(12+1)); //返回true
 
 ```
 
-| 9 | 原码 | 反码 | 补码 |
-| :--------: | :--------:| :--------:| :--------:|
-|  正 数  | `00001001` | `00001001` | `00001001` |
-|  负 数  | `10001001` | `11110110` | `11110111` |
+|   9   |    原码    |    反码    |    补码    |
+| :---: | :--------: | :--------: | :--------: |
+| 正 数 | `00001001` | `00001001` | `00001001` |
+| 负 数 | `10001001` | `11110110` | `11110111` |
 
 
 ?> 正数的原码反码补码都一样.唯有负数不一样。左边第一位是符号位(0是正数,1是负数)<br>
@@ -150,7 +157,7 @@ console.log( ~ 12 == -(12+1)); //返回true
 补码是在反码的基础上+1.<br>
 负数的补码怎么回到原码? 在补码的基础上除符号位其余取反再+1即使负数的原码
 
-` ~~  转换成数字并且把小数点去掉    效率比Math.floor(向下取整)高`
+` ~~  转换成数字并且把小数点去掉  效率比Math.floor(向下取整)高`
 
 ```javascript
 var a = 8.86
@@ -177,6 +184,138 @@ console.log(~~a);
 
 Math.pow(2,3)
 ```
+
+
+### "&&" , "||"  替代  "if"
+
+> #### 以下方法不被推荐因为是降低了代码的可读性
+
+```javascript
+if (fn) fn()
+
+fn && fn()
+
+
+if (!fn) fn()
+
+fn || fn()
+```
+
+### 一元操作符加号 `+`
+
+> #### 一元操作符加号尝试将 bool 转为 number
+
+```javascript
++true; // 1
+
++false; // 0
+```
+
+### 高精度运算：
+
+> #### 在Js经常出现以下的低精度运算误差
+
+```javascript
+0.1+0.2
+// 0.30000000000000004
+
+0.1*0.2
+// 0.020000000000000004
+
+0.3-0.1
+// 0.19999999999999998
+```
+
+> #### 加法：
+
+```javascript
+//加法  
+function accAdd(arg1, arg2) {
+    var r1, r2, m;
+    try { 
+        r1 = arg1.toString().split(".")[1].length 
+    } catch (e) { 
+        r1 = 0 
+    }
+    try { 
+        r2 = arg2.toString().split(".")[1].length 
+    } catch (e) { 
+        r2 = 0
+    }
+    m = Math.pow(10, Math.max(r1, r2))
+    return (arg1 * m + arg2 * m) / m
+}
+accAdd(0.1,0.2)
+// 0.3
+
+// Math.max(x,y) 函数返回一组数中的最大值
+// Math.pow(x,y) 可返回 x 的 y 次幂的值
+```
+
+?> 将两个数都乘以一个10的N次幂使两个数变成整数然后进行加法运算在将结果除以那个10的N次幂避免小数计算
+
+> #### 减法：
+
+```javascript
+function Subtr(arg1,arg2){ 
+  var r1,r2,m,n; 
+  try{r1=arg1.toString().split(".")[1].length}catch(e){r1=0} 
+  try{r2=arg2.toString().split(".")[1].length}catch(e){r2=0} 
+  m=Math.pow(10,Math.max(r1,r2)); 
+  n=(r1>=r2)?r1:r2; 
+  return ((arg1*m-arg2*m)/m).toFixed(n); 
+}
+Subtr(0.3,0.1)
+// "0.2"
+
+// toFixed() 方法可把 Number 四舍五入为指定小数位数的数字。
+```
+
+?> 思路与加法一样，不过这`.toFixed(n)`
+
+
+> #### 乘法：
+
+```javascript
+ //乘法 
+ function accMul(arg1, arg2) {
+     var m = 0,
+         s1 = arg1.toString(),
+         s2 = arg2.toString();
+     try {
+         m += s1.split(".")[1].length
+     } catch (e) {}
+     try {
+         m += s2.split(".")[1].length
+     } catch (e) {}
+     return Number(s1.replace(".", "")) * Number(s2.replace(".", "")) / Math.pow(10, m)
+ }
+ accMul(0.1,0.2)
+ // 0.02
+```
+
+?> 思路与加法类似,也可以都乘以一个10的N次幂在除以那个10的N次幂2次
+
+> #### 除法：
+
+
+```javascript
+function accDiv(arg1, arg2) {
+    var t1 = 0,
+        t2 = 0,
+        r1, r2;
+    try { t1 = arg1.toString().split(".")[1].length } catch (e) {}
+    try { t2 = arg2.toString().split(".")[1].length } catch (e) {}
+    with(Math) {
+        r1 = Number(arg1.toString().replace(".", ""))
+        r2 = Number(arg2.toString().replace(".", ""))
+        return accMul((r1 / r2), pow(10, t2 - t1));
+    }
+}
+```
+
+?> 目前尚未碰到过除法精度问题
+
 
 <style>
 @import url('static/css/code3.css');

@@ -62,6 +62,42 @@
 }
 ```
 
+### 样式结构与伪类
+
+```html
+<div class="box">
+	<div class="box-content"></div>
+</div>
+```
+
+```css
+.box {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	&-content {
+		width: 100%;
+		height: 100%;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		width: 0;
+		height: 0;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+		width: 0;
+		height: 0;
+	}
+}
+```
+
 #### [Sass传送门](https://www.sass.hk/guide/)
 
 <style>

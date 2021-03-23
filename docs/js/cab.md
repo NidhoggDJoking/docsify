@@ -2,7 +2,7 @@
 
 ?> `call()`、`apply()`、`bind()` 都是用来重定义 `this` 这个对象的！- 可以编写能够在不同对象上使用的方法
 
-# `例1:`
+#### `例1:`
 
 ```javascript
 var name = 'Joking',age='1733';
@@ -23,7 +23,7 @@ obj.myFun.call(null) // Joking岁月1733
 ```
 
 
-# `例2:`
+#### `例2:`
 
 ```javascript
 var fav = '盲人';
@@ -36,7 +36,7 @@ show() // '盲人'
 
 > ##### 比较一下这两者 `this` 的差别，第一个打印里面的 `this` 指向 obj，第二个全局声明的 `show()` 函数 `this` 是 `window`
 
-# `例3:`
+#### `例3:`
 
 ```javascript
 var name = 'Joking',age='1733';
@@ -60,7 +60,7 @@ obj.myFun.bind(data)() //joking岁月1945
 
 > ##### 以上出了 `bind` 方法后面多了个 （） 外 ，结果返回都一致！由此得出结论，`bind` 返回的是一个新的函数，你必须调用它才会被执行。
 
-# `例4:`
+#### `例4:`
 
 > #### `call()` 和 `apply()` 之间的区别
 >  

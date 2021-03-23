@@ -92,7 +92,7 @@ console.log(JSON.parse(JSON.stringify(obj)))
 //     at <anonymous>:6:29
 ```
 
-# `封装方法`
+#### `封装方法`
 
 ```javascript
 /* sourceObj 表示源对象
@@ -180,7 +180,7 @@ console.log(copyObj);
 */
 ```
 
-# `Object.assign()` . `Object.create()`
+#### `Object.assign()` . `Object.create()`
 
 !> `Object.assign()`、`Object.create()` 都是一层（根级）深拷贝，之下的级别为浅拷贝。
 

@@ -17,6 +17,7 @@ const btn = document.querySelector('#replication');
     })
 ```
 
+
 <input type="text" id="recommended">
 <!-- <buttom id="replication">复制</buttom> -->
 
@@ -25,9 +26,29 @@ const btn = document.querySelector('#replication');
 
 <br>
 
-<br>
+<hr/>
 
 <br>
+
+!>`execCommand不再推荐(即将废除)`：This feature is obsolete. Although it may still work in some browsers, its use is discouraged since it could be removed at any time. Try to avoid using it.
+
+> #### 在未来应该是用`ClipboardEvent` 代替 `document.execCommand` 目前该方法
+
+!> `不过这是一个实验中的功能`:
+此功能某些浏览器尚在开发中，请参考浏览器兼容性表格以得到在不同浏览器中适合使用的前缀。由于该功能对应的标准文档可能被重新修订，所以在未来版本的浏览器中该功能的语法和行为可能随之改变。
+
+#### [ClipboardEvent 传送门](https://developer.mozilla.org/zh-CN/docs/Web/API/ClipboardEvent)
+
+<br>
+
+`补充说明`
+```javascript
+// 这个方法可以直接获取IE这粘贴板的内容,其余的浏览器不行😂
+// JavaScript 没有一个很完美的访问剪贴板的方案，没有跨浏览器支持window.clipboardData，它仅受IE支持。
+// window.clipboardData被认为是一个安全问题，因为它允许您访问的每个网站都能读取当时发生在剪贴板中的任何内容。
+window.clipboardData.getData("Text");
+```
+
 
 <br>
 

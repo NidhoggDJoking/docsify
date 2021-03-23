@@ -96,3 +96,65 @@ margin-top:var(--far); //有效
        }
 </script>
 ```
+
+- ### border style
+
+<div class="border">
+    <div class="dotted">dotted</div>
+    <div class="dashed">dashed</div>
+    <div class="solid">solid</div>
+    <div class="double">double</div>
+    <div class="groove">groove</div>
+    <div class="ridge">ridge</div>
+    <div class="inset">inset</div>
+    <div class="outset">outset</div>
+</div>
+
+- none (没有边框，无论边框宽度设为多大) 
+- dotted (点线式边框) 
+- dashed (破折线式边框) 
+- solid (直线式边框) 
+- double (双线式边框) 
+- groove (槽线式边框) 
+- ridge(脊线式边框) 
+- inset (内嵌效果的边框) 
+- outset (突起效果的边框)
+
+<style>
+.border{
+    display:flex;
+    flex-wrap: wrap;
+}
+.border>div{
+    width:100px;
+    height:100px;
+    line-height:98px;
+    text-align:center;
+    margin:10px;
+}
+
+.dotted{
+    border:2px dotted #333
+}
+.dashed{
+    border:2px dashed #333
+}
+.solid{
+    border:2px solid #333
+}
+.double{
+    border:2px double #333
+}
+.groove{
+    border:2px groove #333
+}
+.ridge{
+    border:2px ridge #333
+}
+.inset{
+    border:2px inset #333
+}
+.outset{
+    border:2px outset #333
+}
+</style>

@@ -6,7 +6,7 @@
 
 ?> 在表中，一个列可能会包含多个重复值，有时您也许希望仅仅列出不同(distinct)的值。`DISTINCT` 关键词用于返回唯一不同的值。
 
-# `SQL SELECT DISTINCT 语法`
+#### `SQL SELECT DISTINCT 语法`
 
 ```sql
 SELECT DISTINCT column_name,column_name FROM table_name;
@@ -16,7 +16,7 @@ SELECT DISTINCT column_name,column_name FROM table_name;
 
 ?> WHERE 子句用于提取那些满足指定条件的记录。
 
-# `SQL WHERE 语法`
+#### `SQL WHERE 语法`
 
 ```
 SELECT column_name,column_name FROM table_name WHERE column_name operator value;
@@ -28,7 +28,7 @@ SELECT column_name,column_name FROM table_name WHERE column_name operator value;
 
 !> 如果不存在 `column_name` 报 `Unknown column 'column_name' in 'field list'` 错误
 
-# `SQL UPDATE 语法`
+#### `SQL UPDATE 语法`
 
 ```sql
 UPDATE table_name SET column1=value1,column2=value2,... WHERE some_column=some_value;
@@ -76,7 +76,12 @@ SELECT * FROM table WHERE name LIKE 'K%';
 SELECT * FROM table_name1 a, table_name2 b WHERE a.id = b.id
 ```
 
+#### 查询表是否存在
 
+```sql
+// 查询 user 表 是否存在
+SELECT table_name FROM information_schema.TABLES WHERE table_name ='user'
+```
 
 <style>
 @import url('static/css/code2.css');

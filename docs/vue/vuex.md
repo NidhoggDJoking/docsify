@@ -44,7 +44,7 @@ this.$store.dispatch('increment')
 
 ### Vuex 辅助函数们：
 
-# `mapState`
+#### `mapState`
 
 ?> 当一个组件需要获取多个状态的时候，将这些状态都声明为计算属性会有些重复和冗余。为了解决这个问题，我们可以使用 `mapState` 辅助函数帮助我们生成计算属性，让你少按几次键
 
@@ -91,7 +91,7 @@ computed: {
 }
 ```
 
-# `mapGetters`
+#### `mapGetters`
 
 ?> `mapGetters` 辅助函数仅仅是将 store 中的 getter 映射到局部计算属性：
 
