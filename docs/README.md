@@ -2,13 +2,13 @@
 
 <p align="center">
   <a href="https://github.com/NidhoggDJoking" target="_blank">
-    <img width="190" src="static/png/inori-removebg-preview.png" alt="logo">
+    <!-- <img width="190" src="static/png/inori-removebg-preview.png" alt="logo"> -->
   </a>
 </p>
 
-<h1 style="background: linear-gradient(145deg, #00bcff,#ff6f6f,#fb8dd5,#ff7600);
+<h1 style="background: linear-gradient(145deg, #00bcff,#6fff96,#00e7f3,#ff7600);
     -webkit-background-clip: text;
-    color: transparent;font-family: StencilD;" align="center">Egoist Inori</h1>
+    color: transparent;font-family: 'Comic Sans MS', cursive;" align="center">Nidhogg·D·Joking</h1>
 
 <p align="center">
   <a href="https://docsify.js.org" target="_blank">
@@ -233,7 +233,7 @@
 <!-- #### Nidhogg家族起源1733年7月13日的瑞士 -->
 
 <div class="alone">
-    在这个没有你的世界里,我选择了替你看遍世界的孤独还有美丽。
+    只有在战胜了那幼稚的过去，人才会有所成长。
 </div>
 
 <!-- <hr> -->
@@ -1866,7 +1866,6 @@ docsify serve docs
         }
 </style>
 <script>
-// let msg = 'MD运行JS成功'
-let msg2 = '祈り,俺はここにいよ';
-console.log(`%c ${msg2}`, 'font-size: 36px; font-weight: bold; color : #ff6ae6');
+let msg = 'MD运行JS成功'
+console.log(`%c ${msg}`, 'font-size: 36px; font-weight: bold; color : #b8f3f8');
 </script>

@@ -1,17 +1,5 @@
-# Evolution
+# Home
 
-
-###  安装：
-
-```
-npm i docsify-cli -g
-```
-
-### 初始化：
-
-```
-docsify init ./docs
-```
 
 ### 运行：
 
