@@ -1,5 +1,25 @@
 
-  
+*  CSS
+  *  [CSS总篇](css/css.md)
+  *  [CSS按钮篇](css/button.md)
+  *  [CSS动画效果](css/animation.md)
+  *  [CSS浮动](css/float.md)
+  *  [预编译 - Less](css/less.md)
+  *  [预编译 - Sass](css/sass.md)
+  *  [瀑布流](css/waterfall.md)
+    *  CSS 布局
+        *  [CSS 弹性布局](css/flex.md)
+        *  [CSS 网格布局](css/grid.md)
+        *  [CSS 日常布局](css/layout.md)
+    *  图片相关 CSS
+        *  [CSS3 object-fit 属性](css/fit.md)
+        *  [CSS3 mask(遮罩) 属性](css/mask.md)
+        *  [CSS3 filter(滤镜) 属性](css/filter.md)
+        *  [CSS3 filter(滤镜) 拓展](css/drop.md)
+    *  文字相关 CSS
+        *  [clip-path](css/clip.md)
+        *  [CSS3 字体基本](css/font.md)
+        *  [CSS3 字体Family](css/family.md)
 *  JavaScript
   *  [循环](js/for.md)
   *  [webGL](notes/webgl.md)
@@ -38,27 +58,6 @@
       *  [Node](node/node.md)
     *  NPM
       *  [发布NPM包](node/npm.md)
-*  CSS
-  *  [CSS总篇](css/css.md)
-  *  [CSS按钮篇](css/button.md)
-  *  [CSS动画效果](css/animation.md)
-  *  [CSS浮动](css/float.md)
-  *  [预编译 - Less](css/less.md)
-  *  [预编译 - Sass](css/sass.md)
-  *  [瀑布流](css/waterfall.md)
-    *  CSS 布局
-        *  [CSS 弹性布局](css/flex.md)
-        *  [CSS 网格布局](css/grid.md)
-        *  [CSS 日常布局](css/layout.md)
-    *  图片相关 CSS
-        *  [CSS3 object-fit 属性](css/fit.md)
-        *  [CSS3 mask(遮罩) 属性](css/mask.md)
-        *  [CSS3 filter(滤镜) 属性](css/filter.md)
-        *  [CSS3 filter(滤镜) 拓展](css/drop.md)
-    *  文字相关 CSS
-        *  [clip-path](css/clip.md)
-        *  [CSS3 字体基本](css/font.md)
-        *  [CSS3 字体Family](css/family.md)
 * SQL
     *  [SQL基础](sql/query.md)
 

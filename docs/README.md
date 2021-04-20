@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/NidhoggDJoking" target="_blank">
-    <!-- <img width="190" src="static/png/inori-removebg-preview.png" alt="logo"> -->
+    <img width="190" src="https://nidhoggdjoking.gitee.io/storage/common/img/joker.jpg" alt="logo">
   </a>
 </p>
 
@@ -283,7 +283,7 @@ docsify serve docs
 <style>
           @import url('static/css/vueCode.css');
           body {
-            background:linear-gradient(120deg,#ffffff,#fbf4fa);
+            /* background:linear-gradient(120deg,#ffffff,#fbf4fa); */
           }
           .pay{
               /* border: 1px solid #22a5ab; */
