@@ -313,7 +313,7 @@ docsify serve docs
         }
         .ball {
               position: absolute;
-              top: calc(50% - 450px);
+              top: calc(50% - 500px);
               left: calc(50% - 50px);
               width: 100px;
               height: 100px;
@@ -1756,17 +1756,17 @@ docsify serve docs
             0% {
                 -webkit-transform: scale(0) translateY(-300px);
                 transform: scale(0) translateY(-300px);
-                background: #ff00ff;
+                background: #ff0000;
             }
             50% {
                 -webkit-transform: scale(1) translateY(0);
                 transform: scale(1) translateY(0);
-                background: #ffffff;
+                background: #72ffcc;
             }
             100% {
                 -webkit-transform: scale(0) translateY(300px);
                 transform: scale(0) translateY(300px);
-                background: #0000ff;
+                background: #ff2500;
             }
         }
         
