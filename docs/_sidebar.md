@@ -20,7 +20,15 @@
         *  [clip-path](css/clip.md)
         *  [CSS3 字体基本](css/font.md)
         *  [CSS3 字体Family](css/family.md)
-
+*  杂记篇
+  *  [面筋儿](notes/face.md)
+  *  [客制化](notes/keyboard.md)
+  *  [Canvas](notes/canvas.md)
+  *  [CodePen](notes/codepen.md)
+  *  [颜色选择器](notes/color.md)
+  *  [百度语言合成](notes/baidu.md)
+  *  [和风天气插件](notes/hefeng.md)
+  *  [博客代码编辑器](notes/note.md)
 *  JavaScript
   *  [Js循环](js/for.md)
   *  [webGL](notes/webgl.md)
@@ -69,15 +77,7 @@
     *  [uniapp](uniapp/uni.md)
     *  [习惯文档](uniapp/base.md)
 
-*  杂记篇
-  *  [面筋儿](notes/face.md)
-  *  [客制化](notes/keyboard.md)
-  *  [Canvas](notes/canvas.md)
-  *  [CodePen](notes/codepen.md)
-  *  [颜色选择器](notes/color.md)
-  *  [百度语言合成](notes/baidu.md)
-  *  [和风天气插件](notes/hefeng.md)
-  *  [博客代码编辑器](notes/note.md)
+
 
 
 <!-- 侧边栏样式 -->

@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/NidhoggDJoking" target="_blank">
-    <img width="190" src="https://nidhoggdjoking.gitee.io/storage/common/img/joker.jpg" alt="logo">
+    <img width="190" class="jokerLogo" src="https://nidhoggdjoking.gitee.io/storage/common/img/joker.png" alt="logo">
   </a>
 </p>
 
@@ -285,6 +285,50 @@ docsify serve docs
           body {
             /* background:linear-gradient(120deg,#ffffff,#fbf4fa); */
           }
+          .jokerLogo{
+            -webkit-animation: logo 10000ms  infinite;
+            animation: logo 10000ms  infinite;
+            transition: all 1s;
+          }
+          /* .jokerLogo:hover{
+              transition: all 2s;
+              filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+          } */
+           @keyframes logo {
+            0% {
+                filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.5));
+            }
+            10% {
+                filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
+            }
+            20% {
+                filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+            }
+            30% {
+                filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+            }
+            40% {
+                filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
+            }
+            50% {
+                filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+            }
+            60% {
+                filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
+            }
+            70% {
+                filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+            }
+            80% {
+                filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+            }
+            90% {
+                filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
+            }
+            100% {
+                filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.5));
+            }
+        }
           .pay{
               /* border: 1px solid #22a5ab; */
           }
