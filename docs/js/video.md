@@ -1,9 +1,9 @@
-### `audio`音频剪裁剪切复制播放与上传
+### 音,视频剪裁播放
 
 
 <br/>
 
-> #### 版本一 `稳定截取15秒`
+> #### 版本一 `音频稳定截取前15秒`
 
 ---
 
@@ -163,6 +163,28 @@ function bufferToWave(abuffer, len) {
 
 #### [AudioContext.createBuffer()](https://developer.mozilla.org/zh-CN/docs/Web/API/AudioContext/createBuffer)
 
+
+---
+
+> #### 版本二 `自定义截取音频（代码支持视频提取音频）`
+
+<input id="start" type="number"  placeholder="开始时间（单位秒）" min="0" />
+<input id="end" type="number" placeholder="结束时间（单位秒）" min="0"/>
+
+<form class="uploadBox2">
+    <svg t="1606975095651" class="uploadIcon2" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3325" width="32" height="32"><path d="M848.0256 474.0096h-297.984v-322.048H473.9584v322.048h-297.984a8.0384 8.0384 0 0 0-8.0384 7.9872v60.0064c0 4.4032 3.584 7.9872 7.9872 7.9872h297.984v322.048h76.032v-322.048h297.984c4.4032 0 8.0384-3.584 8.0384-7.9872V481.9968a8.0384 8.0384 0 0 0-8.0384-7.9872z" fill="#707070" fill-opacity=".65" p-id="3326"></path></svg>
+    <input type="file" id="file2" accept="audio/*,video/*" style="position:absolute;opacity:0;">
+    <p id="fileName2">未选择任何文件</p>
+    <div class="action">
+        <span>自爆按钮</span>
+    </div>
+</form>
+<br/>
+
+<p><audio id="audioNow2" controls></audio></p>
+
+<!-- <p><video id="videoNow2" controls="controls"></video></p> -->
+
 <script>
 $('.uploadIcon').click(function(){
     console.log($('.uploadBox'))
@@ -183,9 +205,11 @@ file.onchange = function (event) {
         console.log('源对象:',event);
         $('#fileName').html(document.getElementById('file').files[0].name);
         // console.log(document.getElementById('file').files[0].name)
+        console.log('arrBuffer',arrBuffer)
         var audioCtx = new AudioContext();
-
+        console.log('audioCtx',audioCtx)
         audioCtx.decodeAudioData(arrBuffer, function(audioBuffer) {
+            console.log('decodeAudioData触发',audioBuffer)
             var duration = audioBuffer.duration;
             var channels = audioBuffer.numberOfChannels;
             var rate = audioBuffer.sampleRate;
@@ -228,6 +252,7 @@ file.onchange = function (event) {
             reader2.readAsDataURL(blob);
             */
             // 使用Blob地址
+            console.log(URL.createObjectURL(blob))
             audioNow.src = URL.createObjectURL(blob);
         });
     };
@@ -281,6 +306,7 @@ function bufferToWave(abuffer, len) {
     // mp4 => m4a
     // wav => wav
     return new Blob([buffer], {type: "audio/wav"});
+    // return new Blob([buffer], {type: "video/mp4"});
 
     function setUint16(data) {
         view.setUint16(pos, data, true);
@@ -292,28 +318,130 @@ function bufferToWave(abuffer, len) {
         pos += 4;
     }
 }
+
+
+// ==========版本二============
+
+$('.uploadIcon2').click(function(){
+    console.log($('.uploadBox2'))
+    setTimeout(function(){
+        $('#file2').click();
+    },200);
+});
+
+file2.onchange = function (event) {
+    $('#fileName2').html(document.getElementById('file2').files[0].name);
+     
+    var content = document.getElementById('file2').files[0]
+    var url = URL.createObjectURL(content);
+    var audioElement = new Audio(url);
+    var duration;
+    audioElement.addEventListener("loadedmetadata", function (_event) {
+        duration = audioElement.duration;
+        console.log('这个音频文件:',duration+'s');
+        $('#start').val(0);
+        $('#end').val(~~duration);
+        $("#start").attr("max",~~duration);
+        $("#end").attr("max",~~duration);
+    });
+}
+
+$('.action').click(function(){
+    var startTime = $('#start').val();
+    var endTime = $('#end').val();
+    if(!startTime || !endTime || startTime>endTime){
+        alert('框没填对')
+        return false;
+    }
+    console.log($('#file2'))
+    var joker = document.getElementById('file2');
+    var file = joker.files[0];
+    var type = file.type;
+    // 开始识别
+    var reader = new FileReader();
+    reader.onload = function (event) {
+        var arrBuffer = event.target.result;
+        console.log('源对象:',event);
+        console.log('arrBuffer',arrBuffer)
+        var audioCtx = new AudioContext();
+        console.log('audioCtx',audioCtx)
+        audioCtx.decodeAudioData(arrBuffer, function(audioBuffer) {
+            console.log('decodeAudioData触发',audioBuffer)
+            // `duration` 为当前音频文件的时长
+            var duration = audioBuffer.duration;
+            var channels = audioBuffer.numberOfChannels;
+            var rate = audioBuffer.sampleRate;
+
+            // 秒数
+            var startOffset = rate * startTime;
+            var endOffset = rate * endTime;
+            var frameCount = endOffset - startOffset;
+            var newAudioBuffer;
+
+            newAudioBuffer = new AudioContext().createBuffer(channels, endOffset - startOffset, rate);
+            var anotherArray = new Float32Array(frameCount);
+            var offset = 0;
+
+            for (var channel = 0; channel < channels; channel++) {
+                audioBuffer.copyFromChannel(anotherArray, channel, startOffset);
+                newAudioBuffer.copyToChannel(anotherArray, channel, offset);
+            }
+
+            /**
+            * 直接播放使用下面的代码
+            // 创建AudioBufferSourceNode对象
+            var source = audioCtx.createBufferSource();
+            // 设置AudioBufferSourceNode对象的buffer为复制的3秒AudioBuffer对象
+            source.buffer = newAudioBuffer;
+            // 这一句是必须的，表示结束，没有这一句没法播放，没有声音
+            // 这里直接结束，实际上可以对结束做一些特效处理
+            source.connect(audioCtx.destination);
+            // 资源开始播放
+            source.start();
+            */
+
+            var blob = bufferToWave(newAudioBuffer, frameCount);
+            /**
+            * 转换成Base64使用下面的代码
+            var reader2 = new FileReader();
+            reader2.onload = function(evt){
+                audio.src = evt.target.result;
+            };
+            reader2.readAsDataURL(blob);
+            */
+            // 使用Blob地址
+            console.log(URL.createObjectURL(blob))
+            audioNow2.src = URL.createObjectURL(blob);
+            // videoNow2.src = URL.createObjectURL(blob);
+        });
+    };
+    reader.readAsArrayBuffer(file);
+})
 </script>
 
 
 <style>
-.uploadBox{
+.uploadBox,.uploadBox2{
     position:relative;
     width:100px;
     height:100px;
     background:#f1f3f4;
-    cursor: pointer;
     box-shadow: 1px 1px 2px 2px #e6e6e6;
 }
 .uploadBox:hover{
     box-shadow: 1px 1px 4px 1px #b4b5c3;
 }
-.uploadIcon{
+.uploadBox2:hover{
+    box-shadow: 1px 1px 4px 1px #b4b5c3;
+}
+.uploadIcon,.uploadIcon2{
     position: absolute;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
+    cursor: pointer;
 }
-#fileName{
+#fileName,#fileName2{
     width: 200px;
     height: 50px;
     position: absolute;
@@ -321,4 +449,48 @@ function bufferToWave(abuffer, len) {
     font-size: 15px;
     color: #5d5d5d;
     margin: 0;
+}
+#start,#end{
+    -webkit-appearance: none;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    box-sizing: border-box;
+    color: #606266;
+    display: inline-block;
+    font-size: inherit;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    padding: 0 15px;
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    width: 200px;
+    margin-bottom:10px;
+}
+.action{
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    -webkit-appearance: none;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    transition: .1s;
+    font-weight: 500;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    position: absolute;
+    left: 120%;
+    bottom:0;
+}
 </style>

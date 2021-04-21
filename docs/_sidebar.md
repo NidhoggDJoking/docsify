@@ -20,8 +20,9 @@
         *  [clip-path](css/clip.md)
         *  [CSS3 字体基本](css/font.md)
         *  [CSS3 字体Family](css/family.md)
+
 *  JavaScript
-  *  [循环](js/for.md)
+  *  [Js循环](js/for.md)
   *  [webGL](notes/webgl.md)
   *  [Js异步](notes/Async.md)
   *  [深浅拷贝](js/deep.md)

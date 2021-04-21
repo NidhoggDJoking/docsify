@@ -47,6 +47,13 @@ font-family:NSimSun;
 font-family:FangSong;
 ```
 
+- <p class="family" style="Comic Sans MS', cursive">文生·康奈尔 Comic Sans 012</p>
+
+```css
+font-family: 'Comic Sans MS', cursive;
+```
+
+
 > ### 浏览器 内置字体
 
 - <p class="family" style="font-family: -webkit-body;">无名氏 -webkit-body 012</p>
