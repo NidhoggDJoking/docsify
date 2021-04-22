@@ -1912,4 +1912,10 @@ docsify serve docs
 <script>
 let msg = 'MD运行JS成功'
 console.log(`%c ${msg}`, 'font-size: 36px; font-weight: bold; color : #b8f3f8');
+fetch('https://v1.hitokoto.cn')
+    .then(res => res.json())
+    .then(function(json){
+        $('.alone').html(json.hitokoto)
+        console.log(json.hitokoto)
+    })
 </script>
