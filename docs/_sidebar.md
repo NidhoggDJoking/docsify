@@ -38,7 +38,6 @@
   *  [JS原型链](js/prototype.md)
   *  [Lintcode](js/lintcode.md)
   *  [`new Date`](js/date.md)
-  *  [图片懒加载](js/lazy.md)
   *  [防抖和节流](notes/debounce.md)
   *  [H5点击复制文本](notes/copy.md)
   *  [`Web Components`](js/components.md)
@@ -46,7 +45,9 @@
   *  [Js 写法与运行速度](js/speed.md)
   *  [`call()`、`apply()`、`bind()`](js/cab.md)
   *  [Event loop / 宏任务和微任务](js/loop.md)
-  *  [`IntersectionObserver`实现懒加载](js/intersection.md)
+    * 图片相关 JS
+      *  [图片懒加载](js/lazy.md)
+      *  [`IntersectionObserver`实现懒加载](js/intersection.md)
     * 音视频相关
       *  [视频取帧](notes/video.md)
       *  [音频剪裁剪切复制播放](js/video.md)

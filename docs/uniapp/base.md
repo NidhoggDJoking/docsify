@@ -1,6 +1,6 @@
 <p align="center">
   <a href="#" target="_blank">
-    <img width="220" src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/doc/uniapp4@2x.png" alt="uniApp">
+    <img width="220" src="https://nidhoggdjoking.gitee.io/storage/project/NidhoggDJoking/uniapp.png" alt="uniApp">
   </a>
 </p>
 <p align="center">
