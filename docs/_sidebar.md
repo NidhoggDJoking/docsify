@@ -29,6 +29,13 @@
   *  [百度语言合成](notes/baidu.md)
   *  [和风天气插件](notes/hefeng.md)
   *  [博客代码编辑器](notes/note.md)
+      * SQL
+        *  [SQL基础](sql/query.md)
+      * Windows
+        *  [命令提示符](win/bash.md)
+      * uniApp
+        *  [uniapp](uniapp/uni.md)
+        *  [习惯文档](uniapp/base.md)
 *  JavaScript
   *  [Js循环](js/for.md)
   *  [webGL](notes/webgl.md)
@@ -50,6 +57,7 @@
       *  [`IntersectionObserver`实现懒加载](js/intersection.md)
     * 音视频相关
       *  [视频取帧](notes/video.md)
+      *  [视频相关](js/barrage.md "Made In Heaven")
       *  [音频剪裁剪切复制播放](js/video.md)
     * ES
       *  [ES6 Class](js/class.md)
@@ -68,15 +76,6 @@
       *  [Node](node/node.md)
     *  NPM
       *  [发布NPM包](node/npm.md)
-* SQL
-    *  [SQL基础](sql/query.md)
-
-* Windows
-    *  [命令提示符](win/bash.md)
-
-* uniApp
-    *  [uniapp](uniapp/uni.md)
-    *  [习惯文档](uniapp/base.md)
 
 
 
