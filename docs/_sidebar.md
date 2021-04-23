@@ -57,7 +57,7 @@
       *  [`IntersectionObserver`实现懒加载](js/intersection.md)
     * 音视频相关
       *  [视频取帧](notes/video.md)
-      *  [视频相关](js/barrage.md "Made In Heaven")
+      *  [视频相关](js/barrage.md)
       *  [音频剪裁剪切复制播放](js/video.md)
     * ES
       *  [ES6 Class](js/class.md)
