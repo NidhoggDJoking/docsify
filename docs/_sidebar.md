@@ -74,7 +74,7 @@
       *  [TypeScript](ts/ts.md)
     * Node
       *  [Node](node/node.md)
-    *  NPM
+    * NPM
       *  [发布NPM包](node/npm.md)
 
 
