@@ -53,6 +53,7 @@ font-family:FangSong;
 font-family: 'Comic Sans MS', cursive;
 ```
 
+---
 
 > ### 浏览器 内置字体
 
@@ -134,10 +135,96 @@ font-family: serif;
 font-family: unset;
 ```
 
+---
 
-> ### 苹果OS 内置字体
+> ### Serif 字体
 
-!> 别了我的 `markbook pro` 从今天起我对所有小偷不抱有一丝丝怜悯
+- <p class="family" style="font-family: Georgia, serif;">无名氏 Georgia, serif 012</p>
+
+```css
+font-family: Georgia, serif;
+```
+
+- <p class="family" style="font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;">无名氏 "Palatino Linotype", "Book Antiqua", Palatino, serif 012</p>
+
+```css
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+```
+
+- <p class="family" style="font-family: 'Times New Roman', Times, serif">无名氏 "Times New Roman", Times, serif 012</p>
+
+```css
+font-family: "Times New Roman", Times, serif;
+```
+
+---
+
+> ### sans - serif字体
+
+- <p class="family" style="font-family: Arial, Helvetica, sans-serif;">无名氏 Arial, Helvetica, sans-serif 012</p>
+
+```css
+font-family: Arial, Helvetica, sans-serif;
+```
+
+- <p class="family" style="font-family: Arial Black, Gadget, sans-serif;">无名氏 Arial Black, Gadget, sans-serif 012</p>
+
+```css
+font-family: Arial Black, Gadget, sans-serif;
+```
+
+- <p class="family" style="font-family: 'Comic Sans MS', cursive, sans-serif;">无名氏 "Comic Sans MS", cursive, sans-serif 012</p>
+
+```css
+font-family: "Comic Sans MS", cursive, sans-serif;
+```
+
+- <p class="family" style="font-family: Impact, Charcoal, sans-serif;">无名氏 Impact, Charcoal, sans-serif 012</p>
+
+```css
+font-family: Impact, Charcoal, sans-serif;
+```
+
+- <p class="family" style="font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">无名氏 "Lucida Sans Unicode", "Lucida Grande", sans-serif 012</p>
+
+```css
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+```
+
+- <p class="family" style="font-family: Tahoma, Geneva, sans-serif;">无名氏 Tahoma, Geneva, sans-serif 012</p>
+
+```css
+font-family: Tahoma, Geneva, sans-serif;
+```
+
+- <p class="family" style="font-family: 'Trebuchet MS', Helvetica, sans-serif;">无名氏 "Trebuchet MS", Helvetica, sans-serif 012</p>
+
+```css
+font-family: "Trebuchet MS", Helvetica, sans-serif;
+```
+
+- <p class="family" style="font-family: Verdana, Geneva, sans-serif;">无名氏 Verdana, Geneva, sans-serif 012</p>
+
+```css
+font-family: Verdana, Geneva, sans-serif;
+```
+
+---
+
+> ### Monospace 字体
+
+- <p class="family" style="font-family: 'Courier New', Courier, monospace;">无名氏 "Courier New", Courier, monospace 012</p>
+
+```css
+font-family: "Courier New", Courier, monospace;
+```
+
+- <p class="family" style="font-family: 'Lucida Console', Monaco, monospace;">无名氏 "Lucida Console", Monaco, monospace 012</p>
+
+```css
+font-family: "Lucida Console", Monaco, monospace;
+```
+
 
 <style>
     .family{
