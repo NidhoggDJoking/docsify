@@ -118,9 +118,10 @@ function bufferToWave(abuffer, len) {
         channels.push(abuffer.getChannelData(i));
 
     while(pos < length) {
-        for(i = 0; i < numOfChan; i++) {             // interleave channels
+        for(i = 0; i < numOfChan; i++) {             // interleave channels:交织信道
             sample = Math.max(-1, Math.min(1, channels[i][offset])); // clamp
             sample = (0.5 + sample < 0 ? sample * 32768 : sample * 32767)|0; // scale to 16-bit signed int
+            // `setInt16()`从`DataView`起始位置以byte为计数的指定偏移量(byteOffset)处储存一个16-bit数(短整型).
             view.setInt16(pos, sample, true);          // write 16-bit sample
             pos += 2;
         }
