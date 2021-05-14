@@ -67,6 +67,7 @@
     * Vue
       *  [Vuex](vue/vuex.md)
       *  [Axios](vue/axios.md)
+      *  [Vue相关](vue/directives.md)
       *  [双向数据绑定](vue/property.md)
       *  [Vue + JQuery](vue/jquery.md)
       *  [Vue + 百度地图](vue/map.md)

@@ -55,3 +55,34 @@ export default {
     },
 }
 ```
+
+###  .env.* 文件全局变量
+
+`.env 文件`
+
+```bash
+# just a flag
+NODE_ENV = 'production'
+
+# base api
+BASE_URL = '/prod-api'
+```
+
+`直接使用`
+
+```js
+const service = axios.create({
+    baseURL: process.env.BASE_URL,
+    timeout: 5000
+})
+```
+### 打包内存溢出
+
+```bush
+npx --max_old_space_size=4096 vue-cli-service serve
+
+setx NODE_OPTIONS --max_old_space_size=10240
+```
+
+
+#### [对应案例](https://gitee.com/NidhoggDJoking/jwebsite)
