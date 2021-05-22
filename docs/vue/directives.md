@@ -1,4 +1,8 @@
-### 全局公用组件注册
+## Vue2.x 相关
+
+---
+
+> ### 全局公用组件注册
 
 ```javascript
 // @/components/index.js
@@ -37,7 +41,7 @@ new Vue({
 ```
 
 
-### 全局公用方法注册
+> ### 全局公用方法注册
 
 ```javascript
 import copy from './copy'
@@ -56,7 +60,7 @@ export default {
 }
 ```
 
-###  .env.* 文件全局变量
+> ###  .env.* 文件全局变量
 
 `.env 文件`
 
@@ -76,7 +80,10 @@ const service = axios.create({
     timeout: 5000
 })
 ```
-### 打包内存溢出
+#### [以上代码对应案例](https://gitee.com/NidhoggDJoking/jwebsite)
+
+
+> ### 打包内存溢出
 
 ```bush
 npx --max_old_space_size=4096 vue-cli-service serve
@@ -84,5 +91,66 @@ npx --max_old_space_size=4096 vue-cli-service serve
 setx NODE_OPTIONS --max_old_space_size=10240
 ```
 
+> ### 组件延迟加载
 
-#### [对应案例](https://gitee.com/NidhoggDJoking/jwebsite)
+```html
+<template>
+  <div>
+    <h2>I'm an heavy page</h2>
+
+    <template v-if="defer(2)">
+      <Heavy v-for="n in 10" :key="n"/>
+    </template>
+
+    <Heavy v-if="defer(3)" class="super-heavy" :n="9999999"/>
+  </div>
+</template>
+
+<script>
+import Defer from '@/mixins/Defer'
+
+export default {
+  mixins: [
+    Defer()
+  ]
+}
+</script>
+```
+
+```js
+export default function (count = 10) {
+  return {
+    data () {
+      return {
+        displayPriority: 0
+      }
+    },
+
+    mounted () {
+      this.runDisplayPriority()
+    },
+
+    methods: {
+      runDisplayPriority () {
+        const step = () => {
+          requestAnimationFrame(() => {
+            this.displayPriority++
+            if (this.displayPriority < count) {
+              step()
+            }
+          })
+        }
+        step()
+      },
+
+      defer (priority) {
+        return this.displayPriority >= priority
+      }
+    }
+  }
+}
+```
+
+<style>
+@import url('static/css/vueCode.css');
+</style>
