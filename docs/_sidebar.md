@@ -20,22 +20,6 @@
         *  [clip-path](css/clip.md)
         *  [CSS3 字体基本](css/font.md)
         *  [CSS3 字体Family](css/family.md)
-*  杂记篇
-  *  [面筋儿](notes/face.md)
-  *  [客制化](notes/keyboard.md)
-  *  [Canvas](notes/canvas.md)
-  *  [CodePen](notes/codepen.md)
-  *  [颜色选择器](notes/color.md)
-  *  [百度语言合成](notes/baidu.md)
-  *  [和风天气插件](notes/hefeng.md)
-  *  [博客代码编辑器](notes/note.md)
-      * SQL
-        *  [SQL基础](sql/query.md)
-      * Windows
-        *  [命令提示符](win/bash.md)
-      * uniApp
-        *  [uniapp](uniapp/uni.md)
-        *  [习惯文档](uniapp/base.md)
 *  JavaScript
   *  [Js循环](js/for.md)
   *  [webGL](notes/webgl.md)
@@ -43,18 +27,19 @@
   *  [深浅拷贝](js/deep.md)
   *  [Event 类](js/event.md)
   *  [JS原型链](js/prototype.md)
-  *  [Lintcode](js/lintcode.md)
   *  [`new Date`](js/date.md)
   *  [防抖和节流](notes/debounce.md)
   *  [H5点击复制文本](notes/copy.md)
   *  [`Web Components`](js/components.md)
-  *  [十大经典排序算法](js/algorithm.md)
-  *  [Js 写法与运行速度](js/speed.md)
   *  [`call()`、`apply()`、`bind()`](js/cab.md)
   *  [Event loop / 宏任务和微任务](js/loop.md)
     * 图片相关 JS
       *  [图片懒加载](js/lazy.md)
       *  [`IntersectionObserver`实现懒加载](js/intersection.md)
+    * 算法相关 JS
+      *  [Lintcode](js/lintcode.md)
+      *  [十大经典排序算法](js/algorithm.md)
+      *  [Js 写法与运行速度](js/speed.md)
     * 音视频相关
       *  [视频取帧](notes/video.md)
       *  [视频相关](js/barrage.md)
@@ -77,7 +62,22 @@
       *  [Node](node/node.md)
     * NPM
       *  [发布NPM包](node/npm.md)
-
+*  杂记篇
+  *  [面筋儿](notes/face.md)
+  *  [客制化](notes/keyboard.md)
+  *  [Canvas](notes/canvas.md)
+  *  [CodePen](notes/codepen.md)
+  *  [颜色选择器](notes/color.md)
+  *  [百度语言合成](notes/baidu.md)
+  *  [和风天气插件](notes/hefeng.md)
+  *  [博客代码编辑器](notes/note.md)
+      * SQL
+        *  [SQL基础](sql/query.md)
+      * Windows
+        *  [命令提示符](win/bash.md)
+      * uniApp
+        *  [uniapp](uniapp/uni.md)
+        *  [习惯文档](uniapp/base.md)
 
 
 

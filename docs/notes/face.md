@@ -90,6 +90,82 @@ function closeFullscreen() {
 }
 ```
 
+---
+
+### 满足 (a === 1 && a === 2 && a === 3) 的值为true? 
+
+#### `方法一 :`
+
+```javascript
+class A {
+  constructor(value) {
+    this.value = value;
+  }
+  toString() {
+    return this.value++;
+  }
+}
+const a = new A(1);
+if (a == 1 && a == 2 && a == 3) {
+  console.log("Hi world!");
+}
+```
+> ####  当然，你也可以不使用toString，换成valueOf也行，效果也是一样的
+
+#### `方法二 :`
+
+```javascript
+class A extends Array {
+  join = this.shift;
+}
+const a = new A(1, 2, 3);
+if (a == 1 && a == 2 && a == 3) {
+  console.log("Hi world!");
+}
+
+```
+
+#### `babel7 ：` 
+
+```javascript
+"use strict";
+
+function _defineProperty(obj, key, value) { 
+if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } 
+else { obj[key] = value; } return obj; }
+
+class A extends Array {
+  constructor(...args) {
+    super(...args);
+
+    _defineProperty(this, "join", this.shift);
+  }
+
+}
+
+const a = new A(1, 2, 3);
+
+if (a == 1 && a == 2 && a == 3) {
+  console.log("Hi world!");
+}
+```
+
+#### `方法三 :`
+
+```javascript
+var value = 1;
+Object.defineProperty(window, "a", {
+  get() {
+    return this.value++;
+  }
+});
+
+if (a === 1 && a === 2 && a === 3) {
+  console.log("Hi world!");
+}
+
+```
+
 <style>
 @import url('static/css/code2.css');
 </style>

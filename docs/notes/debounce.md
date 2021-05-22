@@ -182,7 +182,7 @@ ton1.onmousemove = addNum // 无节流
 ton2.onmousemove = Throttle(addNum, 1000) // 节流
 ```
 
-# `添加是否立即执行用法同防抖`
+#### `添加是否立即执行用法同防抖`
 
 ```javascript
 // 是否立即执行
