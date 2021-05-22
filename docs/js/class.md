@@ -68,10 +68,10 @@ class Point {
 	constructor() {
 	        return new Date();
 	        //return Object.create(null);
-	    }
-    }
-	let p = new Point();   //返回为Date对象
-	console.log(p); // Tue Dec 01 2020 17:30:00 GMT+0800 (中国标准时间)
+	}
+}
+let p = new Point();   //返回为Date对象
+console.log(p); // Tue Dec 01 2020 17:30:00 GMT+0800 (中国标准时间)
 ```
 
 ### ES2019 : 私有类字段

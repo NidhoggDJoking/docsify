@@ -86,7 +86,7 @@ let g = gen();
 
 <hr>
 
-# `示例:一个无限迭代器`
+#### `示例:一个无限迭代器`
 
 ```javascript
 function* idMaker(){
