@@ -1,4 +1,4 @@
-# Vuex
+# Vuex3.x
 
 <hr>
 
@@ -191,8 +191,79 @@ export default store
 
 <br>
 
-#### [Vuex 传送门](https://vuex.vuejs.org/zh/)
+#### [Vuex3.x 传送门](https://vuex.vuejs.org/zh/)
 
+---
+
+
+# Vuex4.x
+
+> #### 到达4.0以上版本构建方法发生变化
+
+```javascript
+import { createStore } from 'vuex';
+
+export default createStore({
+  state: {
+    stateDemo:'this is vuex'
+  },
+  mutations: {
+    changeData(state, newData) {
+      console.log('来前:',state.stateDemo)
+      state.stateDemo = newData
+      console.log('过后:',state.stateDemo)
+    }
+  },
+  actions: {
+  },
+  modules: {
+  },
+});
+```
+
+> #### 4.0以上版本对Ts的支持
+
+```javascript
+// vuex-shim.d.ts
+import { ComponentCustomProperties } from 'vue'
+import { Store } from 'vuex'
+
+declare module '@vue/runtime-core' {
+  // Declare your own store states.
+  interface State {
+    count: number
+  }
+
+  interface ComponentCustomProperties {
+    $store: Store<State>
+  }
+}
+```
+
+> #### 在Vue3.x中的使用
+
+```javascript
+import { computed } from 'vue'
+import { useStore } from 'vuex'
+
+export default {
+  setup () {
+    const store = useStore()
+
+    return {
+      // 在 computed 函数中访问 state
+      count: computed(() => store.state.count),
+
+      // 在 computed 函数中访问 getter
+      double: computed(() => store.getters.double)
+    }
+  }
+}
+```
+
+?> 其余的变化不大，详情查看文档
+
+#### [Vuex4.x 传送门](https://next.vuex.vuejs.org/)
 
 <style>
 @import url('static/css/code2.css');
