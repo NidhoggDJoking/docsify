@@ -12,6 +12,7 @@
         *  [CSS 网格布局](css/grid.md)
         *  [CSS 日常布局](css/layout.md)
     *  图片相关 CSS
+        *  [CSS 图片相关](css/photo.md)
         *  [CSS3 object-fit 属性](css/fit.md)
         *  [CSS3 mask(遮罩) 属性](css/mask.md)
         *  [CSS3 filter(滤镜) 属性](css/filter.md)
