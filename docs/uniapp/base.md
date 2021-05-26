@@ -542,6 +542,34 @@ uni.pageScrollTo({
 }
 ```
 
+### 支付宝富文本
+
+```javascript
+/**支付宝处理富文本文件*/
+changeText(html){
+	if(html!=''&&html!=undefined&&html!=null){
+	let newContent= html.replace(/<img[^>]*>/gi,function(match,capture){
+		match = match.replace(/style="[^"]+"/gi, '').replace(/style='[^']+'/gi, '');
+		match = match.replace(/width="[^"]+"/gi, '').replace(/width='[^']+'/gi, '');
+		match = match.replace(/height="[^"]+"/gi, '').replace(/height='[^']+'/gi, '');
+		return match;
+	});
+	newContent = newContent.replace(/style="[^"]+"/gi,function(match,capture){
+		match = match.replace(/width:[^;]+;/gi, 'max-width:100%;').replace(/width:[^;]+;/gi, 'max-width:100%;');
+		return match;
+	});
+	newContent = newContent.replace(/<br[^>]*\/>/gi, '');
+	newContent = newContent.replace(/\<img/gi, '<img style="max-width:100%;height:auto;display:inline-block;margin:10rpx auto;"');
+	//将 HTML String转化为 nodes 数组
+	//const content = new HTMLParser(newContent.replace()?.trim());
+	//console.log(content)
+	return newContent;
+	}else{
+		return html;
+	}
+}
+```
+
 <style>
 /* @import url('static/css/code3.css'); */
 .markdown-section td, .markdown-section th {
