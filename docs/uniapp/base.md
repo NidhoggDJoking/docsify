@@ -223,6 +223,7 @@ export default {
 ### 防抖、节流:
 
 - ####  防抖
+
 ```html
 <template>
     <view class="">
