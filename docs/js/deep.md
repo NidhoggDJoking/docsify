@@ -30,7 +30,7 @@ let 栈C = 栈A; // 栈A获取的并不是堆A的值而是堆A的地址
 
 #### 深拷贝：
 
-# `通过JSON对象实现`
+#### `通过JSON对象实现`
 
 ```javascript
 var  clone = JSON.parse(JSON.stringify(obj));  // 缺点：丢失constructor，RegExp无法实现
