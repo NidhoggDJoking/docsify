@@ -1,61 +1,43 @@
 ## 面筋儿
 
+--- 
+
 > #### 冷知识
 
 ```javascript
-![] == false
-true
+![] == false // true
 
-![] === false
-true
+![] === false // true
 
-[] == false
-true
+[] == false // true
 
-[] === false
-false
+[] === false // false
 ```
 
 ```javascript
-'' == '0'
-false
+'' == '0' // false
 
-0 == '' 
-true
+0 == '' // true
 
-0 == '0'
-true
+0 == '0' // true
 
-false == 'false'
-false
+false == 'false' // false
 
-false == '0'
-true
+false == '0' // true
 
-false == undefined
-false
+false == undefined // false
 
-false == null
-false
+false == null // false
 
-null == undefined
-true
+null == undefined // true
 
-'\t\r\n' == 0
-true
+'\t\r\n' == 0 // true
 ```
 
 ---
 
-#### 使用SSR是否无须再使用NodeJS中间件了
 
-#### 微前端 + 中间件 best march
-
-#### servicework 原理（反正是真的快）
----
-
-
-> 浏览器打开全屏模式 即“F11”
+> #### 浏览器打开全屏模式 即 `F11`
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -92,7 +74,7 @@ function closeFullscreen() {
 
 ---
 
-### 满足 (a === 1 && a === 2 && a === 3) 的值为true? 
+- ### 满足 (a === 1 && a === 2 && a === 3) 的值为true? 
 
 #### `方法一 :`
 
@@ -161,9 +143,103 @@ Object.defineProperty(window, "a", {
 });
 
 if (a === 1 && a === 2 && a === 3) {
-  console.log("Hi world!");
+  console.log("The World!");
 }
 
+```
+
+---
+
+- ### 数组扁平化
+
+```javascript
+function flatter(arr) {
+  if (!arr.length) return;
+  return arr.reduce(
+    (pre, cur) =>
+      // 如果当前的值为数组则开始递归在直到数组完全展开
+      Array.isArray(cur) ? [...pre, ...flatter(cur)] : [...pre, cur],
+    []
+  );
+}
+console.log(flatter([1, 2, [1, [2, 3, [4, 5, [6]]]]]));
+// > [1, 2, 1, 2, 3, 4, 5, 6]
+```
+
+---
+
+- ### 手写 ` AJAX `
+
+```javascript
+const getJSON = function (url) {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", url, false);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState !== 4) return;
+      if (xhr.status === 200 || xhr.status === 304) {
+        resolve(xhr.responseText);
+      } else {
+        reject(new Error(xhr.responseText));
+      }
+    };
+    xhr.send();
+  });
+};
+
+```
+
+- ### 虚拟 Dom 转化为真实 Dom
+
+```javascript
+// 真正的渲染函数
+function _render(vnode) {
+  // 如果是数字类型转化为字符串
+  if (typeof vnode === "number") {
+    vnode = String(vnode);
+  }
+  // 字符串类型直接就是文本节点
+  if (typeof vnode === "string") {
+    return document.createTextNode(vnode);
+  }
+  // 普通DOM
+  const dom = document.createElement(vnode.tag);
+  if (vnode.attrs) {
+    // 遍历属性
+    Object.keys(vnode.attrs).forEach((key) => {
+      const value = vnode.attrs[key];
+      dom.setAttribute(key, value);
+    });
+  }
+  // 子数组进行递归操作
+  vnode.children.forEach((child) => dom.appendChild(_render(child)));
+  return dom;
+}
+
+var vv = {
+  tag: 'DIV',
+  attrs:{
+  id:'app'
+  },
+  children: [
+    {
+      tag: 'SPAN',
+      children: [
+        { tag: 'A', children: [] }
+      ]
+    },
+    {
+      tag: 'SPAN',
+      children: [
+        { tag: 'A', children: [] },
+        { tag: 'A', children: [] }
+      ]
+    }
+  ]
+}
+
+console.log(_render(vv))
 ```
 
 <style>
