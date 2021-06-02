@@ -324,8 +324,9 @@ import "main.less";
 > #### 上面的方法过于麻烦,也不符合全局引用的思想。尝试这个方法：
  
  <br>
- 
-#### 项目路径下执行 `vue add style-resources-loader`  或  `npm install style-resources-loader -D` 命令
+
+
+##### 项目路径下执行 `vue add style-resources-loader`  或  `npm install style-resources-loader -D` 命令
 
 <br>
 
@@ -361,7 +362,7 @@ module.exports = {
 
 > `main.js` 无须引入全局Less文件，直接使用即可:
 
-### `base.less`
+##### `base.less`
 
 ```css
 @width:calc(100% - 1rem);
