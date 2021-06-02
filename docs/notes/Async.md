@@ -197,9 +197,9 @@ result.then(res1 => {
 
 ```
 
-> #### 为什么说 async/await 是 generator 的语法糖？
+> #### 为什么说 `async/await` 是 `generator` 的语法糖？
 
-# `在使用语法糖的情况(与本篇第一个例子相似)`
+#### `在使用语法糖的情况(与本篇第一个例子相似)`
 
 ```javascript
 function sleep(time) {
@@ -220,7 +220,7 @@ async function test () {
 test ()
 ```
 
->#### 在不使用语法糖的情况(效果等同上面的语法 只是将 async/await 转成 generator 和 promise 来实现)
+>#### 在不使用语法糖的情况(效果等同上面的语法 只是将 `async/await` 转成 `generator` 和 `promise` 来实现)
 
 ```javascript
 function sleep(time) {
