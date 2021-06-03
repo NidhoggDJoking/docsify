@@ -120,6 +120,19 @@ margin-top:var(--far); //有效
 - inset (内嵌效果的边框) 
 - outset (突起效果的边框)
 
+
+---
+
+> #### display: none与visibility: hidden的区别
+
+?> `visibility: hidden` 的隐藏依旧占据布局时所使用的空间，而 `display: none` 则如同DOM消失一样
+
+- `visibility`具有继承性，给父元素设置`visibility:hidden;`子元素也会继承这个属性。但是如果重新给子元素设置`visibility: visible`,则子元素又会显示出来。这个和`display: none`有着质的区别
+
+- `visibility: hidden`不会影响计数器的计数，如图所示，`visibility: hidden`虽然让一个元素不见了，但是其计数器仍在运行。这和`display: none`完全不一样
+
+- CSS3的`transition`支持visibility属性，但是并不支持display，由于`transition`可以延迟执行，因此可以配合`visibility`使用纯CSS实现`hover`延时显示效果。提高用户体验。
+
 <style>
 .border{
     display:flex;
