@@ -317,6 +317,25 @@ function accDiv(arg1, arg2) {
 ?> 目前尚未碰到过除法精度问题
 
 
+> #### 大数相加:
+
+```javascript
+function sumBigNumber(a, b) {
+  var res = '', temp = 0;
+  a = a.split('');
+  b = b.split('');
+  while (a.length || b.length || temp) {
+    temp += ~~a.pop() + ~~b.pop();
+    res = (temp % 10) + res;
+    temp = temp > 9;
+  }
+  return res.replace(/^0+/, '');
+}
+```
+
+?> 将数字转换数组对应的下标数相加去个位数，进位存储在temp参与下一次相加，布尔类型的temp参与四则运算默认false为0 true为1因为加法运算最多进位为一所以可以使用
+
+
 <style>
 @import url('static/css/code3.css');
 </style>
