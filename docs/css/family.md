@@ -225,6 +225,12 @@ font-family: "Courier New", Courier, monospace;
 font-family: "Lucida Console", Monaco, monospace;
 ```
 
+---
+
+[![Cricut fonts](https://see.fontimg.com/api/renderfont4/BW55G/eyJyIjoiZnMiLCJoIjo2NSwidyI6MTAwMCwiZnMiOjY1LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/TmlkaG9nZ8K3RMK3Sm9raW5n/junitta.png)](https://www.fontspace.com/category/cricut)
+
+[![Cricut fonts](https://see.fontimg.com/api/renderfont4/BW55G/eyJyIjoiZnMiLCJoIjo2NSwidyI6MTAwMCwiZnMiOjY1LCJmZ2MiOiIjRTgxMjcxIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/Sm9raW5n/junitta.png)](https://www.fontspace.com/category/cricut)
+
 
 <style>
     .family{
