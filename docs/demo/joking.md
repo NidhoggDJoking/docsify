@@ -202,3 +202,16 @@
 
 
 - ##### 技术
+
+
+Gitee 存放个人学习案例 可查看代码风格
+
+[发布的NPM包](https://www.npmjs.com/package/joking-navigation)
+[基于serverless模式的uniCloud开发尝鲜](https://gitee.com/NidhoggDJoking/juni-cloud)
+[UniApp + NativeJS APP Demo](https://gitee.com/NidhoggDJoking/uand)
+[学习React中的JSX和函数式编程思想](https://gitee.com/NidhoggDJoking/React)
+[基于Express的NODE](https://gitee.com/NidhoggDJoking/node)
+[Vue3](https://gitee.com/NidhoggDJoking/vuenext)
+[svelte](https://gitee.com/NidhoggDJoking/svelte)
+[ThinkPHPv6](https://gitee.com/NidhoggDJoking/ThinkPHPv6)
+[Angular学习](https://github.com/NidhoggDJoking/Angular)
