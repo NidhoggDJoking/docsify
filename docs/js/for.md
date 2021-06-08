@@ -7,9 +7,13 @@
 > ##### 遍历时间：`for循环遍历` < `for...of遍历` < `forEach遍历` < `for...in遍历` < `map遍历`
 
 ```javascript
-for( i=0; i<arr.length;i++){ }
+for(let i=0; i<arr.length;i++){
+    something...
+}
 // to
-for(i=0,len=arr.length;i<len;i++){ }
+for(let i=0,len=arr.length;i<len;i++){
+    something...
+}
 ```
 
 ---
