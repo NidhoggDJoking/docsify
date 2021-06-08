@@ -351,24 +351,58 @@
     z-index: 1;
 }
 ```
-<hr>
 
-### mask 与图片
+---
 
+> ### mask 与图片
+
+<div class="mask-box">
+  <div class="mask11"></div>
+  <div class="mask10"></div>
+</div>
 
 <br>
 
-<!-- <div class="mask-box">
-<div class="mask11">
-</div>
-<div class="mask10">
-</div>
-</div> -->
+?> 需要遮罩层的宽度尺寸和帧数的判断计算;换个简单的案例吧
 
-<br>
 
+<div class="human"> </div>
+
+<div class="chromon"> </div>
 
 <style>
+.human{
+    width: 140px;
+    height: 277px;
+    background: url(static/png/mask3.png) no-repeat;
+    background-size: cover;
+    animation: sping 1s steps(6) infinite;
+}
+.chromon{
+    width: 190px;
+    height: 277px;
+    background: url(static/png/mask4.png) no-repeat;
+    background-size: cover;
+    animation: sping2 1s steps(5) infinite;
+}
+@keyframes sping {
+    0% {
+        background-position: 0 0;
+    }
+    
+    100% {
+        background-position: -775px 0;
+    }
+}
+@keyframes sping2 {
+    0% {
+        background-position: 0 0;
+    }
+    
+    100% {
+        background-position: -949px 0;
+    }
+}
 .mask1{
     width: 600px;
     height: 35vh;
@@ -540,18 +574,20 @@
     height: 250px;
     position: relative;
 }
+/* mask 97*53 */
+
 .mask10{
-    width: 500px;
-    height: 250px;
+    width: 485px;
+    height: 265px;
     background: url(static/png/Raven.jpg) no-repeat;
     background-size: cover;
     mask-image: url(static/png/mask.png);
     -webkit-mask-image: url(static/png/mask2.png);
     mask-size: 3000% 100%;
     -webkit-mask-size: 3000% 100%;
-    animation: maskMove2 3s steps(20) infinite;
-    mask-position: 2.2% 0;
-    -webkit-mask-position: 2.2% 0;
+    animation: maskMove2 3s steps(21) infinite;
+    mask-position: 1.95% 0;
+    -webkit-mask-position: 1.95% 0;
     position: absolute;
     top: 0;left: 0; right: 0;bottom: 0;
 }
@@ -561,15 +597,15 @@
     top: 0;left: 0; right: 0;bottom: 0;
     background: url(static/png/SKT1.jpg) no-repeat;
     background-size: cover;
-    width: 500px;
-    height: 250px;
+    width: 485px;
+    height: 265px;
 }
 
 
 @keyframes maskMove {
     0% {
         mask-position: 0 0;
-        -webkit-mask-position: 2.2% 0;
+        -webkit-mask-position: 0 0;
     }
     
     100% {
@@ -577,8 +613,17 @@
         -webkit-mask-position: 100% 0;
     }
 }
+
 @keyframes maskMove2 {
-  0% {
+  from{
+     mask-position: 1.95% 0;
+    -webkit-mask-position: 1.95% 0;
+  }
+  to{
+     mask-position: 113.2% 0;
+    -webkit-mask-position: 113.2% 0;
+  }
+  /* 0% {
     mask-position: 1.95% 0;
     -webkit-mask-position: 1.95% 0;
   }
@@ -661,7 +706,7 @@
   100% {
     mask-position: 113.2% 0;
     -webkit-mask-position: 113.2% 0;
-  }
+  } */
 }
 
 /* @for $i from 0 through 100 { 
