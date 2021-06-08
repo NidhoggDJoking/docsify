@@ -232,8 +232,8 @@
 </div>
 
 <script>
-// 手动触发关闭侧边栏
-// $('.sidebar-toggle').trigger("click");
+// 自动触发关闭侧边栏
+$('.sidebar-toggle').trigger("click");
 
 // 手动开启全屏
 
