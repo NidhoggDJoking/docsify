@@ -234,9 +234,12 @@
 <img class="phone" src="static/project/jt/4.jpg"/>
 <img class="phone" src="static/project/jt/1.jpg"/> -->
 
-#### Friends from other places, Please click on this name
 
-[![](https://see.fontimg.com/api/renderfont4/BW55G/eyJyIjoiZnMiLCJoIjo4NywidyI6MTAwMCwiZnMiOjg3LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/Sm9raW5n/junitta.png)](https://nidhoggdjoking.gitee.io/eternal)
+<!-- [![](https://see.fontimg.com/api/renderfont4/BW55G/eyJyIjoiZnMiLCJoIjo4NywidyI6MTAwMCwiZnMiOjg3LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/Sm9raW5n/junitta.png)](https://nidhoggdjoking.gitee.io/eternal) -->
+
+[![Cricut fonts](https://see.fontimg.com/api/renderfont4/pV3O/eyJyIjoiZnMiLCJoIjo4NywidyI6MTAwMCwiZnMiOjg3LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/Sm9raW5n/digidon-demo.png)](https://nidhoggdjoking.gitee.io/eternal)
+
+<span class="englist">Friends from other places, Please click on this name</span>
 
 <div class="full-screen">
     全
@@ -293,6 +296,11 @@ $('.sidebar-toggle').trigger("click");
     /* 120  240  360 480 720*/
 }
 
+.englist{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-weight:600;
+    font-size: 20px;
+}
 .full-screen{
     position: fixed;
     cursor: pointer;
