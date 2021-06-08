@@ -71,6 +71,11 @@
 微信搜索锦泰安防即可查看
 ```
 
+<!-- <img class="phone" src="static/project/jt/3.jpg"/>
+<img class="phone" src="static/project/jt/2.jpg"/>
+<img class="phone" src="static/project/jt/4.jpg"/>
+<img class="phone" src="static/project/jt/1.jpg"/> -->
+
 - ##### 一部手机游潇湘平台
 
 
@@ -228,12 +233,6 @@
 ```
 
 ---
-
-<!-- <img class="phone" src="static/project/jt/3.jpg"/>
-<img class="phone" src="static/project/jt/2.jpg"/>
-<img class="phone" src="static/project/jt/4.jpg"/>
-<img class="phone" src="static/project/jt/1.jpg"/> -->
-
 
 <!-- [![](https://see.fontimg.com/api/renderfont4/BW55G/eyJyIjoiZnMiLCJoIjo4NywidyI6MTAwMCwiZnMiOjg3LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/Sm9raW5n/junitta.png)](https://nidhoggdjoking.gitee.io/eternal) -->
 
