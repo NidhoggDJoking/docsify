@@ -232,9 +232,6 @@
 </div>
 
 <script>
-// 自动触发关闭侧边栏
-$('.sidebar-toggle').trigger("click");
-
 // 手动开启全屏
 
 var state = false;
@@ -271,9 +268,8 @@ $('.full-screen').click(function(){
     }
 });
 
-
-
-
+// 自动触发关闭侧边栏
+$('.sidebar-toggle').trigger("click");
 </script>
 
 
