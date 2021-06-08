@@ -229,14 +229,14 @@
 
 ---
 
-<img class="phone" src="static/project/jt/3.jpg"/>
+<!-- <img class="phone" src="static/project/jt/3.jpg"/>
 <img class="phone" src="static/project/jt/2.jpg"/>
 <img class="phone" src="static/project/jt/4.jpg"/>
-<img class="phone" src="static/project/jt/1.jpg"/>
+<img class="phone" src="static/project/jt/1.jpg"/> -->
 
 #### Friends from other places, Please click on this name
 
-[![Cricut fonts](https://see.fontimg.com/api/renderfont4/BW55G/eyJyIjoiZnMiLCJoIjo4NywidyI6MTAwMCwiZnMiOjg3LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/Sm9raW5n/junitta.png)](https://nidhoggdjoking.gitee.io/eternal)
+[![](https://see.fontimg.com/api/renderfont4/BW55G/eyJyIjoiZnMiLCJoIjo4NywidyI6MTAwMCwiZnMiOjg3LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/Sm9raW5n/junitta.png)](https://nidhoggdjoking.gitee.io/eternal)
 
 <div class="full-screen">
     全
@@ -245,7 +245,7 @@
 <script>
 // 手动开启全屏
 
-var state = false;
+var state = true;
 var elem = document.documentElement;
 function openFullscreen() {
   if (elem.requestFullscreen) {
