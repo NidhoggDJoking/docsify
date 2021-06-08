@@ -2,20 +2,31 @@
 
 ---
 
-#### 个人信息
+#### 基础信息
 
-- 姓名 ： 胡康
+- ##### 姓名 ：胡康
 
-- 代码仓库与博客右上角列表查看
+- ##### 性别 ：男
 
-- 个人开源项目：https://gitee.com/NidhoggDJoking/navigation
+- ##### 年龄 ：25岁
 
-- npm 地址：https://www.npmjs.com/package/joking-navigation
+- ##### 电话 ：15773594340
+
+- ##### 岗位 ：前端开发工程师
+
+- ##### 邮箱 : &nbsp; 250348426@qq.com
 
 ---
 
-#### 工作经验
+#### 专业技能
 
+-  掌握 HTML5 CSS3 JavaScript Jquery
+-  熟练使用 Vue2 以及全家桶,初步掌握 Vue3
+-  熟练使用 Uni-app 进行的多端开发
+-  了解后台一些语言 如 PHP，Java，NodeJS 数据库 MySql
+---
+
+#### 工作经验
 
 
 <details>
@@ -51,7 +62,7 @@
 
 时间：2015-09 - 2018-06
 
-学校：[湖南软件职业技术大学](https://baike.baidu.com/item/%E6%B9%96%E5%8D%97%E8%BD%AF%E4%BB%B6%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%A4%A7%E5%AD%A6) &nbsp;  |  &nbsp; 专业：软件技术
+学校：[湖南软件职业技术大学](https://baike.baidu.com/item/%E6%B9%96%E5%8D%97%E8%BD%AF%E4%BB%B6%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%A4%A7%E5%AD%A6) - 软件开发与信息工程系 &nbsp;  |  &nbsp; 专业：软件技术
 
 ---
 
@@ -71,10 +82,12 @@
 微信搜索锦泰安防即可查看
 ```
 
-<!-- <img class="phone" src="static/project/jt/3.jpg"/>
-<img class="phone" src="static/project/jt/2.jpg"/>
-<img class="phone" src="static/project/jt/4.jpg"/>
-<img class="phone" src="static/project/jt/1.jpg"/> -->
+`如下图所示 :`
+
+<img class="phone" src="static/project/jt/3.jpg"/>
+<!-- <img class="phone" src="static/project/jt/2.jpg"/> -->
+<!-- <img class="phone" src="static/project/jt/4.jpg"/> -->
+<!-- <img class="phone" src="static/project/jt/1.jpg"/> -->
 
 - ##### 一部手机游潇湘平台
 
@@ -108,7 +121,7 @@
 
 工作内容 : 负责前端页面构建 采用 vue-element-admin 自带的 element UI ，数据的增删改查
 
-工作总结 : vue-element-admin 是一个非常好项目案例特别是在权限判断路由动态加载生成菜单栏那块的处理方法非常值得学习
+工作总结 : vue-element-admin 是一个非常好项目案例特别是在权限判断路到由动态加载再到生成菜单栏的处理方法非常值得学习
 
 个人仓库 : https://nidhoggdjoking.github.io/BackstageTemplate
 ```
@@ -120,6 +133,7 @@
 
 项目概述 : 开发游潇湘平台下面的子项目 包括 : 智游衡阳县, 智游新邵, 智游祁阳, 智游汝城, 智游衡南 等小程序
 
+工作总结 : 全部采用同一套API接口和相似的业务逻辑 ,除了不同UI设计图的以外项目结构大致相同 并未对项目经验提供太大的帮助
 
 ```
 
@@ -137,7 +151,7 @@
 ```
 描述 : 金融类应用通过其他支付平台提供的接口进行套现和智能还款的功能
 
-技术栈 : 微信小程序
+技术栈 : 微信小程序开发
 
 工作内容 : 主要负责对接接口以及使用百度大脑第三方API实现读取身份证照片信息，银行卡照片信息和银行卡四要素验证等
 
@@ -206,10 +220,10 @@
 
 
 
-####  代码仓库
+####  代码学习仓库
 
 
-?> Gitee 存放个人学习案例 可查看代码风格
+?> Gitee 存放个人学习案例 可查阅代码风格
 
 ```
 [发布的NPM包](https://www.npmjs.com/package/joking-navigation)
