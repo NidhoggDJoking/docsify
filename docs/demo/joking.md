@@ -201,17 +201,103 @@
 
 
 
-- ##### 技术
+####  代码仓库
 
 
-Gitee 存放个人学习案例 可查看代码风格
+?> Gitee 存放个人学习案例 可查看代码风格
 
+```
 [发布的NPM包](https://www.npmjs.com/package/joking-navigation)
+
 [基于serverless模式的uniCloud开发尝鲜](https://gitee.com/NidhoggDJoking/juni-cloud)
+
 [UniApp + NativeJS APP Demo](https://gitee.com/NidhoggDJoking/uand)
+
 [学习React中的JSX和函数式编程思想](https://gitee.com/NidhoggDJoking/React)
+
 [基于Express的NODE](https://gitee.com/NidhoggDJoking/node)
+
 [Vue3](https://gitee.com/NidhoggDJoking/vuenext)
+
 [svelte](https://gitee.com/NidhoggDJoking/svelte)
+
 [ThinkPHPv6](https://gitee.com/NidhoggDJoking/ThinkPHPv6)
+
 [Angular学习](https://github.com/NidhoggDJoking/Angular)
+```
+
+
+<div class="full-screen">
+    全
+</div>
+
+<script>
+// 手动触发关闭侧边栏
+// $('.sidebar-toggle').trigger("click");
+
+// 手动开启全屏
+
+var state = false;
+var elem = document.documentElement;
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
+
+$('.full-screen').click(function(){ 
+    if(state){
+        openFullscreen();
+        state = !state;
+        $('.full-screen').text('缩');
+    }else{
+        closeFullscreen();
+        state = !state;
+        $('.full-screen').text('全');
+    }
+});
+
+
+
+
+</script>
+
+
+<style>
+.phone{
+    width:108px;
+    height:240px;
+    display:inline-block;
+}
+
+.full-screen{
+    position: fixed;
+    cursor: pointer;
+    right: 3%;
+    user-select: none;
+    bottom: 3%;
+    z-index: 10;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 22px;
+    color:#333;
+    box-shadow:0 0 5px #9a9a9a;
+}
+</style>
