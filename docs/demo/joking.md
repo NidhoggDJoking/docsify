@@ -224,8 +224,19 @@
 [ThinkPHPv6](https://gitee.com/NidhoggDJoking/ThinkPHPv6)
 
 [Angular学习](https://github.com/NidhoggDJoking/Angular)
+
 ```
 
+---
+
+<img class="phone" src="static/project/jt/3.jpg"/>
+<img class="phone" src="static/project/jt/2.jpg"/>
+<img class="phone" src="static/project/jt/4.jpg"/>
+<img class="phone" src="static/project/jt/1.jpg"/>
+
+#### Friends from other places, Please click on this name
+
+[![Cricut fonts](https://see.fontimg.com/api/renderfont4/BW55G/eyJyIjoiZnMiLCJoIjo4NywidyI6MTAwMCwiZnMiOjg3LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/Sm9raW5n/junitta.png)](https://nidhoggdjoking.gitee.io/eternal)
 
 <div class="full-screen">
     全
@@ -275,9 +286,11 @@ $('.sidebar-toggle').trigger("click");
 
 <style>
 .phone{
-    width:108px;
-    height:240px;
+    width:216px;
+    height:480px;
     display:inline-block;
+    /* 54  108 162 216 324*/
+    /* 120  240  360 480 720*/
 }
 
 .full-screen{
