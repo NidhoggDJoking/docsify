@@ -126,6 +126,13 @@
 个人仓库 : https://nidhoggdjoking.github.io/BackstageTemplate
 ```
 
+
+`如下图所示 :`
+
+<img class="phone" src="static/project/jt/7.jpg"/>
+
+
+
 - ##### 智游系列
 
 ```
@@ -137,7 +144,6 @@
 
 ```
 
-
 ```
 2. 智游系列后台
 
@@ -145,6 +151,11 @@
 
 若依管理系统 : http://doc.ruoyi.vip
 ```
+
+`如下图所示 :`
+
+<img class="phone" src="static/project/jt/6.jpg"/>
+
 
 - ##### 点点管家2.0
 
