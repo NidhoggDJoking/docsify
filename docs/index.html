@@ -328,30 +328,30 @@
             ],
         }
 
-        var music = document.createElement('audio');
-        music.src = "static/music/EGOIST - Departures~あなたにおくるアイの歌~ (Departures ～送给你的爱之歌～).mp3";
-        music.autoplay = 'autoplay';
-        music.id = 'music';
-        document.getElementsByTagName('body')[0].appendChild(music);
-        document.getElementById("music").volume = 0.2;
-        var audio = document.getElementById('music');
-        audio.pause();
+        // var music = document.createElement('audio');
+        // music.src = "static/music/EGOIST - Departures~あなたにおくるアイの歌~ (Departures ～送给你的爱之歌～).mp3";
+        // music.autoplay = 'autoplay';
+        // music.id = 'music';
+        // document.getElementsByTagName('body')[0].appendChild(music);
+        // document.getElementById("music").volume = 0.2;
+        // var audio = document.getElementById('music');
+        // audio.pause();
         // ctrl + 回车销毁
-        $(document).keydown(function (e) {
-            if (e.ctrlKey && e.keyCode == 13) {
-                $("#music").remove();
-            }
-        });
+        // $(document).keydown(function (e) {
+        //     if (e.ctrlKey && e.keyCode == 13) {
+        //         $("#music").remove();
+        //     }
+        // });
         // 回车暂停或播放
-        $(document).keydown(function (event) {
-            if (event.keyCode == 13) {
-                if (audio.paused) {
-                    audio.play();
-                } else {
-                    audio.pause();
-                }
-            }
-        });
+        // $(document).keydown(function (event) {
+        //     if (event.keyCode == 13) {
+        //         if (audio.paused) {
+        //             audio.play();
+        //         } else {
+        //             audio.pause();
+        //         }
+        //     }
+        // });
         // TOP  Cat
         window.onscroll = function () { scrollFunction() };
         function scrollFunction() {
@@ -384,8 +384,10 @@
     <!-- 搜索组件 -->
     <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type="text/javascript"charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ext-language_tools.js" type="text/javascript"charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type="text/javascript"
+        charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ext-language_tools.js" type="text/javascript"
+        charset="utf-8"></script>
 </body>
 
 </html>
