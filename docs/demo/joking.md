@@ -224,7 +224,7 @@
 
 描述 : 使用Eclipse工具进行的Android原生开发，也是由Java转前端的契机
 
-难点 ：Android 的布局是一套独立的语法对没接触过的东西刚上手比较吃力，因此开始加入前端
+难点 ：Android 的布局是一套独立的语法对没接触过的东西刚上手比较吃力，至此开始加入前端
 
 下载地址 : http://edu.hyxxit.com/app.html
 ```
@@ -257,9 +257,18 @@
 
 ```
 
+#### 感谢看到最后
+
+?> 这里其实是我个人的一个博客 可点击左下角打开菜单栏 
+
+<img style="width:500px;margin:10px;" src="static/project/this/local.png"/>
+
+<img style="width:500px;margin:10px;" src="static/project/this/sw.png"/>
+
+在第一次加载时使用了 `Service Workers`  和 路由的本地存储 以便于之后的顺畅以及断网情况下的文档查看，可能会导致短时间的页面空白 耐不住性子的或许早就关闭网页了，能看到这里的再次感谢
+
 ---
 
-<!-- [![](https://see.fontimg.com/api/renderfont4/BW55G/eyJyIjoiZnMiLCJoIjo4NywidyI6MTAwMCwiZnMiOjg3LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/Sm9raW5n/junitta.png)](https://nidhoggdjoking.gitee.io/eternal) -->
 
 [![Cricut fonts](https://see.fontimg.com/api/renderfont4/pV3O/eyJyIjoiZnMiLCJoIjo4NywidyI6MTAwMCwiZnMiOjg3LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/Sm9raW5n/digidon-demo.png)](https://nidhoggdjoking.gitee.io/eternal)
 
@@ -332,6 +341,7 @@ $('.sidebar-toggle').trigger("click");
     user-select: none;
     bottom: 3%;
     z-index: 10;
+    background-color:#fff;
     width:60px;
     height:60px;
     border-radius:50%;
