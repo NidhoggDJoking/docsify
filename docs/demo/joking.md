@@ -175,7 +175,11 @@
 
 `如下图所示 :`
 
+<img class="phone" src="static/project/jt/13.jpg"/>
+
 <img class="phone" src="static/project/jt/6.jpg"/>
+
+
 
 
 - ##### 点点管家2.0
