@@ -84,10 +84,10 @@
 
 `如下图所示 :`
 
-<img class="phone" src="static/project/jt/3.jpg"/>
-<!-- <img class="phone" src="static/project/jt/2.jpg"/> -->
+<img style="margin:10px;" class="phone" src="static/project/jt/3.jpg"/>
+<img style="margin:10px;" class="phone" src="static/project/jt/2.jpg"/>
 <!-- <img class="phone" src="static/project/jt/4.jpg"/> -->
-<!-- <img class="phone" src="static/project/jt/1.jpg"/> -->
+<img style="margin:10px;" class="phone" src="static/project/jt/1.jpg"/>
 
 - ##### 一部手机游潇湘平台
 
@@ -104,6 +104,14 @@
 网址 : http://yxx.h-etrip.com/app
 
 ```
+
+`如下图所示 :`
+
+<img class="phone" src="static/project/jt/7.jpg"/>
+
+<img class="phone" src="static/project/jt/11.jpg"/>
+
+<img class="phone" src="static/project/jt/12.jpg"/>
 
 ```
 2. 一部手机游潇湘(App)
@@ -126,12 +134,25 @@
 个人仓库 : https://nidhoggdjoking.github.io/BackstageTemplate
 ```
 
+```
+4. 游潇湘支付宝小程序 1.0
 
-`如下图所示 :`
+项目描述 : 和阿里合作的项目，支付宝联合游潇湘打造湖南景区平台 实现景区门票线上预约
 
-<img class="phone" src="static/project/jt/7.jpg"/>
+工作内容 : 后台产生票务和景区过一道阿里提供的接口数据和他们达成标椎，前端则使用他们提供的打卡，卡券等
 
+工作难点 : 阿里提供的接口和前端组件全是现写的出现问题也没办法百度，异地联调许多不便而且他们交流只用钉钉
+```
 
+`流程图如下 :`
+
+<img style="margin:10px;" class="phone" src="static/project/jt/5.jpg"/>
+
+<img style="margin:10px;" class="phone" src="static/project/jt/9.jpg"/>
+
+<img style="margin:10px;" class="phone" src="static/project/jt/8.jpg"/>
+
+<img style="margin:10px;" class="phone" src="static/project/jt/10.jpg"/>
 
 - ##### 智游系列
 
@@ -201,7 +222,7 @@
 
 技术栈: JQuery + Bootstrap + art-template 模板引擎渲染
 
-网址 ：http://edu.hyxxit.com/
+网址 ：http://edu.hyxxit.com
 ```
 
 ```
@@ -234,7 +255,7 @@
 ####  代码学习仓库
 
 
-?> Gitee 存放个人学习案例 可查阅代码风格
+?> [Gitee](https://gitee.com/NidhoggDJoking) &nbsp; 存放个人学习案例 可查阅代码风格 
 
 ```
 [发布的NPM包](https://www.npmjs.com/package/joking-navigation)
@@ -325,6 +346,7 @@ $('.sidebar-toggle').trigger("click");
     width:216px;
     height:480px;
     display:inline-block;
+    margin:10px;
     /* 54  108 162 216 324*/
     /* 120  240  360 480 720*/
 }
