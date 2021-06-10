@@ -7,7 +7,7 @@
 
 [All alone with you](https://nidhoggdjoking.gitee.io/eternal)
 [You'll never walk alone](README)
-
+[我的简历](demo/joking)
 
 
 
