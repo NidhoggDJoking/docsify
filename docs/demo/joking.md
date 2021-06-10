@@ -96,7 +96,7 @@
 
 <img style="margin:10px;" class="phone" src="static/project/jt/3.jpg"/>
 <img style="margin:10px;" class="phone" src="static/project/jt/2.jpg"/>
-<!-- <img class="phone" src="static/project/jt/4.jpg"/> -->
+<img class="phone" src="static/project/jt/4.jpg"/>
 <img style="margin:10px;" class="phone" src="static/project/jt/1.jpg"/>
 
 - ##### 一部手机游潇湘平台
@@ -129,6 +129,8 @@
 项目描述 : 基于 uni-app 所开发的 App
 
 技术栈 : uni-app 为主体配合 NativeJS 进行开发
+
+总结 ：熟悉了uni-app 的 app 端开发和配置
 ```
 
 ```
@@ -223,10 +225,13 @@
 
 描述 ：使用公司内部研制一套PHP框架独自完成官网和后台系统的前后端开发，从而了解些后台的架构以及掌握SQL的基础语句
 
+总结 : 首个独自完成前后端的项目，对项目的开发的全部流程都有了一定的了解
+
 网址:http://www.hyxxit.com
 
 后台管理 : http://www.hyxxit.com/manage/index.html  测试账号：joking / 123
 ```
+
 
 - ##### 和永教育平台（和永教育培训网）
 
