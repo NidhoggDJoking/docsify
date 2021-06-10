@@ -6,10 +6,8 @@
     <title>WHY SO SERIOUS?</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="description" content="Description">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="shortcut icon " type="images/x-icon"
-        href="https://gitee.com/NidhoggDJoking/Evolution/raw/master/docs/static/png/joker.png">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon " type="images/x-icon" href="https://gitee.com/NidhoggDJoking/Evolution/raw/master/docs/static/png/joker.png">
     <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
 
     <!-- 难看的主题 自定义吧 -->
@@ -20,12 +18,12 @@
     <!-- 纳兰迦 -- 猫猫飞行员 专用样式-->
     <style>
         /* 阿里全局矢量图 */
+        
         @import url('//at.alicdn.com/t/font_2102225_1kzd6uwfb75j.css');
-
         .docsify-copy-code-button {
             right: 10px !important;
         }
-
+        
         .iframe-top {
             position: fixed;
             right: 0;
@@ -33,22 +31,20 @@
             z-index: 10;
             animation-fill-mode: forwards;
         }
-
+        
         @keyframes cat {
             from {
                 bottom: 33%;
             }
-
             to {
                 bottom: 70%;
             }
         }
-
+        
         @media screen and (max-width: 500px) {
             .iframe-top {
                 display: none;
             }
-
             #topCat {
                 display: none;
             }
@@ -76,81 +72,80 @@
             font-family: Ha;
             src: url("static/font/HanyiSentySuciTablet.ttf");
         }
-
+        
         @font-face {
             font-family: Elgatino;
             src: url("static/font/Elgatino.ttf");
         }
-
         /* 彩色字体 */
+        
         @font-face {
             font-family: SentyCandy;
             src: url("static/font/SentyCandy-color.ttf");
         }
-
+        
         @font-face {
             font-family: HYRunYuan;
             src: url("static/font/HYRunYuan-55W.ttf");
         }
-
         /* 日语书法 */
-
+        
         @font-face {
             font-family: HYDiS;
             src: url("static/font/HYDiShengYingXiongTiW.ttf");
         }
-
+        
         @font-face {
             font-family: GlastonburyD;
             src: url("static/font/GlastonburyD.ttf");
         }
-
+        
         @font-face {
             font-family: ZolaD;
             src: url("static/font/ZolaD-Reg.ttf");
         }
-
+        
         @font-face {
             font-family: CooperBlaOutConD;
             src: url("static/font/CooperBlaOutConD.ttf");
         }
-
         /* 英语专用 */
+        
         @font-face {
             font-family: RegIta;
             src: url("static/font/CrawModURW-RegIta.ttf");
         }
-
         /* 自动转大写 */
+        
         @font-face {
             font-family: StencilD;
             src: url("static/font/StencilD.ttf");
         }
-
+        
         #nidhoggdjoking a span {
             font-family: GlastonburyD;
         }
-
+        
         #見つけてくれてありがとう {
             font-family: HYDiS;
             color: #900000;
         }
-
+        
         #見つけてくれてありがとう span {
             /* color: #8a0000; */
             background: linear-gradient(to right, red, blue);
             -webkit-background-clip: text;
             color: transparent;
         }
-
+        
         .cover-main blockquote p {
             font-family: HYRunYuan;
         }
-
+        
         .cover-main ul li {
             font-family: HYRunYuan;
         }
-
+        
         .app-name-link>h4 {
             font-family: HYDiS;
             color: #6fb7ae;
@@ -163,95 +158,86 @@
             bottom: 0;
             margin-bottom: 10px;
         }
-
+        
         .github-corner:hover .octo-arm {
             animation: octocat-wave 560ms ease-in-out
         }
-
+        
         .github-corner svg {
             height: 60px;
             width: 60px;
         }
-
         /* 导航栏滑动条 */
-
+        
         .sidebar::-webkit-scrollbar {
             width: 0px;
         }
-
+        
         .sidebar:hover::-webkit-scrollbar {
             width: 2px;
         }
-
+        
         .sidebar:hover::-webkit-scrollbar-thumb {
             background: linear-gradient(45deg, #1dfff5, #fff256, #ff008d);
         }
-
+        
         @keyframes octocat-wave {
-
             0%,
             100% {
                 transform: rotate(0)
             }
-
             20%,
             60% {
                 transform: rotate(-25deg)
             }
-
             40%,
             80% {
                 transform: rotate(10deg)
             }
         }
-
+        
         @media (max-width:500px) {
             .github-corner:hover .octo-arm {
                 animation: none
             }
-
             .github-corner .octo-arm {
                 animation: octocat-wave 560ms ease-in-out
             }
         }
-
-        ::-webkit-scrollbar-track {
+        
+         ::-webkit-scrollbar-track {
             border-radius: 15px;
             background-color: #fff;
             -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
         }
-
         /*滑动条*/
-
-        ::-webkit-scrollbar {
+        
+         ::-webkit-scrollbar {
             width: 8px;
             background-color: #fff00;
             border-radius: 15px;
         }
-
         /*滑块*/
-
-        ::-webkit-scrollbar-thumb {
+        
+         ::-webkit-scrollbar-thumb {
             border-radius: 15px;
             /* background-color: #b3b3b3; */
             -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
             background: linear-gradient(45deg, #fffa1d, #59ff56, #00d7ff);
         }
-
         /* 外嵌 iframe 去除边框 */
-
+        
         .markdown-section iframe {
             border: 0;
         }
-
         /* 海螺搜索 */
-
+        
         .input-wrap>input[type=search] {
             letter-spacing: 5px;
             font-family: SentyCandy;
             font-size: 25px;
         }
-
+        
         .search p.empty {
             font-family: SentyCandy;
             font-size: 25px;
@@ -311,7 +297,7 @@
             },
             // 自定义插件
             plugins: [
-                function (hook) {
+                function(hook) {
                     var footer = [
                         '<hr/>',
                         '<footer style="text-align: right">',
@@ -320,7 +306,7 @@
                         '</footer>'
                     ].join('')
 
-                    hook.afterEach(function (html) {
+                    hook.afterEach(function(html) {
                         return html + footer
                     })
 
@@ -353,7 +339,10 @@
         //     }
         // });
         // TOP  Cat
-        window.onscroll = function () { scrollFunction() };
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
         function scrollFunction() {
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
                 $('.iframe-top').fadeIn();
@@ -366,7 +355,7 @@
         function parentJO() {
             $('.iframe-top').css('animation', 'cat 1s')
             $('.iframe-top').css('animation-fill-mode', 'forwards')
-            var djs = setInterval(function () {
+            var djs = setInterval(function() {
                 var oTop = document.body.scrollTop || document.documentElement.scrollTop;
                 if (oTop > 0) {
                     document.body.scrollTop = document.documentElement.scrollTop = oTop - 50;
@@ -378,16 +367,20 @@
             }, 10);
         }
     </script>
+    <!-- 离线模式 -->
+    <script>
+        if (typeof navigator.serviceWorker !== 'undefined') {
+            navigator.serviceWorker.register('sw.js')
+        }
+    </script>
     <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
     <script src="//unpkg.com/docsify-copy-code"></script>
 
     <!-- 搜索组件 -->
     <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type="text/javascript"
-        charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ext-language_tools.js" type="text/javascript"
-        charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
 </html>
