@@ -1777,6 +1777,39 @@ iframe {
     z-index: 1;
 }
 
+.progress-bar.pb1{
+    background-color: #fb00ff;
+    background-image: linear-gradient(to right,#ff41bc 0,#e400ff 100%);
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(251, 0, 255, 0.15), 0 8px 16px rgba(216, 0, 255, 0.2);
+    overflow: hidden;
+    position: relative;
+    width: 0%;
+    z-index: 1;
+}
+
+.progress-bar.pb2{
+    background-color: #0045FF;
+    background-image: linear-gradient(to right,#00a1ff 0,#00ff89 100%);
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 69, 255, 0.15), 0 8px 16px rgba(0, 69, 255, 0.2);
+    overflow: hidden;
+    position: relative;
+    width: 0%;
+    z-index: 1;
+}
+
+.progress-bar.pb3{
+    background-color: #ffbc00;
+    background-image: linear-gradient(to right, #ff0000 0%, #ffbc00 100%);
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(255, 0, 0, 0.15), 0 8px 16px rgba(255, 212, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    width: 0%;
+    z-index: 1;
+}
+
 .progress .progress-text {
     display: -webkit-flex;
     display: -ms-flexbox;
