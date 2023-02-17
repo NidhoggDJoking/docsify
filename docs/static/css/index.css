@@ -1,0 +1,165 @@
+/* 彩色字体 */
+
+@font-face {
+  font-family: SentyCandy;
+  src: url("../font/SentyCandy-color.ttf");
+}
+
+@font-face {
+  font-family: HYRunYuan;
+  src: url("../font/HYRunYuan-55W.ttf");
+}
+
+/* 日语书法 */
+
+@font-face {
+  font-family: HYDiS;
+  src: url("../font/HYDiShengYingXiongTiW.ttf");
+}
+
+@font-face {
+  font-family: GlastonburyD;
+  src: url("../font/GlastonburyD.ttf");
+}
+
+@font-face {
+  font-family: CooperBlaOutConD;
+  src: url("../font/CooperBlaOutConD.ttf");
+}
+
+#nidhoggdjoking a span {
+  font-family: GlastonburyD;
+}
+
+section.cover{
+  z-index: 11;
+}
+
+.cover-main blockquote p {
+  font-family: HYRunYuan;
+}
+
+.cover-main ul li {
+  font-family: HYRunYuan;
+}
+
+.cover-main h1{
+  font-family: HYDiS;
+  color: #900000;
+}
+
+.cover-main h1 span{
+  background: linear-gradient(to right, red, blue);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+.app-name-link > h4 {
+  font-family: HYDiS;
+  color: #6fb7ae;
+  text-align: left;
+  margin-left: 6px;
+  font-size: 20px;
+  margin-top: 20px;
+  position: fixed;
+  left: 100px;
+  bottom: 0;
+  margin-bottom: 10px;
+}
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+.github-corner svg {
+  height: 60px;
+  width: 60px;
+}
+
+/* 导航栏滑动条 */
+
+.sidebar::-webkit-scrollbar {
+  width: 0px;
+}
+
+.sidebar:hover::-webkit-scrollbar {
+  width: 2px;
+}
+
+.sidebar:hover::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #1dfff5, #fff256, #ff008d);
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 15px;
+  background-color: #fff;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/*滑动条*/
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #fff000;
+  border-radius: 15px;
+}
+
+/*滑块*/
+
+::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  /* background-color: #b3b3b3; */
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #fffa1d, #59ff56, #00d7ff);
+}
+
+/* 外嵌 iframe 去除边框 */
+
+.markdown-section iframe {
+  border: 0;
+}
+
+/* 海螺搜索 */
+
+.input-wrap > input[type="search"] {
+  letter-spacing: 5px;
+  font-family: SentyCandy;
+  font-size: 25px;
+}
+
+.search p.empty {
+  font-family: SentyCandy;
+  font-size: 25px;
+}
+
+.markdown-section pre {
+  border-radius: 5px;
+}

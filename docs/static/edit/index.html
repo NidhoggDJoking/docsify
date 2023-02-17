@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>博客嵌入式代码编辑器</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link href="./css/code.min.css" rel="stylesheet" /> -->
+  <!-- <link href="./css/edit.min.css" rel="stylesheet" /> -->
+  <link href="./css/code.css" rel="stylesheet" />
+  <link href="./css/edit.css" rel="stylesheet" />
+  <script>
+    "use strict";
+
+    function postToKuma(e) {
+      window.parent.postMessage(e, "*")
+    }
+    postToKuma({
+        markName: "interactive-editor-loading"
+      }),
+      document.addEventListener("readystatechange", function (e) {
+        switch (e.target.readyState) {
+          case "interactive":
+            postToKuma({
+              markName: "interactive-editor-interactive",
+              measureName: "ie-time-to-interactive",
+              startMark: "interactive-editor-loading",
+              endMark: "interactive-editor-interactive"
+            });
+            break;
+          case "complete":
+            postToKuma({
+              markName: "interactive-editor-complete",
+              measureName: "ie-time-to-complete",
+              startMark: "interactive-editor-loading",
+              endMark: "interactive-editor-complete"
+            })
+        }
+      });
+  </script>
+  <script>
+    // window.addEventListener('message',  (e) => {
+    //     console.log('传值',e);
+    // });
+    // window.addEventListener('message', function(event) { 
+    //     console.log(event); 
+    // }); 
+    // https://tool.oschina.net/encode
+    function jokingstatic(data = '') {
+      // console.log(document.querySelector('#static-js'))
+      document.querySelector('#static-js').innerHTML = data;
+
+      loadJS('./js/code.min.js', function () {
+        loadJS('./js/edit.min.js', function () {
+          // console.log('加载成功!')
+        });
+      });
+    }
+
+    function loadJS(url, callback) {
+      var script = document.createElement('script'),
+        fn = callback || function () {};
+      script.type = 'text/javascript';
+
+      //IE - readyState 是 IE 独有孤儿属性,其实这里可以省略的毕竟只有SB还在用IE
+      if (script.readyState) {
+        script.onreadystatechange = function () {
+          if (script.readyState == 'loaded' || script.readyState == 'complete') {
+            script.onreadystatechange = null;
+            fn();
+          }
+        };
+      } else {
+        //其他浏览器
+        script.onload = function () {
+          fn();
+        };
+      }
+      script.src = url;
+      document.getElementsByTagName('head')[0].appendChild(script);
+    }
+  </script>
+</head>
+
+<body>
+  <section id="static">
+    <pre>
+      <code id="static-js" data-height="taller">
+        const arr1 = [0, 1, 2, [3, 4]];
+
+        console.log(arr1.flat());
+        // expected output: [0, 1, 2, 3, 4]
+        
+        const arr2 = [0, 1, 2, [[[3, 4]]]];
+        
+        console.log(arr2.flat(2));
+        // expected output: [0, 1, 2, [3, 4]]
+    </code>
+  </pre>
+  </section>
+  <section id="live" class="live hidden">
+    <div id="editor" class="editor"></div>
+    <div class="output-container">
+      <div class="buttons-container">
+        <button id="execute" class="button run" type="button">运行</button>
+        <button id="reset" type="button" class="button">重置</button>
+      </div>
+      <div id="console" class="output">
+        <code></code>
+      </div>
+    </div>
+  </section>
+  <!-- <script src="./js/code.js"></script> -->
+  <!-- <script src="./js/edit.js"></script> -->
+</body>
+
+</html>
