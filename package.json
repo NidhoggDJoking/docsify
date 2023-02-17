@@ -1,0 +1,12 @@
+{
+    "name": "joking-blog",
+    "author": "Joking <250348426@qq.com>",
+    "version": "3.0",
+    "license": "Apache",
+    "scripts": {
+        "serve": "docsify serve docs"
+    },
+    "keywords": [
+        "docsify"
+    ]
+}
