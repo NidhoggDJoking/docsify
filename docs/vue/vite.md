@@ -31,7 +31,7 @@ npm install -g n 后面添加 --force即可
 
 ### nvm:  node.js version management。
 
-```
+```sh
 nvm list 查看已经安装的版本
 nvm list installed 查看已经安装的版本
 nvm list available 查看网络可以安装的版本
@@ -76,3 +76,7 @@ svelte
 
 
 vue3 + ts 存在的一个问题对低版本的浏览器的兼容不到位
+
+<!-- <style>
+    @import url('static/prism/prism.css');
+</style> -->

@@ -89,3 +89,8 @@ WMIC           在交互式命令 shell 中显示 WMI 信息。
 
 有关工具的详细信息，请参阅联机帮助中的命令行参考。
 ```
+
+
+<!-- <style>
+    @import url('static/prism/prism.css');
+</style> -->
