@@ -120,9 +120,42 @@ observer.disconnect();
 
 ```
 
+### 观察器的配置(皆为可选)
+
+- subtree
+
+当为 `true` 时，将会监听以 `target` 为根节点的整个子树。包括子树中所有节点的属性，而不仅仅是针对 `target`。默认值为 `false`。
+
+- childList
+
+当为 `true` 时，监听 `target` 节点中发生的节点的新增与删除（同时，如果 `subtree` 为 `true`，会针对整个子树生效）。默认值为 `false`。
+
+- attributes
+
+当为 `true` 时观察所有监听的节点属性值的变化。默认值为 `true`，当声明了 `attributeFilter` 或 `attributeOldValue`，默认值则为 `false`。
+
+- attributeFilter
+
+一个用于声明哪些属性名会被监听的数组。如果不声明该属性，所有属性的变化都将触发通知。
+
+- attributeOldValue
+
+当为 `true` 时，记录上一次被监听的节点的属性变化；可查阅监听属性值了解关于观察属性变化和属性值记录的详情。默认值为 `false`。
+
+- characterData
+
+当为 `true` 时，监听声明的 `target` 节点上所有字符的变化。默认值为 `true`，如果声明了 `characterDataOldValue`，默认值则为 `false`
+
+- characterDataOldValue
+
+当为 `true` 时，记录前一个被监听的节点中发生的文本变化。默认值为 `false`
+
+
 !> 这个也是 `vue.$nextTick` 的策略之一 `Promise -> MutationObserver -> setTimeout`
 
 #### [ MutationObserver API](https://developer.mozilla.org/zh-CN/docs/Web/API/MutationObserver)
+
+
 
 <script>
     // ===============使用intersectionObserver实现懒加载START==========================
