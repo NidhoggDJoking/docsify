@@ -131,11 +131,15 @@
     text-decoration: auto;
 }
 .sidebar ul li.active>a{
-  color: #00de82;
   font-size: 18px;
-  font-family: cursive;
-  text-shadow: 1px 1px 1px #0083a8;
   text-decoration: auto;
+
+  background: linear-gradient(to right, #00bcff, #00ff96,#fbff00,#ff7600);
+  -webkit-background-clip: text;
+  color: transparent;
+  /* font-family: cursive; */
+  /* color: #00de82; */
+  /* text-shadow: 1px 1px 1px #0083a8; */
 }
 
 @keyframes navText {
