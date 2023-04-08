@@ -35,6 +35,7 @@
   *  [JS Date](js/date.md)
   *  [Js代码片段](js/fragment.md)
   *  [防抖和节流](notes/debounce.md)
+  *  [Canvas拖拽](js/drag.md)
   *  [Web Components](js/components.md)
   *  [call、apply、bind](js/cab.md)
   *  [Event loop / 宏任务和微任务](js/loop.md)
