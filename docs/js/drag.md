@@ -2,14 +2,19 @@
 
 ### Canvas 实现
 
-```html
-<canvas id="canvas" width="2000" height="1200"></canvas>
-```
 
 <canvas id="canvas" width="2000" height="1200"></canvas>
 
 
 ---
+
+<details>
+<summary>
+<b>全部源码</b></summary><p>
+
+```html
+<canvas id="canvas" width="2000" height="1200"></canvas>
+```
 
 ```js
 var canvas = document.getElementById('canvas');
@@ -168,6 +173,9 @@ document.addEventListener('pointerup', function () {
     store.isPointInA = store.isPointInB = false;
 });
 ```
+
+</p>
+</details>
 
 [《参考文章》](https://www.zhangxinxu.com/wordpress/2023/02/js-curve-two-points/)
 

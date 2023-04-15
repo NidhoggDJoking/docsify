@@ -163,3 +163,7 @@ section.cover{
 .markdown-section pre {
   border-radius: 5px;
 }
+
+summary > b{
+  cursor: pointer;
+}

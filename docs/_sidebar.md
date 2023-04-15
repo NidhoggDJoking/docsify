@@ -35,10 +35,13 @@
   *  [JS Date](js/date.md)
   *  [Js代码片段](js/fragment.md)
   *  [防抖和节流](notes/debounce.md)
-  *  [Canvas拖拽](js/drag.md)
   *  [Web Components](js/components.md)
   *  [call、apply、bind](js/cab.md)
   *  [Event loop / 宏任务和微任务](js/loop.md)
+    * Canvas
+      *  [Canvas拖拽](js/drag.md)
+      *  [Canvas裁剪](js/cropping.md)
+      *  [Canvas加载效果](notes/canvas.md)
     * 图片相关 JS
       *  [图片懒加载](js/lazy.md)
       *  [IntersectionObserver实现懒加载](js/intersection.md)
@@ -79,7 +82,6 @@
   *  [面筋儿](notes/face.md)
   *  [Gitee](notes/gitee.md)
   *  [客制化](notes/keyboard.md)
-  *  [Canvas](notes/canvas.md)
   *  [CodePen](notes/codepen.md)
   *  [理论知识](notes/unimportance.md)
   *  [颜色选择器](notes/color.md)
