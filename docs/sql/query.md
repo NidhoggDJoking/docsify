@@ -83,6 +83,13 @@ SELECT * FROM table_name1 a, table_name2 b WHERE a.id = b.id
 SELECT table_name FROM information_schema.TABLES WHERE table_name ='user'
 ```
 
+
+前端运用场景也就这么多
+
+中间层平常不让操作数据库,只查询以上估计够了
+
+
+
 <style>
 @import url('static/css/code2.css');
 </style>
