@@ -1,6 +1,9 @@
-#### 数组:
+## JavaScript 常用方法
 
 ---
+
+#### 数组 相关:
+
 
 ##### `Array.prototype.slice()`
 
@@ -95,7 +98,7 @@ console.log(array3);
 
 ---
 
-#### 字符串
+#### 字符串 相关
 
 ##### `String.prototype.split()`
 

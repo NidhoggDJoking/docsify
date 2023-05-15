@@ -286,13 +286,13 @@
     input[type="range"]:focus {
         outline: none;
     }
- 
+
     /*滑道*/
     input[type="range"]::-webkit-slider-runnable-track {
         background: transparent;
         border: none;
     }
- 
+
     /*滑块*/
     input[type="range"]::-webkit-slider-thumb {
         -webkit-appearance: none;
@@ -301,6 +301,7 @@
         border-radius: 50%;
         margin-bottom: 15px;
         margin-top:5px;
+        cursor: pointer;
         background-color: transparent;
         box-shadow: 0 0 0 3px white, 0 1px 3px 3px rgba(5, 10, 70, 0.33);
     }

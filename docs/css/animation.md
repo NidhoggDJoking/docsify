@@ -1,4 +1,6 @@
-## CSS animation
+# CSS animation
+
+---
 
 !> 注释：Internet Explorer 9，以及更早的版本，不支持 `@keyframe` 规则或 `animation` 属性。
 

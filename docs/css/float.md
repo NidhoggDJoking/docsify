@@ -1,4 +1,4 @@
-## CSS 浮动
+# CSS 浮动
 
 > #### `position:absolute`和`float`属性的异同
 

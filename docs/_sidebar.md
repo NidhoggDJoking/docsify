@@ -3,6 +3,7 @@
   *  [CSS总篇](css/css.md)
   *  [CSS Button](css/button.md)
   *  [CSS Animation](css/animation.md)
+  *  [CSS clip-path](css/clip.md)
   *  [CSS浮动](css/float.md)
   *  [Less](css/less.md)
   *  [Sass](css/sass.md)
@@ -18,8 +19,7 @@
         *  [CSS3 filter 属性](css/filter.md)
         *  [CSS3 filter 拓展](css/drop.md)
     *  文字相关 CSS
-        *  [clip-path](css/clip.md)
-        *  [CSS3 font](css/font.md)
+        *  [CSS3 文字相关](css/font.md)
         *  [CSS3 Font Family](css/family.md)
 *  JavaScript
   *  [Js常用](js/often.md)
