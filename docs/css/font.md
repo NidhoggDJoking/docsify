@@ -114,9 +114,9 @@ p {
 }
 /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
  @media screen and (max-width: 600px) { 
-        .css-text-box{
-            display:block;
-        }      
+    .css-text-box{
+        display:block;
+    }
 }
 ```
 
@@ -206,7 +206,7 @@ p {
         100%{
             background-position: -100% 0;
         }
-}    
+}
 ```
 !> 效果是靠`background-size: 200% 100%;`将背景拉伸一倍在通过动画`background-position: -100% 0;`移动背景位置达到效果,背景颜色必须首尾色差不大不然会显得不连贯。
 <style>
