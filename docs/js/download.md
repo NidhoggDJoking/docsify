@@ -30,3 +30,29 @@ downloadlink(url, name) {
     x.send();
 }
 ```
+
+### 文件下载 Blob
+
+
+```js
+this.handleDownload(data, 'xlsx')
+
+handleDownload(res, suffix){
+    const blob = new Blob([res], {
+        type: 'application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+    })
+    const fileName = `${ suffix }`
+    if (window.navigator.msSaveOrOpenBlob) {
+        navigator.msSaveBlob(blob, fileName)
+    } else {
+        const elink = document.createElemnt('a')
+        elink.download = decodeURI(fileName)
+        elink.style.display = none
+        elink.href = URL.createObjectURL(blob)
+        document.body.appendChild(elink)
+        elink.click()
+	document.body.removeChild(elink)
+    }       
+}
+
+```
