@@ -62,6 +62,15 @@ formatDateTime(new Date)
 // 返回 "2010-04-26 15:31:34"
 ```
 
+补充方法:
+
+```js
+new Date().toISOString()
+// '2023-05-20T12:59:59.803Z'
+new Date().toISOString().replace(/T/g, ' ').replace(/\.[\d]{3}Z/, '')
+// '2023-05-20 12:59:59'
+```
+
 <br>
 
 #### 时间格式字符串转为时间戳`1970.01.01开始的毫秒数`
