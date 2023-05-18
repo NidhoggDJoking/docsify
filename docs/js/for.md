@@ -142,6 +142,18 @@ var arr = ['a', 'b', 'c', 'd'];
 
 ---
 
+- ## sort
+
+```javascript
+const strings = ['top', 'jug', 'mid', 'adc', 'sup'];  
+  
+strings.sort(function(a, b) {  
+  return a.localeCompare(b, 'zh');  
+});  
+  
+console.log(strings);
+// ['adc', 'jug', 'mid', 'sup', 'top']
+```
 - ## while 
 
 ```javascript
