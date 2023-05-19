@@ -40,3 +40,5 @@ docsify serve docs
 1 [highlightjs](https://highlightjs.org/)
 
 2 [prismjs](https://prismjs.com/)
+
+上述2个的包CND极不稳定 暂且搁置
