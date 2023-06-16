@@ -4,13 +4,13 @@
 
 #### 基础信息
 
-<img style="width:190px" src="static/png/hmbb2.jpeg">
+<!-- <img style="width:190px" src="static/png/hmbb2.jpeg"> -->
 
 -  姓名 ：胡康
 
 -  性别 ：男
 
--  年龄 ：<span id="age">25</span>岁
+-  年龄 ：<span id="age">26</span>岁
 
 -  电话 ：15773594340
 
@@ -37,31 +37,43 @@
 
 #### 工作经验
 
-
 <details>
-<summary>湖南易趣在线旅游服务有限公司</summary>
+<summary>北海石基信息技术有限公司（2021-6 至今）</summary>
 <pre>
-<code>在职时间 2019-9 至 2021-06
+<code>在职时间 2021-6 至今
+石基信息 SDP 研发部
 </code></pre>
 </details>
 
 <br>
 
 <details>
-<summary>湖南微金塾网络科技有限公司</summary>
+<summary>湖南易趣在线旅游服务有限公司（2019-9 至 2021-06）</summary>
+<pre>
+<code>在职时间 2019-9 至 2021-06
+文旅相关开发
+</code></pre>
+</details>
+
+<br>
+
+<details>
+<summary>湖南微金塾网络科技有限公司（2019-5 至 2019-8）</summary>
 <pre>
 <code>在职时间 2019-5 至 2019-8
 现已改名 长沙微金塾网络科技有限公司
+金融相关开发
 </code></pre>
 </details>
 
 <br>
 
 <details>
-<summary>湖南和永信息技术有限公司</summary>
+<summary>湖南和永信息技术有限公司（2017-12 至 2019-03）</summary>
 <pre>
 <code>在职时间 2017-12 至 2019-03
 2017-12 至 2018-3 为在校实习期
+从事教育相关开发
 </code></pre>
 </details>
 
