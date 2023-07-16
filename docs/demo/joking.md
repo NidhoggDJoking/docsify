@@ -99,6 +99,17 @@
 
 `从上至下 由新到旧 ,类似的项目不加以赘述`
 
+- ##### SDI-ETL
+
+一款类似kettle的ETL 工具
+
+<img src="static/project/sj/WechatIMG17.png"/>
+
+<img src="static/project/sj/WechatIMG18.png"/>
+
+<img src="static/project/sj/WechatIMG19.png"/>
+
+
 - #####  锦泰安防（小程序）
 
 ```
