@@ -99,7 +99,7 @@
 
 `从上至下 由新到旧 ,类似的项目不加以赘述`
 
-- ##### SDI-ETL
+- #### SDI-ETL
 
 一款类似kettle的ETL 工具
 
@@ -109,6 +109,28 @@
 
 <img src="static/project/sj/WechatIMG19.png"/>
 
+##### 难点处理：
+
+- 数据组装，数据回显
+- 运行结果及时响应处理
+- 多线程操作
+
+---
+
+- ####  infrasys ER
+
+<img src="static/project/sj/WechatIMG16.png"/>
+
+<img src="static/project/sj/WechatIMG15.png"/>
+
+##### 技术涵盖
+
+- 涉及多主题(elementUI 主题配置)，多语言（vue-i18n）
+- 图表操作(AntV-G6) 数据可视化（echarts）等
+
+[infrasys ER 介绍](https://www.shijigroup.cn/brands/infrasys-enterprisesolution.html)
+
+---
 
 - #####  锦泰安防（小程序）
 
@@ -154,6 +176,7 @@
 <img class="phone" src="static/project/jt/12.jpg"/> -->
 
  ```
+
 2. 一部手机游潇湘(App)
 
 项目描述 : 基于 uni-app 所开发的 App
