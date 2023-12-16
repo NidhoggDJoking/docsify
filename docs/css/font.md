@@ -213,6 +213,8 @@ p {
 
 ### CSS 实现打字机效果
 
+<div class="typewriter">「完全なるの黄金回旋エネルギー」！</div>
+
 
 
 <style>
@@ -314,6 +316,36 @@ p {
         }
         100%{
             background-position: -100% 0;
+        }
+    }
+    /* 打字机效果 */
+    .typewriter{
+        margin-top: 20px;
+        animation: grow 4s steps(44) 1s infinite normal both, link 600ms steps(44) infinite  normal;
+        border-right: 1px solid #000;
+        font-family: HYDiS;
+        font-size: 2rem;
+        overflow: hidden;
+        white-space: nowrap;
+        color: #e8eb00;
+    }
+
+    @keyframes grow {
+        from {
+            width: 0;
+        }
+        to{
+            /* width: fit-content; */
+            width: 100%;
+        }
+    }
+
+    @keyframes link {
+        from {
+            border-right-color: #000;
+        }
+        to{
+            border-right-color: transparent;
         }
     }
 </style>
