@@ -209,6 +209,12 @@ p {
 }
 ```
 !> 效果是靠`background-size: 200% 100%;`将背景拉伸一倍在通过动画`background-position: -100% 0;`移动背景位置达到效果,背景颜色必须首尾色差不大不然会显得不连贯。
+
+
+### CSS 实现打字机效果
+
+
+
 <style>
     .text-overflow{
         max-width: 100%;

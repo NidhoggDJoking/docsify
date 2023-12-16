@@ -77,6 +77,10 @@ section.cover{
   width: 60px;
 }
 
+.content{
+  overflow: scroll;
+}
+
 /* 导航栏滑动条 */
 
 .sidebar::-webkit-scrollbar {
